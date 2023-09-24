@@ -25,7 +25,7 @@ My Design
 
 ### Links
 
-- Solution URL: (https://github.com/mtjeth/Frontend-Mentor-Challenges-Solutions/results-summary)
+- Solution URL: (https://github.com/mtjeth/Frontend-Mentor-Challenges-Solutions/tree/main/results-summary)
 - Live Site URL: (https://mtjeth.github.io/Frontend-Mentor-Challenges-Solutions/results-summary/index.html)
 
 ## My process
