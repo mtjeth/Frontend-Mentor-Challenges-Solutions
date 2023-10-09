@@ -17,14 +17,6 @@ body h2 {
   color: hsl(192, 100%, 9%);
 }
 
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-.attribution a {
-  color: hsl(228, 45%, 44%);
-}
-
 .container {
   width: 100%;
   display: block;
@@ -37,6 +29,12 @@ body h2 {
   justify-content: center;
   padding: 3% 5.2% 1%;
 }
+.row .col-1 {
+  width: 8.33%;
+}
+.row .col-2 {
+  width: 16.66%;
+}
 .row .col-3 {
   width: 25%;
 }
@@ -44,7 +42,7 @@ body h2 {
   width: 33.33%;
 }
 .row .col-5 {
-  width: 41.67%;
+  width: 41.66%;
 }
 .row .col-6 {
   width: 50%;
@@ -53,7 +51,13 @@ body h2 {
   width: 58.33%;
 }
 .row .col-8 {
-  width: 66.67%;
+  width: 66.66%;
+}
+.row .col-9 {
+  width: 75%;
+}
+.row .col-11 {
+  width: 91.66%;
 }
 .row .col-12 {
   width: 100%;
@@ -77,6 +81,10 @@ body h2 {
   font-weight: 700;
   box-shadow: 0px 4px 10px 3px hsla(208, 11%, 55%, 0.2);
 }
+.bg-hero .navbar button:hover {
+  cursor: pointer;
+  color: hsla(192, 100%, 9%, 0.36);
+}
 .bg-hero .top {
   margin-top: 1%;
   color: hsl(192, 100%, 9%);
@@ -97,6 +105,10 @@ body h2 {
   border-radius: 55px;
   font-weight: 700;
   margin-top: 5%;
+}
+.bg-hero .top .col-5 button:hover {
+  cursor: pointer;
+  background-color: hsla(322, 100%, 66%, 0.45);
 }
 .bg-hero .top .col-7 img {
   width: 93%;
@@ -135,13 +147,13 @@ body h2 {
   justify-content: center;
 }
 .bottom-overlay .row {
-  z-index: 5;
+  z-index: 1;
   background-color: #fff;
-  box-shadow: 0px 4px 10px 3px hsla(208, 11%, 55%, 0.2);
+  box-shadow: 0px -3px 10px 3px hsla(208, 11%, 55%, 0.2);
   border-radius: 10px;
   margin-top: 5%;
   margin-bottom: -5%;
-  padding-bottom: 3%;
+  padding: 3% 8%;
 }
 .bottom-overlay .row .col-12 {
   text-align: center;
@@ -155,13 +167,154 @@ body h2 {
   border-radius: 55px;
   font-weight: 700;
 }
+.bottom-overlay .row .col-12 button:hover {
+  cursor: pointer;
+  background-color: hsla(322, 100%, 66%, 0.45);
+}
 
 .footer {
   width: 100%;
   background-color: hsl(192, 100%, 9%);
-  position: absolute;
   color: #fff;
 }
 .footer .row {
-  margin-left: 2.5%;
+  align-items: baseline;
+  padding-top: 0%;
+}
+.footer .row a {
+  text-decoration: none;
+  color: #fff;
+}
+.footer .row .logo {
+  padding: 10% 0 1% 2%;
+}
+.footer .row .col-5 p {
+  padding-right: 10%;
+}
+.footer .row .col-2 .col-12 {
+  padding: 5% 0;
+}
+.footer .row .col-2 .col-12 a:hover {
+  text-decoration: underline;
+}
+.footer .row a span:hover {
+  cursor: pointer;
+  color: hsl(322, 100%, 66%);
+}
+.footer .row .copyright {
+  margin-left: -10%;
+}
+
+.attribution {
+  padding: 0;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+.attribution a:hover {
+  cursor: pointer;
+  color: hsl(322, 100%, 66%);
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    margin: 0;
+  }
+  .row .col-2,
+  .row .col-3,
+  .row .col-5,
+  .row .col-4,
+  .row .col-7,
+  .row .col-8 {
+    width: 100%;
+  }
+  .bg-hero {
+    background-image: url("./images/bg-hero-mobile.svg");
+    background-size: cover;
+    background-color: hsl(193, 100%, 96%);
+  }
+  .bg-hero .row {
+    display: block;
+    float: none;
+    padding: 8% 5%;
+    text-align: center;
+  }
+  .bg-hero img {
+    width: 30%;
+  }
+  .bg-hero .top .col-5 h1 {
+    margin-top: 10%;
+    padding: 0;
+  }
+  .bg-hero .top .col-5 p {
+    padding: 0;
+  }
+  .bg-hero .top .col-7 {
+    padding-top: 25%;
+  }
+  .middle {
+    margin: 5% 0%;
+  }
+  .middle .row {
+    display: block;
+    float: none;
+    margin-top: 10%;
+    text-align: center;
+    width: 80%;
+  }
+  .middle .row p {
+    width: 100%;
+  }
+  .middle .row img {
+    width: 100%;
+  }
+  .middle .flowing img {
+    width: 100%;
+  }
+  .middle .flowing .col-4 {
+    margin-left: 0%;
+  }
+  .middle .flowing .col-4 p {
+    width: 100%;
+  }
+  .middle .flowing .col-4 {
+    padding-top: 5%;
+  }
+  .middle .change-mob {
+    position: relative;
+    display: flex;
+  }
+  .middle .change-mob .col-8 {
+    margin-top: 90%;
+  }
+  .middle .change-mob .col-4 {
+    position: absolute;
+    bottom: 45%;
+    width: 80%;
+  }
+  .bottom-overlay {
+    padding: 8% 3%;
+  }
+  .bottom-overlay .row {
+    padding: 8% 2%;
+    margin-top: 5%;
+    margin-bottom: -20%;
+  }
+  .footer .row .col-12 {
+    margin-top: 15%;
+  }
+  .footer .row .col-2 .col-12 {
+    margin-top: 0%;
+    padding: 3% 0;
+  }
+  .footer .row .socials {
+    padding: 10% 0;
+    text-align: center;
+  }
+  .footer .row .copyright {
+    margin: auto;
+    text-align: center;
+  }
 }/*# sourceMappingURL=style.css.map */

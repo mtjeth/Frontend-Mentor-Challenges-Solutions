@@ -11,13 +11,6 @@ body
         font-weight: 600
     h2
         color: hsl(192, 100%, 9%)
-
-    
-.attribution
-    font-size: 11px
-    text-align: center
-    a 
-        color: hsl(228, 45%, 44%)
 .container
     width: 100%
     display: block
@@ -28,18 +21,26 @@ body
     align-items: center
     justify-content: center
     padding: 3% 5.2% 1%
+    .col-1
+        width: 8.33%
+    .col-2
+        width: 16.66%
     .col-3
         width: 25%
     .col-4
         width: 33.33%
     .col-5
-        width: 41.67%
+        width: 41.66%
     .col-6
         width:50%
     .col-7
         width: 58.33%
     .col-8
-        width: 66.67%
+        width: 66.66%
+    .col-9
+        width: 75%
+    .col-11
+        width: 91.66%
     .col-12
         width: 100%
 
@@ -59,6 +60,9 @@ body
             color: hsl(192, 100%, 9%)
             font-weight: 700
             box-shadow: 0px 4px 10px 3px hsla(208, 11%, 55%, 0.2)
+            &:hover
+                cursor: pointer
+                color: hsl(192deg 100% 9% / 36%)
     .top
         margin-top: 1%
         color: hsl(192, 100%, 9%)
@@ -77,6 +81,9 @@ body
                 border-radius: 55px
                 font-weight: 700
                 margin-top: 5%
+                &:hover
+                    cursor: pointer
+                    background-color: hsl(322deg 100% 66% / 45%)
         .col-7
             img
                 width: 93%
@@ -107,13 +114,13 @@ body
     align-items: center
     justify-content: center
     .row
-        z-index: 5
+        z-index: 1
         background-color: #fff
-        box-shadow: 0px 4px 10px 3px hsla(208, 11%, 55%, 0.2)
+        box-shadow: 0px -3px 10px 3px hsla(208, 11%, 55%, 0.2)
         border-radius: 10px
         margin-top: 5%
         margin-bottom: -5%
-        padding-bottom: 3%
+        padding: 3% 8%
         .col-12
             text-align: center
             button
@@ -124,13 +131,130 @@ body
                     padding: 4% 15%
                     border-radius: 55px
                     font-weight: 700
+                    &:hover
+                        cursor: pointer
+                        background-color: hsl(322deg 100% 66% / 45%)
 .footer
     width: 100%
     background-color: hsl(192, 100%, 9%)
-    position: absolute
-    color: #fff 
+    color: #fff
     .row
-        margin-left: 2.5%
+        align-items: baseline
+        padding-top: 0%
+        a
+            text-decoration: none
+            color: #fff
+        .logo
+            padding: 10% 0 1% 2%
+        .col-5
+            p
+                padding-right: 10% 
+        .col-2
+            .col-12
+                padding: 5% 0
+                a
+                    &:hover
+                        text-decoration: underline
+        a
+            span
+                &:hover
+                    cursor: pointer
+                    color: hsl(322, 100%, 66%)
+        .copyright
+            margin-left: -10%
+
+.attribution
+    padding: 0
+    font-size: 11px
+    text-align: center
+    a 
+        color: hsl(228, 45%, 44%)
+        &:hover
+            cursor: pointer
+            color: hsl(322, 100%, 66%)
+
+@media screen and (max-width: 700px)
+    body
+        margin: 0
+    .row
+        .col-2,
+        .col-3,
+        .col-5,
+        .col-4,
+        .col-7,
+        .col-8
+            width: 100%
+    .bg-hero
+        background-image: url("./images/bg-hero-mobile.svg")
+        background-size: cover
+        background-color: hsl(193, 100%, 96%)
+        .row
+            display: block
+            float: none
+            padding: 8% 5%
+            text-align: center
+        img
+            width: 30%
+        .top 
+            .col-5 
+                h1
+                    margin-top: 10%
+                    padding: 0
+                p
+                    padding: 0
+            .col-7
+                padding-top: 25%
+    .middle
+        margin: 5% 0%
+        .row
+            display: block
+            float: none
+            margin-top: 10%
+            text-align: center
+            width: 80% 
+            p
+                width: 100%
+            img
+                width: 100% 
+        .flowing
+            img
+                width: 100%
+            .col-4
+                margin-left: 0%
+                p
+                    width: 100%
+        .flowing
+            .col-4
+                padding-top: 5%
+        .change-mob
+            position: relative
+            display: flex
+            .col-8
+                margin-top: 90%
+            .col-4
+                position: absolute
+                bottom: 45%
+                width: 80%
+                
 
 
-
+    .bottom-overlay
+        padding: 8% 3%
+        .row
+            padding: 8% 2%
+            margin-top: 5%
+            margin-bottom: -20%
+    .footer
+        .row
+            .col-12
+                margin-top: 15%
+            .col-2
+                .col-12
+                    margin-top: 0%
+                    padding: 3% 0
+            .socials
+                padding: 10% 0
+                text-align: center
+            .copyright
+                margin: auto
+                text-align: center
