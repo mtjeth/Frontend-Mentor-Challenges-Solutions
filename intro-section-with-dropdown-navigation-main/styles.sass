@@ -1,0 +1,286 @@
+html
+    margin: 0
+    padding: 0
+    font-size: 18px
+    font-family: 'Epilogue'
+body
+    margin: 0
+    font-weight: 500
+.container
+    margin: 0
+.row
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    padding: 1.5% 5%
+    .col-1
+        width: 8.33%
+    .col-2
+        width: 16.66%
+    .col-3
+        width: 25%
+    .col-4
+        width: 33.33%
+    .col-5
+        width: 41.66%
+    .col-6
+        width:50%
+    .col-7
+        width: 58.33%
+    .col-8
+        width: 66.66%
+    .col-9
+        width: 75%
+    .col-10
+        width: 83.33%
+    .col-11
+        width: 91.66%
+    .col-12
+        width: 100%
+    a
+        text-decoration: none
+    ul
+        padding: 0
+        list-style: none
+        margin: 0
+        li
+            float: left
+            padding: 1% 1%
+            
+        
+    
+    
+.navbar
+    a,
+    button
+        display: block
+        color: hsl(0, 0%, 41%)
+        font-size: 16px
+        font-weight: 700
+        &:hover
+            color: hsl(0, 0%, 8%)
+            cursor: pointer
+    button
+        border: none
+        background-color: hsl(0, 0%, 100%)
+        padding: 12px 24px
+    .right-nav
+        padding: 0 1%
+        float: right
+        div
+            display: flex   
+    #register
+        border-style: solid
+        border-color: hsl(0, 0%, 41%)
+        border-width: 2px
+        border-radius: 10px
+        &:hover
+            border-color: hsl(0, 0%, 8%)
+    .menuIcon,
+    .closeIcon
+        display: none
+
+    .dropdown
+        position: relative
+        display: inline-block
+        .arrowup
+            display: none
+        .dropdown-content 
+            padding: 10% 0
+            display: none
+            position: absolute
+            background-color: #fff
+            box-shadow: 0px 5px 20px 5px rgb(0 0 0 / 15%) 
+            border-radius: 5px
+            min-width: 175px
+            margin-top: 15%
+            a
+                padding: 5% 10%
+                text-decoration: none
+                display: block
+            img
+                padding: 0 10%
+        .feature
+            margin-left: -75%
+
+        &:hover
+            .arrowup
+                display: inline-block
+            .arrowdown
+                display: none
+            .dropdown-content
+                display: block
+
+
+
+
+
+
+
+            
+.main
+    width: 90%
+    padding: 2% 0%
+    .col-7
+        .row
+            padding: 0% 20%
+        h1
+            font-size: 4rem
+            font-weight: 700
+        p
+            line-height: 1.5rem
+            color: hsl(0, 0%, 41%)
+        img
+            width: 100%
+
+        .button-col
+            padding: 5% 0
+            button
+                border-color: hsl(0, 0%, 8%)
+                color: hsl(0, 0%, 98%)
+                background-color: hsl(0, 0%, 8%)
+                padding: 12px 35px
+                border-radius: 10px
+                font-size: 1rem
+                font-weight: 700
+                &:hover
+                    background-color: hsl(0, 0%, 98%)
+                    color: hsl(0, 0%, 8%)
+                    border-color: hsl(0, 0%, 8%)
+                    
+        .client
+            padding-top: 10%
+            li
+                padding: 0 5% 0 0
+            
+    .col-5
+        img
+            width: 100%
+        .hero-desktop
+            display: block
+        .hero-mobile
+                display: none
+        
+@media screen and (max-width: 540px)
+    .row
+        padding: 5%
+    ul.navbar
+        li,.dropdown
+            display: none
+        li.menuIcon
+            display: block
+            float: right
+    ul.navbar.responsive
+        height: 100%
+        width: 0
+        position: fixed
+        z-index: 1
+        top: 0
+        right: 0
+        background-color: #fff
+        padding-top: 60px
+        .dropdown
+            .dropdown-content
+                position: relative
+                box-shadow: none
+                margin-top: 5%
+                padding: 0
+            .feature
+                margin-left: 0
+        li.menuIcon
+            display: none
+            position: absolute
+        li.closeIcon
+            display: block
+            position: absolute
+            z-index: 2
+            right: 5%
+            top: 2%
+        li
+            float: none
+            padding: 8px 8px 8px 32px
+            text-decoration: none
+            font-size: 25px
+            color: #818181
+            display: block
+        button
+            padding: 12px 30%
+        li.right-nav
+            div
+                display: flex
+                justify-content: center
+                flex-direction: column
+        
+    .main
+        width: 100%
+        padding: 0
+        display: flex
+        position: relative
+        .col-5,
+        .col-7
+            display: block
+            width: 100%
+        .col-5
+            position: absolute
+            top: 0
+            img
+                width: 100%
+            .hero-desktop
+                display: none
+            .hero-mobile
+                display: block
+        .col-7
+            margin-top: 85%
+            .row
+                padding: 0% 5%
+            h1
+                font-size: 2rem
+                font-weight: 700
+                text-align: center
+            p
+                margin: 0
+                text-align: center
+                font-size: 0.89rem
+            .button-col
+                display: flex
+                justify-content: center
+            .client
+                padding: 10% 2%
+                .col-12
+                    display: flex
+                    justify-content: center
+                    li
+                        padding: 0
+                        img
+                            width: 70%
+
+
+
+                
+
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.attribution
+    font-size: 11px
+    text-align: center
+    a
+        color: hsl(228, 45%, 44%)
+    

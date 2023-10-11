@@ -2,38 +2,119 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Epilogue">
   <title>Frontend Mentor | Intro section with dropdown navigation</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
-
-  Features
-  Company
-  Careers
-  About
-
-  Login
-  Register
-
-  Make remote work
-
-  Get your team in sync, no matter your location. Streamline processes, 
-  create team rituals, and watch productivity soar.
-
-  Learn more
-  
+  <div class="container" id="menu">
+    <nav>
+      <div class="row">
+        <div class="col-1">
+          <img alt="snap_logo" src="./images/logo.svg"/>
+        </div>
+        <div class="col-11">
+          <ul class="navbar" id="myTopnav">
+            <li class="dropdown ">
+              <a class="dropbtn" href="#Features">Features <img class="arrowdown" src="./images/icon-arrow-down.svg"> <img class="arrowup" src="./images/icon-arrow-up.svg"> </a>
+              <div class="dropdown-content feature">
+                <a href="#"><img src="./images/icon-todo.svg"/>Todo List</a>
+                <a href="#"><img src="./images/icon-calendar.svg"/>Calender</a>
+                <a href="#"><img src="./images/icon-reminders.svg"/>Reminders</a>
+                <a href="#"><img src="./images/icon-planning.svg"/>Planning</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              <a class="dropbtn" href="#Company" >Company <img class="arrowdown" src="./images/icon-arrow-down.svg"> <img class="arrowup" src="./images/icon-arrow-up.svg"> </a>
+              <div class="dropdown-content">
+                <a href="#">History</a>
+                <a href="#">Our Team</a>
+                <a href="#">Blog</a>
+              </div>
+            </li>
+            <li>
+              <a href="#Careers">Careers</a>
+            </li>
+            <li>
+              <a href="#About">About</a>
+            </li>
+            <li class="menuIcon" >
+              <img src="./images/icon-menu.svg" alt="menu" onclick="opentoggle()" />
+            </li>
+            <li class="closeIcon">
+              <img src="./images/icon-close-menu.svg" alt="close" onclick="closetoggle()"/>
+            </li>
+            <div></div>
+            <li class="right-nav">
+              <div>
+                <button type="button" name="button"> Login</button> <button type="button" name="button" id="register"> Register</button>
+              </div> 
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <div class="container">
+    <div class="row main">
+      <div class="col-7">
+        <div class="row">
+          <div class="col-12">
+            <h1>Make remote work</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <p> 
+              Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 button-col">
+            <button type="button">Learn more</button>
+          </div>
+        </div>
+        <div class="row client">
+          <div class="col-12">
+            <ul>
+              <li><img src="./images/client-databiz.svg" /></li>
+              <li><img src="./images/client-audiophile.svg" /></li>
+              <li><img src="./images/client-meet.svg" /></li>
+              <li><img src="./images/client-maker.svg" /></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-5">
+        <img class="hero-desktop" src="./images/image-hero-desktop.png"/>
+        <img class="hero-mobile" src="./images/image-hero-mobile.png"/>
+      </div>
+    </div>
+  </div>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://github.com/mtjeth" target="_blank">MTJ</a>.
   </div>
+  <script>
+    function opentoggle() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "navbar") {
+        x.className += " responsive";
+      };
+      x.style.width = "65%";
+      document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    }
+    function closetoggle() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "navbar responsive") {
+        x.className= "navbar";
+      }
+      x.style.width = "0";
+      document.body.style.backgroundColor = "white"
+    }
+  </script>
 </body>
 </html>

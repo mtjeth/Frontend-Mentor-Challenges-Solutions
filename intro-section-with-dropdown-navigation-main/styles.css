@@ -1,0 +1,319 @@
+html {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-family: "Epilogue";
+}
+
+body {
+  margin: 0;
+  font-weight: 500;
+}
+
+.container {
+  margin: 0;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 1.5% 5%;
+}
+.row .col-1 {
+  width: 8.33%;
+}
+.row .col-2 {
+  width: 16.66%;
+}
+.row .col-3 {
+  width: 25%;
+}
+.row .col-4 {
+  width: 33.33%;
+}
+.row .col-5 {
+  width: 41.66%;
+}
+.row .col-6 {
+  width: 50%;
+}
+.row .col-7 {
+  width: 58.33%;
+}
+.row .col-8 {
+  width: 66.66%;
+}
+.row .col-9 {
+  width: 75%;
+}
+.row .col-10 {
+  width: 83.33%;
+}
+.row .col-11 {
+  width: 91.66%;
+}
+.row .col-12 {
+  width: 100%;
+}
+.row a {
+  text-decoration: none;
+}
+.row ul {
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+.row ul li {
+  float: left;
+  padding: 1% 1%;
+}
+
+.navbar a,
+.navbar button {
+  display: block;
+  color: hsl(0, 0%, 41%);
+  font-size: 16px;
+  font-weight: 700;
+}
+.navbar a:hover,
+.navbar button:hover {
+  color: hsl(0, 0%, 8%);
+  cursor: pointer;
+}
+.navbar button {
+  border: none;
+  background-color: hsl(0, 0%, 100%);
+  padding: 12px 24px;
+}
+.navbar .right-nav {
+  padding: 0 1%;
+  float: right;
+}
+.navbar .right-nav div {
+  display: flex;
+}
+.navbar #register {
+  border-style: solid;
+  border-color: hsl(0, 0%, 41%);
+  border-width: 2px;
+  border-radius: 10px;
+}
+.navbar #register:hover {
+  border-color: hsl(0, 0%, 8%);
+}
+.navbar .menuIcon,
+.navbar .closeIcon {
+  display: none;
+}
+.navbar .dropdown {
+  position: relative;
+  display: inline-block;
+}
+.navbar .dropdown .arrowup {
+  display: none;
+}
+.navbar .dropdown .dropdown-content {
+  padding: 10% 0;
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0px 5px 20px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  min-width: 175px;
+  margin-top: 15%;
+}
+.navbar .dropdown .dropdown-content a {
+  padding: 5% 10%;
+  text-decoration: none;
+  display: block;
+}
+.navbar .dropdown .dropdown-content img {
+  padding: 0 10%;
+}
+.navbar .dropdown .feature {
+  margin-left: -75%;
+}
+.navbar .dropdown:hover .arrowup {
+  display: inline-block;
+}
+.navbar .dropdown:hover .arrowdown {
+  display: none;
+}
+.navbar .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.main {
+  width: 90%;
+  padding: 2% 0%;
+}
+.main .col-7 .row {
+  padding: 0% 20%;
+}
+.main .col-7 h1 {
+  font-size: 4rem;
+  font-weight: 700;
+}
+.main .col-7 p {
+  line-height: 1.5rem;
+  color: hsl(0, 0%, 41%);
+}
+.main .col-7 img {
+  width: 100%;
+}
+.main .col-7 .button-col {
+  padding: 5% 0;
+}
+.main .col-7 .button-col button {
+  border-color: hsl(0, 0%, 8%);
+  color: hsl(0, 0%, 98%);
+  background-color: hsl(0, 0%, 8%);
+  padding: 12px 35px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.main .col-7 .button-col button:hover {
+  background-color: hsl(0, 0%, 98%);
+  color: hsl(0, 0%, 8%);
+  border-color: hsl(0, 0%, 8%);
+}
+.main .col-7 .client {
+  padding-top: 10%;
+}
+.main .col-7 .client li {
+  padding: 0 5% 0 0;
+}
+.main .col-5 img {
+  width: 100%;
+}
+.main .col-5 .hero-desktop {
+  display: block;
+}
+.main .col-5 .hero-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 540px) {
+  .row {
+    padding: 5%;
+  }
+  ul.navbar li, ul.navbar .dropdown {
+    display: none;
+  }
+  ul.navbar li.menuIcon {
+    display: block;
+    float: right;
+  }
+  ul.navbar.responsive {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    padding-top: 60px;
+  }
+  ul.navbar.responsive .dropdown .dropdown-content {
+    position: relative;
+    box-shadow: none;
+    margin-top: 5%;
+    padding: 0;
+  }
+  ul.navbar.responsive .dropdown .feature {
+    margin-left: 0;
+  }
+  ul.navbar.responsive li.menuIcon {
+    display: none;
+    position: absolute;
+  }
+  ul.navbar.responsive li.closeIcon {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    right: 5%;
+    top: 2%;
+  }
+  ul.navbar.responsive li {
+    float: none;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+  }
+  ul.navbar.responsive button {
+    padding: 12px 30%;
+  }
+  ul.navbar.responsive li.right-nav div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .main {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    position: relative;
+  }
+  .main .col-5,
+  .main .col-7 {
+    display: block;
+    width: 100%;
+  }
+  .main .col-5 {
+    position: absolute;
+    top: 0;
+  }
+  .main .col-5 img {
+    width: 100%;
+  }
+  .main .col-5 .hero-desktop {
+    display: none;
+  }
+  .main .col-5 .hero-mobile {
+    display: block;
+  }
+  .main .col-7 {
+    margin-top: 85%;
+  }
+  .main .col-7 .row {
+    padding: 0% 5%;
+  }
+  .main .col-7 h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+  }
+  .main .col-7 p {
+    margin: 0;
+    text-align: center;
+    font-size: 0.89rem;
+  }
+  .main .col-7 .button-col {
+    display: flex;
+    justify-content: center;
+  }
+  .main .col-7 .client {
+    padding: 10% 2%;
+  }
+  .main .col-7 .client .col-12 {
+    display: flex;
+    justify-content: center;
+  }
+  .main .col-7 .client .col-12 li {
+    padding: 0;
+  }
+  .main .col-7 .client .col-12 li img {
+    width: 70%;
+  }
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}/*# sourceMappingURL=styles.css.map */
