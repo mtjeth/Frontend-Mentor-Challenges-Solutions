@@ -207,9 +207,14 @@ body {
   border-color: hsl(0, 0%, 100%);
   background-color: hsl(0, 0%, 100%);
 }
+.phone .phone-outline .chat-background .message form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 .phone .phone-outline .chat-background .message form input {
   border: none;
-  padding: 0 62px 0 13px;
+  padding: 0 13px;
   font-size: 8px;
 }
 .phone .phone-outline .chat-background .message form input::-moz-placeholder {
