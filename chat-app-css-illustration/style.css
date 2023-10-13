@@ -209,7 +209,7 @@ body {
 }
 .phone .phone-outline .chat-background .message form input {
   border: none;
-  padding: 0 66px 0 13px;
+  padding: 0 64px 0 13px;
   font-size: 8px;
 }
 .phone .phone-outline .chat-background .message form input::-moz-placeholder {
