@@ -1,22 +1,55 @@
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-.attribution a {
-  color: hsl(228, 45%, 44%);
-}
-
 html {
   font-family: "Rubik";
   font-size: 16px;
 }
 
 body {
-  background-color: #000;
+  margin: 0;
 }
 
-.phone-outline {
-  margin: 100px;
+.container {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 9/5;
+}
+
+.back-drop-top {
+  top: 0;
+  left: -6.34%;
+  width: 35.556%;
+  aspect-ratio: 128/175;
+  position: absolute;
+  z-index: 1;
+  background-color: black;
+  border-bottom-left-radius: 2560px;
+  border-bottom-right-radius: 2560px;
+  background-color: hsl(293, 100%, 63%);
+  background: linear-gradient(225deg, hsl(293, 100%, 63%) -15%, hsl(264, 100%, 61%) 100%);
+}
+
+.back-drop-bottom {
+  bottom: 0;
+  right: -12.9167%;
+  width: 35.556%;
+  aspect-ratio: 64/85;
+  position: absolute;
+  z-index: 1;
+  background-color: hsl(270, 20%, 96%);
+  border-top-left-radius: 2560px;
+  border-top-right-radius: 2560px;
+}
+
+.phone {
+  top: 18.5%;
+  left: 25.2083%;
+  z-index: 10;
+  position: absolute;
+  display: block;
+}
+.phone .phone-outline {
+  box-shadow: 4px 4px 20px 9px hsla(0, 0%, 0%, 0.13);
   width: 227px;
   height: 485px;
   border-radius: 25px;
@@ -26,7 +59,7 @@ body {
   position: relative;
   background-color: hsl(270, 20%, 96%);
 }
-.phone-outline .notch {
+.phone .phone-outline .notch {
   width: 119px;
   position: absolute;
   background-color: #fff;
@@ -35,7 +68,7 @@ body {
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
 }
-.phone-outline .top-bar {
+.phone .phone-outline .top-bar {
   width: 100%;
   height: 67px;
   background-color: hsl(293, 100%, 63%);
@@ -46,14 +79,14 @@ body {
   border-bottom-right-radius: 5px;
   color: hsl(0, 0%, 100%);
 }
-.phone-outline .top-bar .top-content {
+.phone .phone-outline .top-bar .top-content {
   display: flex;
   flex-direction: row;
   align-items: center;
   padding-top: 30px;
   margin-left: 11px;
 }
-.phone-outline .top-bar .top-content .avatar {
+.phone .phone-outline .top-bar .top-content .avatar {
   margin-left: 8px;
   border-style: solid;
   border-width: 1px;
@@ -61,34 +94,34 @@ body {
   height: 24px;
   border-radius: 12px;
 }
-.phone-outline .top-bar .top-content .avatar img {
+.phone .phone-outline .top-bar .top-content .avatar img {
   width: 100%;
   border-radius: 12px;
 }
-.phone-outline .top-bar .top-content .avatar-name {
+.phone .phone-outline .top-bar .top-content .avatar-name {
   margin-left: 8px;
 }
-.phone-outline .top-bar .top-content .avatar-name h5 {
+.phone .phone-outline .top-bar .top-content .avatar-name h5 {
   font-size: 12px;
   font-weight: 500;
   margin: 0;
 }
-.phone-outline .top-bar .top-content .avatar-name p {
+.phone .phone-outline .top-bar .top-content .avatar-name p {
   font-size: 8px;
   color: hsl(276, 100%, 81%);
   margin: 0;
 }
-.phone-outline .top-bar .top-content .ellipsis {
+.phone .phone-outline .top-bar .top-content .ellipsis {
   margin-left: 70px;
 }
-.phone-outline .chat-background {
+.phone .phone-outline .chat-background {
   padding: 12px 7px;
   display: flex;
   flex-direction: column;
   font-size: 8px;
   line-height: 10px;
 }
-.phone-outline .chat-background .send {
+.phone .phone-outline .chat-background .send {
   border-radius: 9px;
   border-bottom-left-radius: 3px;
   background-color: hsl(281, 42%, 93%);
@@ -96,12 +129,12 @@ body {
   font-weight: 400;
   padding: 7px;
 }
-.phone-outline .chat-background .send p {
+.phone .phone-outline .chat-background .send p {
   margin: 0;
   text-wrap: balance;
   color: hsl(276, 55%, 52%);
 }
-.phone-outline .chat-background .recive {
+.phone .phone-outline .chat-background .recive {
   border-radius: 9px;
   border-bottom-right-radius: 3px;
   background-color: hsl(0, 0%, 100%);
@@ -110,25 +143,25 @@ body {
   padding: 7px;
   align-self: flex-end;
 }
-.phone-outline .chat-background .recive p {
+.phone .phone-outline .chat-background .recive p {
   margin: 0;
   text-wrap: pretty;
   color: hsl(271, 15%, 43%);
 }
-.phone-outline .chat-background .pictures {
+.phone .phone-outline .chat-background .pictures {
   display: flex;
   background-color: hsl(270, 20%, 96%);
   padding: 0;
   align-self: flex-end;
   width: 136px;
 }
-.phone-outline .chat-background .pictures img {
+.phone .phone-outline .chat-background .pictures img {
   border-radius: 7px;
   margin-right: 8px;
   width: 40px;
   height: 40px;
 }
-.phone-outline .chat-background .price {
+.phone .phone-outline .chat-background .price {
   border-radius: 9px;
   border-bottom-left-radius: 3px;
   padding: 9px;
@@ -139,14 +172,14 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-.phone-outline .chat-background .price div {
+.phone .phone-outline .chat-background .price div {
   display: inline-flex;
 }
-.phone-outline .chat-background .price div p {
+.phone .phone-outline .chat-background .price div p {
   font-size: 8px;
   font-weight: 400;
 }
-.phone-outline .chat-background .price .circle {
+.phone .phone-outline .chat-background .price .circle {
   width: 10px;
   height: 10px;
   border-radius: 7px;
@@ -155,13 +188,13 @@ body {
   border-width: 1px;
   margin: 1px 7px 1px 0;
 }
-.phone-outline .chat-background .price p {
+.phone .phone-outline .chat-background .price p {
   margin: 2px 0;
   font-weight: 700;
   font-size: 12px;
   color: hsl(0, 0%, 100%);
 }
-.phone-outline .chat-background .message {
+.phone .phone-outline .chat-background .message {
   border-radius: 20px;
   display: block;
   position: absolute;
@@ -174,18 +207,18 @@ body {
   border-color: hsl(0, 0%, 100%);
   background-color: hsl(0, 0%, 100%);
 }
-.phone-outline .chat-background .message form input {
+.phone .phone-outline .chat-background .message form input {
   border: none;
   padding: 0 66px 0 13px;
   font-size: 8px;
 }
-.phone-outline .chat-background .message form input::-moz-placeholder {
+.phone .phone-outline .chat-background .message form input::-moz-placeholder {
   color: hsl(206, 6%, 79%);
 }
-.phone-outline .chat-background .message form input::placeholder {
+.phone .phone-outline .chat-background .message form input::placeholder {
   color: hsl(206, 6%, 79%);
 }
-.phone-outline .chat-background .message form button {
+.phone .phone-outline .chat-background .message form button {
   width: 24px;
   height: 24px;
   border: none;
@@ -193,10 +226,69 @@ body {
   color: hsl(0, 0%, 100%);
   background-color: hsl(271, 36%, 24%);
 }
-.phone-outline .chat-background .gap {
+.phone .phone-outline .chat-background .gap {
   display: block;
   width: 100%;
   height: 8px;
   margin: 0;
   padding: 0;
+}
+
+.detail {
+  position: absolute;
+  width: 30.972%;
+  top: 36.125%;
+  left: 50.9722%;
+  z-index: 10;
+  font-size: 16px;
+  line-height: 26px;
+}
+.detail h1 {
+  color: hsl(271, 36%, 24%);
+}
+.detail p {
+  color: hsl(270, 7%, 64%);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    width: 100%;
+    aspect-ratio: 375/936;
+  }
+  .back-drop-top {
+    width: 100%;
+    left: -50%;
+    top: 0;
+  }
+  .back-drop-bottom {
+    overflow-clip-box: content-box;
+    width: 100%;
+    right: -50%;
+    bottom: 0;
+  }
+  .phone {
+    top: 6.73%;
+    left: 0;
+    padding: 0 17.0667%;
+  }
+  .detail {
+    width: 100%;
+    top: 66.0256%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .detail p {
+    text-align: center;
+    padding: 0 32px;
+  }
 }/*# sourceMappingURL=style.css.map */

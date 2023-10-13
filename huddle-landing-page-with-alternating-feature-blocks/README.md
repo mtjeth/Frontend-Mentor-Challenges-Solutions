@@ -25,7 +25,7 @@ My Design
 ### Links
 
 - Solution URL: (https://github.com/mtjeth/Frontend-Mentor-Challenges-Solutions/tree/main/huddle-landing-page-with-alternating-feature-blocks)
-- Live Site URL: (https://mtjeth.github.io/Frontend-Mentor-Challenges-Solutions/huddle-landing-page-with-alternating-feature-blocks%20/index.html)
+- Live Site URL: (https://mtjeth.github.io/Frontend-Mentor-Challenges-Solutions/huddle-landing-page-with-alternating-feature-blocks/index.html)
 
 ## My process
 
