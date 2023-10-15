@@ -93,6 +93,7 @@ body {
   font-size: 24px;
 }
 .row a:hover {
+  cursor: pointer;
   color: hsl(171, 66%, 44%);
 }
 .row .header {
