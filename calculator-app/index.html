@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Calculator app</title>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=League+Spartan">
+  <link rel="stylesheet" href="style.css">
+
+
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="calc">
+        <h1 id="man">calc</h1>
+      </div>
+      <div class="theme">
+        <p>THEME</p>
+        <div class="choice">
+          <div class="choice-no">
+            <p>1</p>
+            <p>2</p>
+            <p>3</p>
+          </div>
+          <div class="toggle">
+            <div class="dot" id="first" onclick="theme(1)">
+            </div>
+            <div class="dot" id="second" onclick="theme(2)">
+            </div>
+            <div class="dot" id="third" onclick="theme(3)">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="display">
+      <input type="text" id="display">
+    </div>
+    <div class="keypad">
+      <div class="row">
+        <button class="btn-1" onclick="calc('7')">7</button>
+        <button class="btn-1" onclick="calc('8')">8</button>
+        <button class="btn-1" onclick="calc('9')">9</button>
+        <button class="btn-1 del-reset" onclick="calc('del')">DEL</button>
+      </div>
+      <div class="row">
+        <button class="btn-1" onclick="calc('4')">4</button>
+        <button class="btn-1" onclick="calc('5')">5</button>
+        <button class="btn-1" onclick="calc('6')">6</button>
+        <button class="btn-1" onclick="calc('+')">+</button>
+      </div>
+      <div class="row">
+        <button class="btn-1" onclick="calc('3')">3</button>
+        <button class="btn-1" onclick="calc('2')">2</button>
+        <button class="btn-1" onclick="calc('1')">1</button>
+        <button class="btn-1" onclick="calc('-')">-</button>
+      </div>
+      <div class="row">
+        <button class="btn-1" onclick="calc('.')">.</button>
+        <button class="btn-1" onclick="calc('0')">0</button>
+        <button class="btn-1" onclick="calc('/')">/</button>
+        <button class="btn-1" onclick="calc('*')">x</button>
+      </div>
+      <div class="row">
+        <button class="btn-2 del-reset" onclick="calc('reset')">RESET</button>
+        <button class="btn-2 equal" onclick="calc('=')">=</button>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://github.com/mtjeth" target="_blank">MTJ</a>.
+  </div>
+  <script type="text/javascript" src="main.js"></script>
+</body>
+
+</html>
