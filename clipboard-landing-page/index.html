@@ -11,6 +11,7 @@
   <title>Frontend Mentor | Clipboard landing page</title>
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bai+Jamjuree">
+  <script src="https://kit.fontawesome.com/55f17638ab.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css">
 
 
@@ -26,8 +27,8 @@
             Clipboard allows you to track and organize everything you copy. Instantly access your clipboard on all your devices.
           </p>
         <div class="btn">
-          <button>Download for iOS </button>
-          <button>Download for Mac </button>
+          <button class="ios" name="button" type="button">Download for iOS </button>
+          <button class="mac" name="button" type="button">Download for Mac </button>
         </div>
       </div>
     </div>
@@ -43,7 +44,7 @@
             </p>
           </div>
         </div>
-        <div class="row">
+        <div class="row computer">
           <div class="col-6">
             <img src="./images/image-computer.png">
           </div>
@@ -142,8 +143,8 @@
             and you’re ready to start adding to your clipboard.
           </p> 
         <div class="btn">
-          <button>Download for iOS</button>
-          <button>Download for Mac</button>
+          <button class="ios" name="button" type="button">Download for iOS </button>
+          <button class="mac" name="button" type="button">Download for Mac </button>
         </div>
       </div>
     </div>
@@ -162,21 +163,19 @@
         <a>Install Guide</a>
       </div>
       <div class="col-2">
-        <a><img src="./images/icon-facebook.svg"> </a>
-        <a><img src="./images/icon-twitter.svg"> </a>
-        <a><img src="./images/icon-instagram.svg"> </a>
+        <a href="#facebook" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+        <a href="#twitter" target="_blank"><i class="fa-brands fa-twitter"></i> </a>
+        <a href="#instagram" target="_blank"><i class="fa-brands fa-instagram"></i> </a>
       </div>
     </div>
+    <div >
+      <p class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="#">Your Name Here</a>.
+      </p>
+    </div>
   </div>
-<!--
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
--->
-  </div>
+
 </body>
 
 </html>
