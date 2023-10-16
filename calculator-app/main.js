@@ -24,10 +24,10 @@ function theme(b) {
 }
 
 if(sessionStorage.getItem('calc-theme') === null){
-    if( window.matchMedia("(prefers-color-scheme:dark)").matches ){
-    sessionStorage.setItem('calc-theme', '1');
+    if( window.matchMedia("(prefers-color-scheme:light)").matches ){
+    sessionStorage.setItem('calc-theme', '2');
     }else{
-        sessionStorage.setItem('calc-theme', '2');
+        sessionStorage.setItem('calc-theme', '1');
     }
 }
 theme(parseInt(sessionStorage.getItem('calc-theme')));
