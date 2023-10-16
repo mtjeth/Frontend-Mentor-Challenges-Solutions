@@ -1,11 +1,3 @@
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-.attribution a {
-  color: hsl(228, 45%, 44%);
-}
-
 html {
   font-family: "League Spartan";
 }
@@ -14,92 +6,500 @@ body {
   margin: 0;
 }
 
-.header {
+.container.dark .header {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
-  margin: 24px;
 }
-.header .theme {
+.container.dark .header .calc h1 {
+  color: hsl(0, 0%, 100%);
+}
+.container.dark .header .theme {
   display: flex;
   flex-wrap: nowrap;
   align-items: flex-end;
 }
-.header .theme p {
+.container.dark .header .theme p {
   margin: 5px;
   font-size: 16px;
   font-weight: 700;
+  color: hsl(0, 0%, 100%);
 }
-.header .choice {
+.container.dark .header .theme .choice {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   padding-left: 24px;
 }
-.header .choice .choice-no {
+.container.dark .header .theme .choice .choice-no {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
-.header .toggle {
-  background-color: green;
+.container.dark .header .theme .choice .toggle {
+  background-color: hsl(223, 31%, 20%);
   padding: 4px;
   border-radius: 15px;
   width: 63px;
   height: 18px;
 }
-.header .toggle .dot {
+.container.dark .header .theme .choice .toggle .dot {
   display: inline-block;
-  background-color: green;
   border-radius: 9px;
   width: 18px;
   height: 18px;
 }
-
-.display {
-  margin: 24px;
-  width: 327px;
-  height: 88px;
-  background-color: red;
+.container.dark .display {
+  margin-top: 24px;
+  background-color: hsl(224, 36%, 15%);
   border-radius: 10px;
 }
-.display input {
+.container.dark .display input {
   text-align: right;
+  background-color: transparent;
+  border: none;
+  font-size: 36px;
+  color: hsl(0, 0%, 100%);
+  caret-color: transparent;
 }
-
-.keypad {
+.container.dark .display input:focus {
+  outline: none;
+}
+.container.dark .keypad {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  padding: 24px;
-  margin: 24px;
-  background-color: green;
-  width: 279px;
-  height: 372px;
+  margin-top: 24px;
+  background-color: hsl(223, 31%, 20%);
   border-radius: 10px;
 }
-.keypad .row {
+.container.dark .keypad .row {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  width: 279px;
 }
-.keypad .row .btn-1,
-.keypad .row .btn-2 {
+.container.dark .keypad .row .btn-1,
+.container.dark .keypad .row .btn-2 {
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   margin: 0;
   padding: 0;
-  font-size: 16px;
   font-weight: 700;
 }
-.keypad .row .btn-1 {
-  width: 64px;
-  height: 64px;
+.container.dark .keypad .row .btn-1 {
+  color: hsl(221, 14%, 31%);
+  background-color: hsl(30, 25%, 89%);
+  box-shadow: 0px 5px 0px 0px hsl(28, 16%, 65%);
 }
-.keypad .row .btn-2 {
-  width: 136px;
+.container.dark .keypad .row .btn-1:hover {
+  cursor: pointer;
+  background-color: white;
+}
+.container.dark .keypad .row .del-reset {
+  color: white;
+  background-color: hsl(225, 21%, 49%);
+  box-shadow: 0px 5px 0px 0px hsl(224, 28%, 35%);
+}
+.container.dark .keypad .row .del-reset:hover {
+  cursor: pointer;
+  background-color: #bec4d5;
+}
+.container.dark .keypad .row .equal {
+  color: hsl(30, 25%, 89%);
+  background-color: hsl(6, 63%, 50%);
+  box-shadow: 0px 5px 0px 0px hsl(6, 70%, 34%);
+}
+.container.dark .keypad .row .equal:hover {
+  cursor: pointer;
+  background-color: #ecb2ac;
+}
+.container.dark .attribution {
+  margin-top: 24px;
+  font-size: 11px;
+  text-align: center;
+  color: hsl(0, 0%, 100%);
+}
+.container.dark .attribution a {
+  color: hsl(6, 63%, 50%);
+}
+.container.dark #first {
+  background-color: hsl(6, 63%, 50%);
+}
+.container.dark #first:hover {
+  cursor: pointer;
+  background-color: #ecb2ac;
+}
+.container.dark #second {
+  background-color: transparent;
+}
+.container.dark #second:hover {
+  cursor: pointer;
+  background-color: rgba(77, 77, 77, 0);
+}
+.container.dark #third {
+  background-color: transparent;
+}
+.container.dark #third:hover {
+  cursor: pointer;
+  background-color: rgba(77, 77, 77, 0);
+}
+
+.container.light .header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.container.light .header .calc h1 {
+  color: hsl(60, 10%, 19%);
+}
+.container.light .header .theme {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+}
+.container.light .header .theme p {
+  margin: 5px;
+  font-size: 16px;
+  font-weight: 700;
+  color: hsl(60, 10%, 19%);
+}
+.container.light .header .theme .choice {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding-left: 24px;
+}
+.container.light .header .theme .choice .choice-no {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.container.light .header .theme .choice .toggle {
+  background-color: hsl(0, 5%, 81%);
+  padding: 4px;
+  border-radius: 15px;
+  width: 63px;
+  height: 18px;
+}
+.container.light .header .theme .choice .toggle .dot {
+  display: inline-block;
+  border-radius: 9px;
+  width: 18px;
+  height: 18px;
+}
+.container.light .display {
+  margin-top: 24px;
+  background-color: hsl(0, 0%, 93%);
+  border-radius: 10px;
+}
+.container.light .display input {
+  text-align: right;
+  background-color: transparent;
+  border: none;
+  font-size: 36px;
+  color: hsl(60, 10%, 19%);
+  caret-color: transparent;
+}
+.container.light .display input:focus {
+  outline: none;
+}
+.container.light .keypad {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-top: 24px;
+  background-color: hsl(0, 5%, 81%);
+  border-radius: 10px;
+}
+.container.light .keypad .row {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.container.light .keypad .row .btn-1,
+.container.light .keypad .row .btn-2 {
+  border: none;
+  border-radius: 10px;
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+}
+.container.light .keypad .row .btn-1 {
+  color: hsl(60, 10%, 19%);
+  background-color: hsl(45, 7%, 89%);
+  box-shadow: 0px 5px 0px 0px hsl(35, 11%, 61%);
+}
+.container.light .keypad .row .btn-1:hover {
+  cursor: pointer;
+  background-color: white;
+}
+.container.light .keypad .row .del-reset {
+  color: white;
+  background-color: hsl(185, 42%, 37%);
+  box-shadow: 0px 5px 0px 0px hsl(185, 58%, 25%);
+}
+.container.light .keypad .row .del-reset:hover {
+  cursor: pointer;
+  background-color: #88c8ce;
+}
+.container.light .keypad .row .equal {
+  color: hsl(0, 0%, 93%);
+  background-color: hsl(25, 98%, 40%);
+  box-shadow: 0px 5px 0px 0px hsl(25, 99%, 27%);
+}
+.container.light .keypad .row .equal:hover {
+  cursor: pointer;
+  background-color: #fda668;
+}
+.container.light .attribution {
+  margin-top: 24px;
+  font-size: 11px;
+  text-align: center;
+  color: hsl(60, 10%, 19%);
+}
+.container.light .attribution a {
+  color: hsl(25, 98%, 40%);
+}
+.container.light #first {
+  background-color: transparent;
+}
+.container.light #first:hover {
+  cursor: pointer;
+  background-color: rgba(77, 77, 77, 0);
+}
+.container.light #second {
+  background-color: hsl(25, 98%, 40%);
+}
+.container.light #second:hover {
+  cursor: pointer;
+  background-color: #fda668;
+}
+.container.light #third {
+  background-color: transparent;
+}
+.container.light #third:hover {
+  cursor: pointer;
+  background-color: rgba(77, 77, 77, 0);
+}
+
+.container.violet .header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.container.violet .header .calc h1 {
+  color: hsl(52, 100%, 62%);
+}
+.container.violet .header .theme {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+}
+.container.violet .header .theme p {
+  margin: 5px;
+  font-size: 16px;
+  font-weight: 700;
+  color: hsl(52, 100%, 62%);
+}
+.container.violet .header .theme .choice {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding-left: 24px;
+}
+.container.violet .header .theme .choice .choice-no {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.container.violet .header .theme .choice .toggle {
+  background-color: hsl(268, 71%, 12%);
+  padding: 4px;
+  border-radius: 15px;
+  width: 63px;
+  height: 18px;
+}
+.container.violet .header .theme .choice .toggle .dot {
+  display: inline-block;
+  border-radius: 9px;
+  width: 18px;
+  height: 18px;
+}
+.container.violet .display {
+  margin-top: 24px;
+  background-color: hsl(268, 71%, 12%);
+  border-radius: 10px;
+}
+.container.violet .display input {
+  text-align: right;
+  background-color: transparent;
+  border: none;
+  font-size: 36px;
+  color: hsl(52, 100%, 62%);
+  caret-color: transparent;
+}
+.container.violet .display input:focus {
+  outline: none;
+}
+.container.violet .keypad {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-top: 24px;
+  background-color: hsl(268, 71%, 12%);
+  border-radius: 10px;
+}
+.container.violet .keypad .row {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.container.violet .keypad .row .btn-1,
+.container.violet .keypad .row .btn-2 {
+  border: none;
+  border-radius: 10px;
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+}
+.container.violet .keypad .row .btn-1 {
+  color: hsl(52, 100%, 62%);
+  background-color: hsl(268, 47%, 21%);
+  box-shadow: 0px 5px 0px 0px hsl(290, 70%, 36%);
+}
+.container.violet .keypad .row .btn-1:hover {
+  cursor: pointer;
+  background-color: #7e47bd;
+}
+.container.violet .keypad .row .del-reset {
+  color: white;
+  background-color: hsl(281, 89%, 26%);
+  box-shadow: 0px 5px 0px 0px hsl(285, 91%, 52%);
+}
+.container.violet .keypad .row .del-reset:hover {
+  cursor: pointer;
+  background-color: #b32bf3;
+}
+.container.violet .keypad .row .equal {
+  color: hsl(198, 20%, 13%);
+  background-color: hsl(176, 100%, 44%);
+  box-shadow: 0px 5px 0px 0px hsl(177, 92%, 70%);
+}
+.container.violet .keypad .row .equal:hover {
+  cursor: pointer;
+  background-color: #7afff6;
+}
+.container.violet .attribution {
+  margin-top: 24px;
+  font-size: 11px;
+  text-align: center;
+  color: hsl(52, 100%, 62%);
+}
+.container.violet .attribution a {
+  color: hsl(176, 100%, 44%);
+}
+.container.violet #first {
+  background-color: transparent;
+}
+.container.violet #first:hover {
+  cursor: pointer;
+  background-color: rgba(77, 77, 77, 0);
+}
+.container.violet #second {
+  background-color: transparent;
+}
+.container.violet #second:hover {
+  cursor: pointer;
+  background-color: rgba(77, 77, 77, 0);
+}
+.container.violet #third {
+  background-color: hsl(176, 100%, 44%);
+}
+.container.violet #third:hover {
+  cursor: pointer;
+  background-color: #7afff6;
+}
+
+.container {
+  padding: calc((100vh - 750px) / 2) calc((100vw - 540px) / 2);
+}
+.container .header {
+  width: 540px;
+}
+.container .display {
+  width: 540px;
+  height: 128px;
+}
+.container .display input {
+  width: 478px;
+  padding: 40px 31px;
+}
+.container .keypad {
+  padding: 30px;
+  width: 480px;
+  height: 420px;
+}
+.container .keypad .row {
+  width: 480px;
+}
+.container .keypad .row .btn-1,
+.container .keypad .row .btn-2 {
   height: 64px;
+  font-size: 32px;
+}
+.container .keypad .row .btn-1 {
+  width: 102px;
+}
+.container .keypad .row .btn-2 {
+  width: 227px;
+}
+.container .keypad .row .del-reset,
+.container .keypad .row .equal {
+  font-size: 22px;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    padding: calc((100vh - 665px) / 2) calc((100vw - 327px) / 2);
+  }
+  .container .header {
+    width: 327px;
+  }
+  .container .display {
+    width: 327px;
+    height: 88px;
+  }
+  .container .display input {
+    width: 277px;
+    padding: 27px 25px;
+  }
+  .container .keypad {
+    padding: 24px;
+    width: 279px;
+    height: 372px;
+  }
+  .container .keypad .row {
+    width: 279px;
+  }
+  .container .keypad .row .btn-1,
+  .container .keypad .row .btn-2 {
+    height: 64px;
+    font-size: 26px;
+  }
+  .container .keypad .row .btn-1 {
+    width: 64px;
+  }
+  .container .keypad .row .btn-2 {
+    width: 136px;
+  }
+  .container .keypad .row .del-reset,
+  .container .keypad .row .equal {
+    font-size: 18px;
+  }
 }/*# sourceMappingURL=style.css.map */

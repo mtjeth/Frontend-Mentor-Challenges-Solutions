@@ -1,94 +1,196 @@
-.attribution 
-    font-size: 11px
-    text-align: center
-    a 
-        color: hsl(228, 45%, 44%)
-
 html
     font-family: "League Spartan" 
 body
-    margin: 0 
- 
-.header
-    display: flex
-    flex-direction: row
-    flex-wrap: nowrap
-    justify-content: space-between
-    align-items: center
-    margin: 24px
-    .theme
+    margin: 0  
+
+=shadow($shade)
+    box-shadow: 0px 5px 0px 0px $shade
+
+=prefered-scheme($g1, $g2, $g3, $g4, $g5, $in1, $in2, $in3, $sh1, $sh2, $sh3) 
+    .header
         display: flex
-        flex-wrap: nowrap 
-        align-items: flex-end
-        p
-            margin: 5px
-            font-size: 16px
-            font-weight: 700
-    .choice
-        display: flex
-        flex-direction: column
+        flex-direction: row
         flex-wrap: nowrap
-        padding-left: 24px
-        .choice-no
-            display: flex 
-            flex-direction: row
-            justify-content: space-around
-    .toggle
-        background-color: green
-        padding: 4px
-        border-radius: 15px
-        width:63px
-        height:18px
-        .dot
-            display: inline-block
-            background-color: green
-            border-radius: 9px
-            width:18px
-            height:18px
-
-
-
-
-
-
-.display
-    margin: 24px
-    width: 327px
-    height: 88px
-    background-color: red
-    border-radius: 10px
-    input
-        text-align: right
-
-
-
-.keypad
-    display: flex
-    justify-content: space-between
-    flex-direction: column
-    padding: 24px
-    margin: 24px
-    background-color: green 
-    width: 279px
-    height: 372px
-    border-radius: 10px
-    .row
+        justify-content: space-between
+        align-items: center 
+        .calc
+            h1
+                color: $g1
+        .theme
+            display: flex
+            flex-wrap: nowrap 
+            align-items: flex-end
+            p
+                margin: 5px
+                font-size: 16px
+                font-weight: 700
+                color: $g1
+            .choice
+                display: flex
+                flex-direction: column
+                flex-wrap: nowrap
+                padding-left: 24px
+                .choice-no
+                    display: flex 
+                    flex-direction: row
+                    justify-content: space-around
+                .toggle
+                    background-color: $g5
+                    padding: 4px
+                    border-radius: 15px
+                    width:63px
+                    height:18px
+                    .dot
+                        display: inline-block
+                        border-radius: 9px
+                        width:18px
+                        height:18px 
+    .display
+        margin-top: 24px 
+        background-color: $in3
+        border-radius: 10px
+        input
+            text-align: right
+            background-color: transparent
+            border: none  
+            font-size: 36px 
+            color: $g1
+            caret-color: transparent
+            &:focus
+                outline: none
+    .keypad
         display: flex
         justify-content: space-between
-        flex-direction: row
-        width: 279px
-        .btn-1,
-        .btn-2
-            border: none
-            border-radius: 5px
-            margin: 0
-            padding: 0
-            font-size: 16px
-            font-weight: 700
-        .btn-1
-            width: 64px
-            height: 64px
-        .btn-2
-            width: 136px
-            height: 64px
+        flex-direction: column 
+        margin-top: 24px
+        background-color: $g5  
+        border-radius: 10px
+        .row
+            display: flex
+            justify-content: space-between
+            flex-direction: row 
+            .btn-1,
+            .btn-2
+                border: none
+                border-radius: 10px
+                margin: 0
+                padding: 0
+                font-weight: 700
+            .btn-1
+                color: $g3
+                background-color: $g4
+                +shadow($sh1)
+                &:hover
+                    cursor: pointer
+                    background-color: lighten($g4,30%)
+            .del-reset
+                color: white
+                background-color: $in2
+                +shadow($sh2)
+                &:hover
+                    cursor: pointer
+                    background-color: lighten($in2,30%)
+            .equal
+                color: $in1
+                background-color: $g2
+                +shadow($sh3)
+                &:hover
+                    cursor: pointer
+                    background-color: lighten($g2,30%)
+    .attribution 
+        margin-top: 24px
+        font-size: 11px
+        text-align: center
+        color: $g1
+        a 
+            color: $g2
+
+=toggles($t1,$t2,$t3)
+    #first
+        background-color: $t1
+        &:hover
+            cursor: pointer
+            background-color: lighten($t1,30%)
+    #second
+        background-color: $t2
+        &:hover
+            cursor: pointer
+            background-color: lighten($t2,30%)
+    #third
+        background-color: $t3
+        &:hover
+            cursor: pointer
+            background-color: lighten($t3,30%)
     
+
+.container.dark
+    +prefered-scheme(hsl(0, 0%, 100%), hsl(6, 63%, 50%), hsl(221, 14%, 31%), hsl(30, 25%, 89%), hsl(223, 31%, 20%), hsl(30, 25%, 89%), hsl(225, 21%, 49%), hsl(224, 36%, 15%), hsl(28, 16%, 65%), hsl(224, 28%, 35%), hsl(6, 70%, 34%))
+    +toggles(hsl(6, 63%, 50%), transparent, transparent) 
+
+.container.light
+    +prefered-scheme(hsl(60, 10%, 19%), hsl(25, 98%, 40%), hsl(60, 10%, 19%), hsl(45, 7%, 89%), hsl(0, 5%, 81%), hsl(0, 0%, 93%), hsl(185, 42%, 37%), hsl(0, 0%, 93%), hsl(35, 11%, 61%), hsl(185, 58%, 25%), hsl(25, 99%, 27%))
+    +toggles(transparent, hsl(25, 98%, 40%), transparent) 
+
+.container.violet
+    +prefered-scheme(hsl(52, 100%, 62%), hsl(176, 100%, 44%), hsl(52, 100%, 62%), hsl(268, 47%, 21%), hsl(268, 71%, 12%), hsl(198, 20%, 13%), hsl(281, 89%, 26%), hsl(268, 71%, 12%), hsl(290, 70%, 36%), hsl(285, 91%, 52%), hsl(177, 92%, 70%))
+    +toggles(transparent, transparent, hsl(176, 100%, 44%))
+    
+
+
+
+.container 
+    padding: calc((100vh - 750px)/2) calc( (100vw - 540px)/2)
+    .header 
+        width: 540px  
+    .display 
+        width: 540px
+        height: 128px 
+        input
+            width: 478px 
+            padding: 40px 31px  
+    .keypad  
+        padding: 30px
+        width: 480px
+        height: 420px 
+        .row 
+            width: 480px
+            .btn-1,
+            .btn-2 
+                height: 64px
+                font-size: 32px
+            .btn-1
+                width: 102px
+            .btn-2
+                width: 227px
+            .del-reset,
+            .equal
+                font-size: 22px
+
+@media screen and (max-width:600px)
+    .container
+        padding: calc((100vh - 665px)/2) calc( (100vw - 327px)/2 )
+        .header 
+            width: 327px  
+        .display 
+            width: 327px
+            height: 88px 
+            input
+                width: 277px 
+                padding: 27px 25px  
+        .keypad  
+            padding: 24px
+            width: 279px
+            height: 372px 
+            .row 
+                width: 279px
+                .btn-1,
+                .btn-2 
+                    height: 64px
+                    font-size: 26px
+                .btn-1
+                    width: 64px
+                .btn-2
+                    width: 136px
+                .del-reset,
+                .equal
+                    font-size: 18px

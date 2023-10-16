@@ -1,33 +1,31 @@
-var a = document.getElementById("man");
+var a = document.getElementById("main")
 var x = document.getElementById("first");
 var y = document.getElementById("second");
 var z = document.getElementById("third");
 
 function theme(b) {
+  if(!(a.className==="container")){
+    a.className = "container";
+  }
   if (b === 1) {
-    a.style.color = "green";
-    x.style.backgroundColor = "yellow";
-    y.style.backgroundColor = "green";
-    z.style.backgroundColor = "green";
+    a.className+= " dark";
+    document.body.style.backgroundColor = "hsl(222, 26%, 31%)";
+
   }
   if (b === 2) {
-    a.style.color = "yellow";
-    x.style.backgroundColor = "green";
-    y.style.backgroundColor = "yellow";
-    z.style.backgroundColor = "green";
+    a.className+= " light";
+    document.body.style.backgroundColor = "hsl(0, 0%, 90%)";
   }
   if (b === 3) {
-    a.style.color = "red";
-    x.style.backgroundColor = "green";
-    y.style.backgroundColor = "green";
-    z.style.backgroundColor = "yellow";
+    a.className+= " violet"; 
+    document.body.style.backgroundColor = "hsl(268, 75%, 9%)";
   }
-  sessionStorage.setItem('calc-theme', b);
+  sessionStorage.setItem('calc-theme', b); 
 }
 
 if(sessionStorage.getItem('calc-theme') === null){
     if( window.matchMedia("(prefers-color-scheme:dark)").matches ){
-    sessionStorage.setItem('calc-theme', '2');
+    sessionStorage.setItem('calc-theme', '1');
     }else{
         sessionStorage.setItem('calc-theme', '2');
     }

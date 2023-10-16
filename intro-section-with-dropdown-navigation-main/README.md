@@ -49,8 +49,6 @@ I started from top to bottom approach then thr menu with diffrent configration f
 
 I learned ways to manipulate side bar and menu bars.
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
-
 ### Continued development
 
 javascript and css relationship
