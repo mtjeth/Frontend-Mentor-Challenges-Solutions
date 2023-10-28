@@ -46,52 +46,78 @@ body
             display: flex
             flex-direction: column
             align-items: center
-            .hand
-                position: relative
-                background-color: hsl(236, 21%, 26%)
-                display: block
-                width:148px
-                height:140px
-                padding:0
-                margin:0
+        .hand
+            position: relative
+            background-color: hsl(236, 21%, 26%)
+            display: block
+            width:148px
+            height:140px
+            padding:0
+            margin:0
+            overflow: hidden
+            border-radius: 7px
+            margin: 16px
+            .clock
+                position: absolute
+                display: flex
+                justify-content: center
+                align-items: center
+                width: 100%
+                height: 100%
+                p
+                    font-size: 72px 
+                    color: hsl(345, 95%, 68%) 
+            .up
+                height:50%
                 overflow: hidden
-                border-radius: 7px
-                margin: 16px
-                .clock
-                    position: absolute
-                    display: flex
-                    justify-content: center
-                    align-items: center
-                    width: 100%
-                    height: 100%
-                    p
-                        font-size: 72px 
-                        color: hsl(345, 95%, 68%) 
-                .line
-                    position: absolute
-                    width:148px
-                    top: 49%
-                    height:2px
-                    background-color: hsl(234, 17%, 12%)
-                    opacity: 0.3
-                    box-shadow: 0px -35px 0px 35px 	hsl(0deg 0% 0% / 50%)
-                .circle
-                    position: absolute
-                    background-color: hsl(234, 17%, 12%)
-                    width: 12px
-                    height: 12px
-                    border-radius: 6px
-                    top: 45%
-                .left-circle
-                    left: -6px
-                .right-circle
-                    right: -6px
-            p
-                font-size: 12px
-                color: hsl(237, 18%, 59%)
-                text-transform: uppercase
-                letter-spacing: 7px
-                font-weight: 700
+                z-index: -1
+                transform-style: preserve-3d
+                p
+                    margin-top: 140px 
+                animation-duration: 0.3s
+            .down
+                height:50%
+                overflow: hidden
+                background-color: lighten(hsl(236, 21%, 26%),5% ) 
+                margin-top: 35px
+                z-index: -1
+                transform-style: preserve-3d  
+                transform: rotateX(90deg) 
+                p
+                    margin-top: 0 
+                animation-duration: 0.3s
+                animation-delay: 0.2s
+            .dis
+                transform: rotateX(0deg)
+                margin-top: 70px
+                background-color: hsl(236, 21%, 26%)
+            .line
+                position: absolute
+                width:148px
+                top: 49%
+                height:2px
+                background-color: hsl(234, 17%, 12%)
+                opacity: 0.3
+                box-shadow: 0px -35px 0px 35px 	hsl(0deg 0% 0% / 50%)
+                z-index: 3
+            .circle
+                position: absolute
+                background-color: hsl(234, 17%, 12%)
+                width: 12px
+                height: 12px
+                border-radius: 6px
+                top: 45%
+                z-index: 3
+            .left-circle
+                left: -6px
+            .right-circle
+                right: -6px
+        p
+            font-size: 12px
+            color: hsl(237, 18%, 59%)
+            text-transform: uppercase
+            letter-spacing: 7px
+            font-weight: 700
 
 .section-bottom
     position: absolute
@@ -116,4 +142,37 @@ body
         color: hsl(0,0%,100%)
         a
             color: hsl(228, 45%, 44%) 
+            
+                
+@keyframes flipup
+  0%
+    transform: rotateX('0')
+    margin-top: 0  
+    z-index: 5
+    background-color: darken(hsl(236, 21%, 26%),1% )
+  15%
+    margin-top: 0
+  99%
+    z-index: 5
+  100%
+    transform: rotateX(-90deg)
+    margin-top: 35px
+    z-index: -1
+    background-color: darken(hsl(236, 21%, 26%),15% )
 
+@keyframes flipdwn
+  0%
+    transform: rotateX(-90deg)
+    margin-top: 35px
+    background-color: lighten(hsl(236, 21%, 26%),10% ) 
+    z-index: 5
+  80%
+    margin-top: 68px
+  99%
+    z-index: 5
+  100%
+    transform: rotateX(0deg)
+    margin-top: 70px
+    z-index: -1
+    background-color: hsl(236, 21%, 26%)
+ 

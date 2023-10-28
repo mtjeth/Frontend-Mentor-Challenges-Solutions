@@ -54,10 +54,7 @@ body {
   flex-direction: column;
   align-items: center;
 }
-.section-top .flip-clock .day .hand,
-.section-top .flip-clock .hour .hand,
-.section-top .flip-clock .minute .hand,
-.section-top .flip-clock .second .hand {
+.section-top .flip-clock .hand {
   position: relative;
   background-color: hsl(236, 21%, 26%);
   display: block;
@@ -69,10 +66,7 @@ body {
   border-radius: 7px;
   margin: 16px;
 }
-.section-top .flip-clock .day .hand .clock,
-.section-top .flip-clock .hour .hand .clock,
-.section-top .flip-clock .minute .hand .clock,
-.section-top .flip-clock .second .hand .clock {
+.section-top .flip-clock .hand .clock {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -80,17 +74,40 @@ body {
   width: 100%;
   height: 100%;
 }
-.section-top .flip-clock .day .hand .clock p,
-.section-top .flip-clock .hour .hand .clock p,
-.section-top .flip-clock .minute .hand .clock p,
-.section-top .flip-clock .second .hand .clock p {
+.section-top .flip-clock .hand .clock p {
   font-size: 72px;
   color: hsl(345, 95%, 68%);
 }
-.section-top .flip-clock .day .hand .line,
-.section-top .flip-clock .hour .hand .line,
-.section-top .flip-clock .minute .hand .line,
-.section-top .flip-clock .second .hand .line {
+.section-top .flip-clock .hand .up {
+  height: 50%;
+  overflow: hidden;
+  z-index: -1;
+  transform-style: preserve-3d;
+  animation-duration: 0.3s;
+}
+.section-top .flip-clock .hand .up p {
+  margin-top: 140px;
+}
+.section-top .flip-clock .hand .down {
+  height: 50%;
+  overflow: hidden;
+  background-color: #3e4160;
+  margin-top: 35px;
+  z-index: -1;
+  transform-style: preserve-3d;
+  transform: rotateX(90deg);
+  animation-duration: 0.3s;
+  animation-delay: 0.2s;
+}
+.section-top .flip-clock .hand .down p {
+  margin-top: 0;
+}
+.section-top .flip-clock .hand .dis {
+  transform: rotateX(0deg);
+  margin-top: 70px;
+  background-color: hsl(236, 21%, 26%);
+}
+.section-top .flip-clock .hand .line {
   position: absolute;
   width: 148px;
   top: 49%;
@@ -98,34 +115,24 @@ body {
   background-color: hsl(234, 17%, 12%);
   opacity: 0.3;
   box-shadow: 0px -35px 0px 35px hsla(0, 0%, 0%, 0.5);
+  z-index: 3;
 }
-.section-top .flip-clock .day .hand .circle,
-.section-top .flip-clock .hour .hand .circle,
-.section-top .flip-clock .minute .hand .circle,
-.section-top .flip-clock .second .hand .circle {
+.section-top .flip-clock .hand .circle {
   position: absolute;
   background-color: hsl(234, 17%, 12%);
   width: 12px;
   height: 12px;
   border-radius: 6px;
   top: 45%;
+  z-index: 3;
 }
-.section-top .flip-clock .day .hand .left-circle,
-.section-top .flip-clock .hour .hand .left-circle,
-.section-top .flip-clock .minute .hand .left-circle,
-.section-top .flip-clock .second .hand .left-circle {
+.section-top .flip-clock .hand .left-circle {
   left: -6px;
 }
-.section-top .flip-clock .day .hand .right-circle,
-.section-top .flip-clock .hour .hand .right-circle,
-.section-top .flip-clock .minute .hand .right-circle,
-.section-top .flip-clock .second .hand .right-circle {
+.section-top .flip-clock .hand .right-circle {
   right: -6px;
 }
-.section-top .flip-clock .day p,
-.section-top .flip-clock .hour p,
-.section-top .flip-clock .minute p,
-.section-top .flip-clock .second p {
+.section-top .flip-clock p {
   font-size: 12px;
   color: hsl(237, 18%, 59%);
   text-transform: uppercase;
@@ -161,4 +168,45 @@ body {
 }
 .section-bottom .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@keyframes flipup {
+  0% {
+    transform: rotateX("0");
+    margin-top: 0;
+    z-index: 5;
+    background-color: #32344d;
+  }
+  15% {
+    margin-top: 0;
+  }
+  99% {
+    z-index: 5;
+  }
+  100% {
+    transform: rotateX(-90deg);
+    margin-top: 35px;
+    z-index: -1;
+    background-color: #161722;
+  }
+}
+@keyframes flipdwn {
+  0% {
+    transform: rotateX(-90deg);
+    margin-top: 35px;
+    background-color: #494b6f;
+    z-index: 5;
+  }
+  80% {
+    margin-top: 68px;
+  }
+  99% {
+    z-index: 5;
+  }
+  100% {
+    transform: rotateX(0deg);
+    margin-top: 70px;
+    z-index: -1;
+    background-color: hsl(236, 21%, 26%);
+  }
 }/*# sourceMappingURL=style.css.map */
