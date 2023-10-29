@@ -52,11 +52,11 @@ body
             display: block
             width:148px
             height:140px
-            padding:0
-            margin:0
+            padding:0 
             overflow: hidden
             border-radius: 7px
             margin: 16px
+            box-shadow: 0 12px 0px 0px hsl(234, 17%, 12%)
             .clock
                 position: absolute
                 display: flex
@@ -74,7 +74,7 @@ body
                 transform-style: preserve-3d
                 p
                     margin-top: 140px 
-                animation-duration: 0.3s
+                animation-duration: 0.45s
             .down
                 height:50%
                 overflow: hidden
@@ -86,20 +86,20 @@ body
                 p
                     margin-top: 0 
                 animation-duration: 0.3s
-                animation-delay: 0.2s
+                animation-delay: 0.3s
             .dis
                 transform: rotateX(0deg)
-                margin-top: 70px
-                background-color: hsl(236, 21%, 26%)
+                margin-top: 70px 
+                background-color: darken(hsl(236, 21%, 26%),3%)
             .line
                 position: absolute
                 width:148px
-                top: 49%
-                height:2px
+                top: 48%
+                height:4px
                 background-color: hsl(234, 17%, 12%)
-                opacity: 0.3
-                box-shadow: 0px -35px 0px 35px 	hsl(0deg 0% 0% / 50%)
-                z-index: 3
+                opacity: 0.2
+                box-shadow: 0px -35px 0px 35px 	hsl(0deg 0% 0% / 15%)
+                z-index: 30
             .circle
                 position: absolute
                 background-color: hsl(234, 17%, 12%)
@@ -107,7 +107,7 @@ body
                 height: 12px
                 border-radius: 6px
                 top: 45%
-                z-index: 3
+                z-index: 4
             .left-circle
                 left: -6px
             .right-circle
@@ -123,6 +123,7 @@ body
     position: absolute
     bottom: 0
     background-image: url("./images/pattern-hills.svg") 
+    background-repeat: round
     height: 197px
     width: 100%
     .socials
@@ -175,4 +176,97 @@ body
     margin-top: 70px
     z-index: -1
     background-color: hsl(236, 21%, 26%)
+@media screen and (max-height: 750px)
+    .section-top
+        min-height: 75vh   
+        .title 
+            margin: 0 auto
+            h1
+                margin: 5vh auto
+    .section-bottom 
+        height: 25vh
+        .socials
+            margin-top: 10vh
+
+
+@media screen and ((max-width: 768px) or (max-height: 350px)) 
+    .section-top  
+        .title 
+            h1
+                margin: 14vh 10vw
+                text-align: center
+        .flip-clock  
+            .hand 
+                width:67px
+                height:70px 
+                margin: 4.26vh 10px
+                box-shadow: 0 6px 0px 0px hsl(234, 17%, 12%)
+                .clock 
+                    p
+                        font-size: 30px  
+                .up  
+                    p
+                        margin-top: 64px  
+                .down 
+                    animation-name: none 
+                    margin-top: 17.5px  
+                    p
+                        margin-top: -5px
+                .dis 
+                    margin-top: 35px 
+                .line 
+                    width:67px
+                    top: 48%
+                    height:2px
+                    box-shadow: 0px -17.5px 0px 35px 	hsl(0deg 0% 0% / 15%) 
+                .circle
+                    width: 6px
+                    height: 6px
+                    border-radius: 3px  
+                .left-circle
+                    left: -3px
+                .right-circle
+                    right: -3px
+            p
+                font-size: 8px 
+                letter-spacing: 3px
+
+    .section-bottom
+        background-position-x: right
+        background-size: 1000px
+        background-repeat: no-repeat 
+
+    @keyframes flipup
+        0%
+            transform: rotateX('0')
+            margin-top: 0  
+            z-index: 5
+            background-color: darken(hsl(236, 21%, 26%),1% )
+        15%
+            margin-top: 0
+        99%
+            z-index: 5
+        100%
+            transform: rotateX(-90deg)
+            margin-top: 17.5px
+            z-index: -1
+            background-color: darken(hsl(236, 21%, 26%),15% )
+
+    @keyframes flipdwn
+        0%
+            transform: rotateX(-90deg)
+            margin-top: 17.5px
+            background-color: lighten(hsl(236, 21%, 26%),10% ) 
+            z-index: 5
+        80%
+            margin-top: 33px
+        99%
+            z-index: 5
+        100%
+            transform: rotateX(0deg)
+            margin-top: 35px
+            z-index: -1
+            background-color: hsl(236, 21%, 26%) 
+
+
  

@@ -61,10 +61,10 @@ body {
   width: 148px;
   height: 140px;
   padding: 0;
-  margin: 0;
   overflow: hidden;
   border-radius: 7px;
   margin: 16px;
+  box-shadow: 0 12px 0px 0px hsl(234, 17%, 12%);
 }
 .section-top .flip-clock .hand .clock {
   position: absolute;
@@ -83,7 +83,7 @@ body {
   overflow: hidden;
   z-index: -1;
   transform-style: preserve-3d;
-  animation-duration: 0.3s;
+  animation-duration: 0.45s;
 }
 .section-top .flip-clock .hand .up p {
   margin-top: 140px;
@@ -97,7 +97,7 @@ body {
   transform-style: preserve-3d;
   transform: rotateX(90deg);
   animation-duration: 0.3s;
-  animation-delay: 0.2s;
+  animation-delay: 0.3s;
 }
 .section-top .flip-clock .hand .down p {
   margin-top: 0;
@@ -105,17 +105,17 @@ body {
 .section-top .flip-clock .hand .dis {
   transform: rotateX(0deg);
   margin-top: 70px;
-  background-color: hsl(236, 21%, 26%);
+  background-color: #2e3047;
 }
 .section-top .flip-clock .hand .line {
   position: absolute;
   width: 148px;
-  top: 49%;
-  height: 2px;
+  top: 48%;
+  height: 4px;
   background-color: hsl(234, 17%, 12%);
-  opacity: 0.3;
-  box-shadow: 0px -35px 0px 35px hsla(0, 0%, 0%, 0.5);
-  z-index: 3;
+  opacity: 0.2;
+  box-shadow: 0px -35px 0px 35px hsla(0, 0%, 0%, 0.15);
+  z-index: 30;
 }
 .section-top .flip-clock .hand .circle {
   position: absolute;
@@ -124,7 +124,7 @@ body {
   height: 12px;
   border-radius: 6px;
   top: 45%;
-  z-index: 3;
+  z-index: 4;
 }
 .section-top .flip-clock .hand .left-circle {
   left: -6px;
@@ -144,6 +144,7 @@ body {
   position: absolute;
   bottom: 0;
   background-image: url("./images/pattern-hills.svg");
+  background-repeat: round;
   height: 197px;
   width: 100%;
 }
@@ -208,5 +209,116 @@ body {
     margin-top: 70px;
     z-index: -1;
     background-color: hsl(236, 21%, 26%);
+  }
+}
+@media screen and (max-height: 750px) {
+  .section-top {
+    min-height: 75vh;
+  }
+  .section-top .title {
+    margin: 0 auto;
+  }
+  .section-top .title h1 {
+    margin: 5vh auto;
+  }
+  .section-bottom {
+    height: 25vh;
+  }
+  .section-bottom .socials {
+    margin-top: 10vh;
+  }
+}
+@media screen and ((max-width: 768px) or (max-height: 350px)) {
+  .section-top .title h1 {
+    margin: 14vh 10vw;
+    text-align: center;
+  }
+  .section-top .flip-clock .hand {
+    width: 67px;
+    height: 70px;
+    margin: 4.26vh 10px;
+    box-shadow: 0 6px 0px 0px hsl(234, 17%, 12%);
+  }
+  .section-top .flip-clock .hand .clock p {
+    font-size: 30px;
+  }
+  .section-top .flip-clock .hand .up p {
+    margin-top: 64px;
+  }
+  .section-top .flip-clock .hand .down {
+    animation-name: none;
+    margin-top: 17.5px;
+  }
+  .section-top .flip-clock .hand .down p {
+    margin-top: -5px;
+  }
+  .section-top .flip-clock .hand .dis {
+    margin-top: 35px;
+  }
+  .section-top .flip-clock .hand .line {
+    width: 67px;
+    top: 48%;
+    height: 2px;
+    box-shadow: 0px -17.5px 0px 35px hsla(0, 0%, 0%, 0.15);
+  }
+  .section-top .flip-clock .hand .circle {
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+  }
+  .section-top .flip-clock .hand .left-circle {
+    left: -3px;
+  }
+  .section-top .flip-clock .hand .right-circle {
+    right: -3px;
+  }
+  .section-top .flip-clock p {
+    font-size: 8px;
+    letter-spacing: 3px;
+  }
+  .section-bottom {
+    background-position-x: right;
+    background-size: 1000px;
+    background-repeat: no-repeat;
+  }
+  @keyframes flipup {
+    0% {
+      transform: rotateX("0");
+      margin-top: 0;
+      z-index: 5;
+      background-color: #32344d;
+    }
+    15% {
+      margin-top: 0;
+    }
+    99% {
+      z-index: 5;
+    }
+    100% {
+      transform: rotateX(-90deg);
+      margin-top: 17.5px;
+      z-index: -1;
+      background-color: #161722;
+    }
+  }
+  @keyframes flipdwn {
+    0% {
+      transform: rotateX(-90deg);
+      margin-top: 17.5px;
+      background-color: #494b6f;
+      z-index: 5;
+    }
+    80% {
+      margin-top: 33px;
+    }
+    99% {
+      z-index: 5;
+    }
+    100% {
+      transform: rotateX(0deg);
+      margin-top: 35px;
+      z-index: -1;
+      background-color: hsl(236, 21%, 26%);
+    }
   }
 }/*# sourceMappingURL=style.css.map */
