@@ -1,6 +1,12 @@
 var today = new Date(); 
 var deadline = new Date(2023,11,12);
+var interval = new Date(1970,1,14);
 
+
+if(deadline < today ){
+    deadline = deadline.getTime() + interval.getTime(); 
+    deadline = new Date(deadline);
+}
 var countdown = new Date(deadline - today);
 
 flip("second",countdown.getUTCSeconds());
