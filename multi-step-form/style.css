@@ -1,0 +1,432 @@
+html {
+  font-family: "Ubuntu";
+}
+
+body {
+  background-color: grey;
+  margin: 0;
+  overflow: hidden;
+}
+
+.container {
+  width: 63.06vw;
+  height: 568px;
+  margin: 12.96vh auto;
+  background-color: black;
+  padding: 16px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.container .step-dis {
+  width: 30.2%;
+  height: calc(100% - 8px);
+  background: url("./assets/bg-sidebar-desktop.svg");
+  background-size: cover;
+  background-position-y: bottom;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  border-radius: 16px;
+  padding-top: 8px;
+}
+.container .step-dis .step {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  letter-spacing: 1.5px;
+  margin: 32px;
+}
+.container .step-dis .step .circle {
+  width: 33px;
+  height: 33px;
+  border-radius: 33px;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .step-dis .step .circle p {
+  font-size: 16px;
+  font-weight: 700;
+}
+.container .step-dis .step .step-circle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-left: 16px;
+}
+.container .step-dis .step .step-circle h1 {
+  margin: 0;
+  font-size: 10px;
+  font-weight: 400;
+}
+.container .step-dis .step .step-circle p {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 700;
+}
+.container .main-dis {
+  width: 68.06%;
+  height: 100%;
+  background-color: green;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  align-items: center;
+}
+.container .main-dis h1 {
+  margin: 16px 0;
+  font-size: 28px;
+}
+.container .main-dis p {
+  margin: 0;
+  font-size: 16px;
+}
+.container .main-dis .form-section {
+  margin: auto;
+  background-color: yellow;
+  position: absolute;
+  top: 4.577%;
+  width: 72.82%;
+}
+.container .main-dis .form-section form {
+  padding: 32px 0;
+  display: flex;
+  flex-direction: column;
+}
+.container .main-dis .form-section form label {
+  margin: 11px 0;
+  font-size: 12px;
+}
+.container .main-dis .form-section form input {
+  height: 46px;
+  margin-bottom: 16px;
+}
+.container .main-dis .form-section form h3 {
+  margin: 6px 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+.container .main-dis .form-section #step2 input[type=radio] {
+  display: none;
+}
+.container .main-dis .form-section #step2 form {
+  flex-direction: row;
+  justify-content: space-between;
+}
+.container .main-dis .form-section #step2 form label {
+  margin: 0;
+  width: 30%;
+}
+.container .main-dis .form-section #step2 form label .plan-box {
+  width: 74.81%;
+  background-color: blue;
+  padding: 16px;
+  border: 1px solid black;
+}
+.container .main-dis .form-section #step2 form label .plan-box img {
+  margin: 4px 0 40px 0;
+}
+.container .main-dis .form-section #step2 form label .plan-box p {
+  font-size: 16px;
+  font-weight: 400;
+}
+.container .main-dis .form-section #step2 .toggle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+}
+.container .main-dis .form-section #step2 .toggle .slider {
+  margin: 24px;
+  border: 4px solid black;
+  width: 30px;
+  height: 12px;
+  border-radius: 12px;
+}
+.container .main-dis .form-section #step2 .toggle .slider .dot {
+  width: 12px;
+  height: 12px;
+  background-color: black;
+  border-radius: 12px;
+}
+.container .main-dis .form-section #step3 input[type=checkbox] {
+  display: none;
+}
+.container .main-dis .form-section #step3 form {
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container .main-dis .form-section #step3 form label {
+  margin: 6px 0;
+  width: 100%;
+}
+.container .main-dis .form-section #step3 form label .add-box {
+  width: 92.88%;
+  background-color: blue;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 15px;
+}
+.container .main-dis .form-section #step3 form label .add-box .check-add {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.container .main-dis .form-section #step3 form label .add-box .check-add .checker {
+  height: 19px;
+  width: 19px;
+  border: 1px solid black;
+}
+.container .main-dis .form-section #step3 form label .add-box .check-add .add-on {
+  margin-left: 17px;
+}
+.container .main-dis .form-section #step4 .detail {
+  padding: 22px 24px;
+  background-color: blue;
+  margin: 40px 0;
+}
+.container .main-dis .form-section #step4 .detail .main-plan {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 23px;
+}
+.container .main-dis .form-section #step4 .detail .main-plan .main-plan-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.container .main-dis .form-section #step4 .detail .main-plan .main-plan-name h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+}
+.container .main-dis .form-section #step4 .detail .main-plan .main-plan-name a {
+  font-size: 16px;
+}
+.container .main-dis .form-section #step4 .detail .break {
+  width: 100%;
+  height: 2px;
+  background-color: yellow;
+}
+.container .main-dis .form-section #step4 .detail .extra {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .main-dis .form-section #step4 .detail .extra h5 {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+}
+.container .main-dis .form-section #step4 .detail .extra h5 p {
+  font-size: 16px;
+}
+.container .main-dis .form-section #step4 .total {
+  padding: 22px 24px;
+  background-color: green;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .main-dis .form-section #step4 .total h6 {
+  font-size: 16px;
+  margin: 0;
+  font-weight: 500;
+}
+.container .main-dis .form-section #step4 .total p {
+  font-size: 18px;
+  font-weight: 800;
+}
+.container .main-dis #step5 {
+  margin-top: 29.22%;
+  width: 72.82%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: grey;
+  align-self: center;
+}
+.container .main-dis #step5 p {
+  text-align: center;
+  line-height: 1.5rem;
+}
+.container .main-dis .buttons {
+  position: absolute;
+  bottom: 2.816%;
+  margin: auto;
+  width: 72.82%;
+  height: 48px;
+  background-color: red;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.container .main-dis .buttons button {
+  width: 123px;
+  font-size: 16px;
+}
+.container .main-dis .buttons #goback {
+  display: block;
+}
+.container .main-dis .buttons #nextstep {
+  display: none;
+}
+.container .main-dis .buttons #confirm {
+  display: block;
+}
+
+@media screen and (max-width: 375px) {
+  .container {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    border-radius: 0;
+  }
+  .container .step-dis {
+    background: url("./assets/bg-sidebar-mobile.svg");
+    background-size: cover;
+    background-position-y: bottom;
+    background-position-x: center;
+    width: 100%;
+    height: 24.75%;
+    border-radius: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .container .step-dis .step {
+    margin: 24px 8px;
+  }
+  .container .step-dis .step .step-circle {
+    display: none;
+  }
+  .container .main-dis {
+    width: 100%;
+    height: 75.25%;
+    flex-direction: column;
+  }
+  .container .main-dis h1 {
+    margin: 16px 0;
+    font-size: 28px;
+  }
+  .container .main-dis .form-section {
+    top: -14.54%;
+    width: 78.66%;
+    padding: 16px 26px;
+  }
+  .container .main-dis .form-section form {
+    padding: 32px 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .container .main-dis .form-section form label {
+    margin: 6px 0;
+  }
+  .container .main-dis .form-section form input {
+    height: 40px;
+    margin-bottom: 16px;
+  }
+  .container .main-dis .form-section #step2 h3 {
+    margin: 0;
+  }
+  .container .main-dis .form-section #step2 form {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .container .main-dis .form-section #step2 form label {
+    margin: 6px 0;
+    width: 100%;
+  }
+  .container .main-dis .form-section #step2 form label .plan-box {
+    width: 89.15%;
+    background-color: blue;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+  }
+  .container .main-dis .form-section #step2 form label .plan-box .price {
+    margin-left: 13px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .container .main-dis .form-section #step2 form label .plan-box img {
+    margin: 0;
+  }
+  .container .main-dis .form-section #step2 form label .plan-box p {
+    font-size: 16px;
+    font-weight: 400;
+  }
+  .container .main-dis .form-section #step2 .toggle {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+  }
+  .container .main-dis .form-section #step2 .toggle .slider {
+    margin: 24px;
+    border: 4px solid black;
+    width: 30px;
+    height: 12px;
+    border-radius: 12px;
+  }
+  .container .main-dis .form-section #step2 .toggle .slider .dot {
+    width: 12px;
+    height: 12px;
+    background-color: black;
+    border-radius: 12px;
+  }
+  .container .main-dis .form-section #step4 .detail {
+    padding: 7px 17px;
+    margin: 25px 0;
+  }
+  .container .main-dis .form-section #step4 .detail .main-plan {
+    margin-bottom: 13px;
+  }
+  .container .main-dis #step5 {
+    position: absolute;
+    top: -37%;
+    width: 78.66%;
+    padding: 80px 26px;
+  }
+  .container .main-dis .buttons {
+    margin-top: 23px;
+    bottom: 0;
+    width: calc(100% - 32px);
+    height: 40px;
+    padding: 17px 16px;
+  }
+  .container .main-dis .buttons button {
+    width: 97px;
+  }
+}
+#step1 {
+  display: none;
+}
+
+#step2 {
+  display: none;
+}
+
+#step3 {
+  display: none;
+}
+
+#step4 {
+  display: none;
+}/*# sourceMappingURL=style.css.map */
