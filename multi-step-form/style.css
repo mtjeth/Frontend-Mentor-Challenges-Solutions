@@ -3,16 +3,16 @@ html {
 }
 
 body {
-  background-color: grey;
+  background-color: hsl(215, 89%, 96%);
   margin: 0;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .container {
   width: 63.06vw;
   height: 568px;
   margin: 12.96vh auto;
-  background-color: black;
+  background-color: hsl(0, 0%, 100%);
   padding: 16px;
   border-radius: 16px;
   display: flex;
@@ -33,22 +33,37 @@ body {
 .container .step-dis .step {
   display: flex;
   flex-direction: row;
-  color: white;
+  color: hsl(0, 0%, 100%);
   letter-spacing: 1.5px;
   margin: 32px;
 }
-.container .step-dis .step .circle {
+.container .step-dis .step .circle_1,
+.container .step-dis .step .circle_2,
+.container .step-dis .step .circle_3,
+.container .step-dis .step .circle_4,
+.container .step-dis .step .circle_current {
   width: 33px;
   height: 33px;
   border-radius: 33px;
-  border: 1px solid white;
+  border: 1px solid hsl(0, 0%, 100%);
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.container .step-dis .step .circle p {
+.container .step-dis .step .circle_1 p,
+.container .step-dis .step .circle_2 p,
+.container .step-dis .step .circle_3 p,
+.container .step-dis .step .circle_4 p,
+.container .step-dis .step .circle_current p {
   font-size: 16px;
   font-weight: 700;
+}
+.container .step-dis .step .circle_current {
+  border: 1px solid hsl(206, 94%, 87%);
+  background-color: hsl(206, 94%, 87%);
+}
+.container .step-dis .step .circle_current p {
+  color: hsl(213, 96%, 18%);
 }
 .container .step-dis .step .step-circle {
   display: flex;
@@ -69,7 +84,6 @@ body {
 .container .main-dis {
   width: 68.06%;
   height: 100%;
-  background-color: green;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -77,16 +91,18 @@ body {
   align-items: center;
 }
 .container .main-dis h1 {
+  color: hsl(213, 96%, 18%);
   margin: 16px 0;
   font-size: 28px;
 }
 .container .main-dis p {
   margin: 0;
   font-size: 16px;
+  color: hsl(231, 11%, 63%);
 }
 .container .main-dis .form-section {
   margin: auto;
-  background-color: yellow;
+  background-color: hsl(0, 0%, 100%);
   position: absolute;
   top: 4.577%;
   width: 72.82%;
@@ -97,17 +113,41 @@ body {
   flex-direction: column;
 }
 .container .main-dis .form-section form label {
-  margin: 11px 0;
+  color: hsl(213, 96%, 18%);
+  margin: 8px 0;
   font-size: 12px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.container .main-dis .form-section form label:hover {
+  cursor: pointer;
+}
+.container .main-dis .form-section form label .error_txt {
+  color: hsl(354, 84%, 57%);
+  font-size: 12px;
+  font-weight: 700;
 }
 .container .main-dis .form-section form input {
+  color: hsl(229, 24%, 87%);
   height: 46px;
   margin-bottom: 16px;
+  border-radius: 5px;
+  padding: 0 20px;
+  border: 1px solid hsl(229, 24%, 87%);
+}
+.container .main-dis .form-section form input:hover {
+  cursor: pointer;
 }
 .container .main-dis .form-section form h3 {
   margin: 6px 0;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 700;
+}
+.container .main-dis .form-section form p {
+  font-size: 16px;
+  font-weight: 400;
 }
 .container .main-dis .form-section #step2 input[type=radio] {
   display: none;
@@ -122,39 +162,61 @@ body {
 }
 .container .main-dis .form-section #step2 form label .plan-box {
   width: 74.81%;
-  background-color: blue;
+  background-color: hsl(0, 0%, 100%);
   padding: 16px;
-  border: 1px solid black;
+  border: 1px solid hsl(229, 24%, 87%);
+  border-radius: 5px;
+}
+.container .main-dis .form-section #step2 form label .plan-box:hover {
+  border-color: hsl(243, 100%, 62%);
 }
 .container .main-dis .form-section #step2 form label .plan-box img {
   margin: 4px 0 40px 0;
 }
-.container .main-dis .form-section #step2 form label .plan-box p {
-  font-size: 16px;
-  font-weight: 400;
+.container .main-dis .form-section #step2 form label .plan-box .yearly_discount {
+  color: hsl(213, 96%, 18%);
 }
 .container .main-dis .form-section #step2 .toggle {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: red;
+  background-color: hsl(231, 100%, 99%);
+  border-radius: 5px;
+}
+.container .main-dis .form-section #step2 .toggle h3:hover {
+  cursor: pointer;
 }
 .container .main-dis .form-section #step2 .toggle .slider {
   margin: 24px;
-  border: 4px solid black;
+  border: 4px solid hsl(213, 96%, 18%);
+  background-color: hsl(213, 96%, 18%);
   width: 30px;
   height: 12px;
   border-radius: 12px;
+  position: relative;
+}
+.container .main-dis .form-section #step2 .toggle .slider:hover {
+  cursor: pointer;
 }
 .container .main-dis .form-section #step2 .toggle .slider .dot {
+  position: absolute;
   width: 12px;
   height: 12px;
-  background-color: black;
+  background-color: hsl(0, 0%, 100%);
   border-radius: 12px;
+}
+.container .main-dis .form-section #step2 .toggle .slider #dot_yearly {
+  right: 0;
+}
+.container .main-dis .form-section #step2 .toggle .slider #dot_monthly {
+  left: 0;
 }
 .container .main-dis .form-section #step3 input[type=checkbox] {
   display: none;
+}
+.container .main-dis .form-section #step3 h2 {
+  color: hsl(243, 100%, 62%);
 }
 .container .main-dis .form-section #step3 form {
   flex-direction: column;
@@ -166,12 +228,16 @@ body {
 }
 .container .main-dis .form-section #step3 form label .add-box {
   width: 92.88%;
-  background-color: blue;
-  border: 1px solid black;
+  background-color: hsl(0, 0%, 100%);
+  border: 1px solid hsl(229, 24%, 87%);
+  border-radius: 5px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 15px;
+}
+.container .main-dis .form-section #step3 form label .add-box:hover {
+  border-color: hsl(243, 100%, 62%);
 }
 .container .main-dis .form-section #step3 form label .add-box .check-add {
   display: flex;
@@ -181,15 +247,21 @@ body {
 .container .main-dis .form-section #step3 form label .add-box .check-add .checker {
   height: 19px;
   width: 19px;
-  border: 1px solid black;
+  border: 1px solid hsl(229, 24%, 87%);
+  border-radius: 5px;
+}
+.container .main-dis .form-section #step3 form label .add-box .check-add .checker img {
+  height: 13px;
+  width: 13px;
+  margin: 3px;
 }
 .container .main-dis .form-section #step3 form label .add-box .check-add .add-on {
   margin-left: 17px;
 }
 .container .main-dis .form-section #step4 .detail {
   padding: 22px 24px;
-  background-color: blue;
-  margin: 40px 0;
+  background-color: hsl(217, 100%, 97%);
+  margin-top: 40px;
 }
 .container .main-dis .form-section #step4 .detail .main-plan {
   display: flex;
@@ -203,17 +275,25 @@ body {
   justify-content: center;
 }
 .container .main-dis .form-section #step4 .detail .main-plan .main-plan-name h4 {
+  color: hsl(213, 96%, 18%);
   font-size: 16px;
   font-weight: 700;
   margin: 0;
 }
 .container .main-dis .form-section #step4 .detail .main-plan .main-plan-name a {
   font-size: 16px;
+  color: hsl(231, 11%, 63%);
+  text-decoration: underline;
+  margin-top: 5px;
+}
+.container .main-dis .form-section #step4 .detail .main-plan .main-plan-name a:hover {
+  cursor: pointer;
+  color: hsl(243, 100%, 62%);
 }
 .container .main-dis .form-section #step4 .detail .break {
   width: 100%;
-  height: 2px;
-  background-color: yellow;
+  height: 1px;
+  background-color: hsl(231, 11%, 63%);
 }
 .container .main-dis .form-section #step4 .detail .extra {
   margin: 20px 0;
@@ -226,34 +306,36 @@ body {
   font-size: 16px;
   font-weight: 500;
   margin: 0;
+  color: hsl(231, 11%, 63%);
 }
-.container .main-dis .form-section #step4 .detail .extra h5 p {
+.container .main-dis .form-section #step4 .detail .extra p {
+  color: hsl(213, 96%, 18%);
   font-size: 16px;
 }
 .container .main-dis .form-section #step4 .total {
   padding: 22px 24px;
-  background-color: green;
+  background-color: hsl(0, 0%, 100%);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 .container .main-dis .form-section #step4 .total h6 {
-  font-size: 16px;
+  color: hsl(243, 100%, 62%);
+  font-size: 18px;
   margin: 0;
-  font-weight: 500;
+  font-weight: 800;
 }
 .container .main-dis .form-section #step4 .total p {
-  font-size: 18px;
-  font-weight: 800;
+  font-size: 16px;
+  font-weight: 600;
 }
 .container .main-dis #step5 {
   margin-top: 29.22%;
   width: 72.82%;
-  display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: grey;
+  background-color: hsl(0, 0%, 100%);
   align-self: center;
 }
 .container .main-dis #step5 p {
@@ -266,7 +348,7 @@ body {
   margin: auto;
   width: 72.82%;
   height: 48px;
-  background-color: red;
+  background-color: hsl(0, 0%, 100%);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -274,24 +356,40 @@ body {
 .container .main-dis .buttons button {
   width: 123px;
   font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  font-weight: 600;
+  color: hsl(0, 0%, 100%);
 }
-.container .main-dis .buttons #goback {
-  display: block;
+.container .main-dis .buttons button:hover {
+  cursor: pointer;
 }
 .container .main-dis .buttons #nextstep {
-  display: none;
+  background-color: hsl(213, 96%, 18%);
+}
+.container .main-dis .buttons #nextstep:hover {
+  background-color: #03418c;
+}
+.container .main-dis .buttons #goback {
+  color: hsl(231, 11%, 63%);
+  margin-left: -20px;
+  background-color: hsl(0, 0%, 100%);
+}
+.container .main-dis .buttons #goback:hover {
+  color: hsl(213, 96%, 18%);
 }
 .container .main-dis .buttons #confirm {
-  display: block;
+  background-color: hsl(243, 100%, 62%);
+}
+.container .main-dis .buttons #confirm:hover {
+  background-color: #7770ff;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 400px) {
   .container {
     width: 100%;
     min-height: 100vh;
     margin: 0;
-    background-color: black;
-    display: flex;
     flex-direction: column;
     padding: 0;
     border-radius: 0;
@@ -317,35 +415,25 @@ body {
   .container .main-dis {
     width: 100%;
     height: 75.25%;
-    flex-direction: column;
-  }
-  .container .main-dis h1 {
-    margin: 16px 0;
-    font-size: 28px;
+    background-color: hsl(215, 89%, 96%);
   }
   .container .main-dis .form-section {
     top: -14.54%;
     width: 78.66%;
     padding: 16px 26px;
-  }
-  .container .main-dis .form-section form {
-    padding: 32px 0;
-    display: flex;
-    flex-direction: column;
+    border-radius: 10px;
   }
   .container .main-dis .form-section form label {
     margin: 6px 0;
   }
   .container .main-dis .form-section form input {
     height: 40px;
-    margin-bottom: 16px;
   }
-  .container .main-dis .form-section #step2 h3 {
+  .container .main-dis .form-section form h3 {
     margin: 0;
   }
   .container .main-dis .form-section #step2 form {
     flex-direction: column;
-    justify-content: space-between;
   }
   .container .main-dis .form-section #step2 form label {
     margin: 6px 0;
@@ -353,8 +441,6 @@ body {
   }
   .container .main-dis .form-section #step2 form label .plan-box {
     width: 89.15%;
-    background-color: blue;
-    border: 1px solid black;
     display: flex;
     flex-direction: row;
   }
@@ -366,30 +452,6 @@ body {
   }
   .container .main-dis .form-section #step2 form label .plan-box img {
     margin: 0;
-  }
-  .container .main-dis .form-section #step2 form label .plan-box p {
-    font-size: 16px;
-    font-weight: 400;
-  }
-  .container .main-dis .form-section #step2 .toggle {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    background-color: red;
-  }
-  .container .main-dis .form-section #step2 .toggle .slider {
-    margin: 24px;
-    border: 4px solid black;
-    width: 30px;
-    height: 12px;
-    border-radius: 12px;
-  }
-  .container .main-dis .form-section #step2 .toggle .slider .dot {
-    width: 12px;
-    height: 12px;
-    background-color: black;
-    border-radius: 12px;
   }
   .container .main-dis .form-section #step4 .detail {
     padding: 7px 17px;
@@ -406,7 +468,7 @@ body {
   }
   .container .main-dis .buttons {
     margin-top: 23px;
-    bottom: 0;
+    top: calc(100vh - 130px);
     width: calc(100% - 32px);
     height: 40px;
     padding: 17px 16px;
@@ -414,19 +476,7 @@ body {
   .container .main-dis .buttons button {
     width: 97px;
   }
-}
-#step1 {
-  display: none;
-}
-
-#step2 {
-  display: none;
-}
-
-#step3 {
-  display: none;
-}
-
-#step4 {
-  display: none;
+  .container .main-dis .buttons button #goback {
+    margin-left: -20px;
+  }
 }/*# sourceMappingURL=style.css.map */

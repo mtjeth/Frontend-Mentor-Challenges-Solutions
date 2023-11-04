@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
 
   <title>Frontend Mentor | Multi-step form</title>
@@ -16,28 +16,28 @@
   <section class="container">
     <div class="step-dis">
       <div class="step">
-        <div class="circle"><p>1</p></div>
+        <div class="circle_1" id="circle_1"><p>1</p></div>
         <div class="step-circle">
           <h1>STEP 1</h1>
           <p>YOUR INFO</p>
         </div>
       </div>
       <div class="step">
-        <div class="circle"><p>2</p></div>
+        <div class="circle_2" id="circle_2"><p>2</p></div>
         <div class="step-circle">
           <h1>STEP 2</h1>
           <p>SELECT PLAN</p>
         </div>
       </div>
       <div class="step">
-        <div class="circle"><p>3</p></div>
+        <div class="circle_3" id="circle_3"><p>3</p></div>
         <div class="step-circle">
           <h1>STEP 3</h1>
           <p>ADD-ONS</p>
         </div>
       </div>
       <div class="step">
-        <div class="circle"><p>4</p></div>
+        <div class="circle_4" id="circle_4"><p>4</p></div>
         <div class="step-circle">
           <h1>STEP 4</h1>
           <p>SUMMARY</p>
@@ -45,62 +45,65 @@
       </div>
     </div>
     <div class="main-dis">
-      <div class="form-section">
+      <div class="form-section" >
         <div id="step1">
           <h1>Personal info</h1>
           <p>Please provide your name, email address, and phone number.</p>
-          <form>
-            <label for="info_name">Name</label>
-            <input type="text" id="info_name" name="info_name" placeholder="e.g. Stephen King">
-            <label for="info_email">Email Address</label>
-            <input type="email" id="info_email" name="info_email" placeholder="e.g. stephenking@lorem.com">
-            <label for="info_tel">Phone Number</label>
-            <input type="tel" id="info_tel" name="info_tel" placeholder="e.g. +1 234 567 890" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+          <form id="info_form" name="info_form">
+            <label for="info_name">Name <p class="error_txt"></p></label>
+            <input class="info_form_input" type="text" id="info_name" name="info_name" placeholder="e.g. Stephen King" onclick="error_rm(0)">
+            <label for="info_email">Email Address <p class="error_txt"></p></label>
+            <input class="info_form_input" type="email" id="info_email" name="info_email" placeholder="e.g. stephenking@lorem.com" onclick="error_rm(1)">
+            <label for="info_tel">Phone Number <p class="error_txt"></p></label>
+            <input class="info_form_input" type="tel" id="info_tel" name="info_tel" placeholder="e.g. +1 234 567 890" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" onclick="error_rm(2)">
           </form>
         </div>
         <div id="step2">
           <h1> Select your plan </h1>
           <p> You have the option of monthly or yearly billing </p>
-          <form>
-            
+          <form id="step2_form">
             <label for="arcade">
-              <div class="plan-box">
+              <div class="plan-box" onclick="plan_chooser()">
                 <input type="radio" id="arcade" name="plan-option" value="arcade">
                 <img src="./assets/icon-arcade.svg"/>
                 <div class="price">
                   <h3>Arcade</h3>
-                  <p> $ </p>
+                  <p id="arcade_price"> $ </p>
+                  <p class="yearly_discount" >2 months free</p>
                 </div>
               </div>
             </label>
-            <label for="Advanced">
-              <div class="plan-box">
-                <input type="radio" id="Advanced" name="plan-option" value="Advanced">
+            <label for="advanced">
+              <div class="plan-box" onclick="plan_chooser()">
+                <input type="radio" id="advanced" name="plan-option" value="advanced">
                 <img src="./assets/icon-advanced.svg"/>
                 <div class="price">
                   <h3>Advanced</h3>
-                  <p> $ </p>
+                  <p id="advanced_price"> $ </p>
+                  <p class="yearly_discount" >2 months free</p>
                 </div>
               </div>
             </label>
             <label for="pro">
-              <div class="plan-box">
+              <div class="plan-box" onclick="plan_chooser()">
                 <input type="radio" id="pro" name="plan-option" value="pro">
                 <img src="./assets/icon-pro.svg"/>
                 <div class="price">
-                  <h3>pro</h3>
-                  <p> $ </p>
+                  <h3>Pro</h3>
+                  <p id="pro_price"> $ </p>
+                  <p class="yearly_discount" >2 months free</p>
                 </div>
                 
               </div>
             </label>
           </form>
-          <div class="toggle">
-            <h3>Monthly</h3>
-            <div class="slider">
-              <div class="dot"></div>
+          <div class="toggle"> 
+            <h3 onclick='slider("Yearly")' id="h3_monthly">Monthly</h3>
+            <div class="slider" onclick="slider()">
+              <div id="dot_monthly" class="dot"></div>
+              <div id="dot_yearly" class="dot"></div>
             </div> 
-            <h3>Yearly</h3>
+            <h3 onclick='slider("Monthly")' id="h3_yearly">Yearly</h3> 
           </div>
         </div>
         <div id="step3">
@@ -108,43 +111,48 @@
           <p> Add-ons help enhance your gaming experience. </p>
           <form>
             <label for="on-service"> 
-              <div class="add-box">
+              <div class="add-box" onclick="option_chooser()">
                 <input type="checkbox" id="on-service" name="on-service" value="on-service">
                 <div class="check-add">
-                  <div class="checker"></div>
+                  <div class="checker">
+                    <img src="./assets/icon-checkmark.svg" />
+                  </div>
                   <div class="add-on">
                     <h3>Online service</h3>
                     <p> Access to multiplayer games </p>
                   </div>
                 </div>
-                
-                <h2> $ </h2>
+                <h2 id="on-service-h2"> $ </h2>
               </div>
             </label>
             <label for="lg-storage"> 
-              <div class="add-box">
+              <div class="add-box" onclick="option_chooser()">
                 <input type="checkbox" id="lg-storage" name="lg-storage" value="lg-storage">
                 <div class="check-add">
-                  <div class="checker"></div>
+                  <div class="checker">
+                    <img src="./assets/icon-checkmark.svg" />
+                  </div>
                   <div class="add-on">
                     <h3>Larger storage</h3>
                     <p> Extra 1TB of cloud save </p>
                   </div>
                 </div> 
-                <h2> $ </h2>
+                <h2 id="lg-storage-h2"> $ </h2>
               </div> 
             </label>
             <label for="cust-profile">
-              <div class="add-box">
+              <div class="add-box" onclick="option_chooser()">
                 <input type="checkbox" id="cust-profile" name="cust-profile" value="cust-profile"> 
                 <div class="check-add">
-                  <div class="checker"></div>
+                  <div class="checker">
+                    <img src="./assets/icon-checkmark.svg" />
+                  </div>
                   <div class="add-on">
                     <h3>Customizable profile</h3>
                     <p> Custom theme on your profile </p>
                   </div>
                 </div>
-                <h2> $ </h2>
+                <h2 id="cust-profile-h2"> $ </h2>
               </div>
             </label>
           </form>
@@ -152,23 +160,20 @@
         <div id="step4">
           <h1>Finishing up</h1>
           <p>Double-check everything looks OK before confirming.</p>
-          <div class="detail">
+          <div class="detail" id="detail_list">
             <div class="main-plan">
               <div class="main-plan-name">
-                <h4> plan </h4>
-                <a>change</a>
+                <h4 id="choosen_plan"> plan </h4>
+                <a onclick="next_step(1)">Change</a>
               </div>
-              <h4> $ </h4>
+              <h4 id="choosen_plan_price"> $ </h4>
             </div>
             <div class="break"></div>
-            <div class="extra">
-              <h5> extra</h5>
-              <p> $ </p>
-            </div>
+            
           </div>
           <div class="total">
             <p id="total"> Total </p>
-            <h6>$</h6>
+            <h6 id="total_price">$</h6>
           </div>
         </div>
       </div>
@@ -181,9 +186,9 @@
         </p>
       </div>
       <div class="buttons">
-        <button id="goback" >Go Back</button>
-        <button id="nextstep" >Next Step</button>
-        <button id="confirm" >Confirm</button>
+        <button id="goback" onclick="prev_step()">Go Back</button>
+        <button id="nextstep" onclick="next_step()">Next Step</button>
+        <button id="confirm" onclick="finish()">Confirm</button>
       </div>
 
     </div>

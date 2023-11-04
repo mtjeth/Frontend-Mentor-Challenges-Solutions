@@ -120,3 +120,29 @@
   </div>
 </body>
 </html>
+/*
+#step1
+    //add block to show
+    display: none
+#step2
+    //add block to show
+    display: none
+#step3
+    //add block to show
+    display: none
+#step4
+    //add block to show
+    display: none
+#step5
+    //add flex to show
+    display: none
+#goback
+    //add space-between in justify contentr to button
+    display: none
+#nextstep
+    //add flex-end in justify contentr to button
+    display: none 
+#confirm
+    //add space-between in justify contentr to button
+    display: none
+    */
