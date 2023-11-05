@@ -1,3 +1,18 @@
+$Marine_blue: hsl(213, 96%, 18%)
+$Purplish_blue: hsl(243, 100%, 62%)
+$Pastel_blue: hsl(228, 100%, 84%)
+$Light_blue: hsl(206, 94%, 87%)
+$Strawberry_red: hsl(354, 84%, 57%)
+$Cool_gray: hsl(231, 11%, 63%)
+$Light_gray: hsl(229, 24%, 87%)
+$Magnolia: hsl(217, 100%, 97%)
+$Alabaster: hsl(231, 100%, 99%)
+$White: hsl(0, 0%, 100%)
+$br0 : 10px
+$br1 : 10px
+$br2 : 30px
+
+
 html
     font-family: "Ubuntu"
     
@@ -11,12 +26,13 @@ body
     width: 63.06vw
     height: 568px
     margin: 12.96vh auto 
-    background-color: hsl(0, 0%, 100%)
+    background-color: $White
     padding: 16px
-    border-radius: 16px
+    border-radius: $br1
     display: flex
     flex-direction: row
     justify-content: space-between
+    box-shadow: 0px 0px 30px 2px $Light_gray
     .step-dis
         width: 30.2%
         height: calc( 100% - 8px ) 
@@ -25,12 +41,12 @@ body
         background-position-y: bottom
         background-position-x: center
         background-repeat: no-repeat
-        border-radius: 16px
+        border-radius: $br1
         padding-top: 8px
         .step
             display: flex
             flex-direction: row
-            color: hsl(0, 0%, 100%)
+            color: $White
             letter-spacing: 1.5px
             margin: 32px
             .circle_1,
@@ -40,8 +56,8 @@ body
             .circle_current
                 width: 33px
                 height: 33px
-                border-radius: 33px
-                border: 1px solid hsl(0, 0%, 100%)
+                border-radius: $br2
+                border: 1px solid $White
                 display: flex 
                 justify-content: center
                 align-items: center
@@ -49,10 +65,10 @@ body
                     font-size: 16px
                     font-weight: 700
             .circle_current
-                border: 1px solid hsl(206, 94%, 87%)
-                background-color: hsl(206, 94%, 87%)
+                border: 1px solid $Light_blue
+                background-color: $Light_blue
                 p
-                    color: hsl(213, 96%, 18%)
+                    color: $Marine_blue
 
             .step-circle
                 display: flex
@@ -60,6 +76,7 @@ body
                 justify-content: space-around
                 padding-left: 16px
                 h1
+                    color: $Pastel_blue
                     margin: 0
                     font-size: 10px
                     font-weight: 400
@@ -76,16 +93,16 @@ body
         position: relative
         align-items: center
         h1
-            color: hsl(213, 96%, 18%)
+            color: $Marine_blue
             margin: 16px 0
             font-size: 28px
         p
             margin: 0
             font-size: 16px
-            color: hsl(231, 11%, 63%)
+            color: $Cool_gray
         .form-section
             margin: auto
-            background-color: hsl(0, 0%, 100%)
+            background-color: $White
             position: absolute
             top: 4.577%
             width: 72.82% 
@@ -94,7 +111,7 @@ body
                 display: flex
                 flex-direction: column
                 label 
-                    color: hsl(213, 96%, 18%)
+                    color: $Marine_blue
                     margin: 8px 0
                     font-size: 12px
                     font-weight: 600
@@ -104,18 +121,19 @@ body
                     &:hover
                         cursor: pointer
                     .error_txt 
-                        color: hsl(354, 84%, 57%)
+                        color: $Strawberry_red
                         font-size: 12px
                         font-weight: 700
                 input
-                    color: hsl(229, 24%, 87%)
+                    color: $Marine_blue
                     height: 46px
                     margin-bottom: 16px 
-                    border-radius: 5px 
+                    border-radius: $br0
                     padding: 0 20px
-                    border: 1px solid hsl(229, 24%, 87%)
+                    border: 1px solid $Light_gray
                     &:hover
                         cursor: pointer
+                        border-color: $Purplish_blue
                 h3
                     margin: 6px 0
                     font-size: 16px
@@ -135,16 +153,16 @@ body
                         width: 30%
                         .plan-box
                             width: 74.81% 
-                            background-color: hsl(0, 0%, 100%)
+                            background-color: $White
                             padding: 16px
-                            border: 1px solid hsl(229, 24%, 87%)
-                            border-radius: 5px
+                            border: 1px solid $Light_gray
+                            border-radius: $br0
                             &:hover
-                                border-color: hsl(243, 100%, 62%)
+                                border-color: $Purplish_blue
                             img
                                 margin: 4px 0 40px 0
                             .yearly_discount 
-                                color: hsl(213, 96%, 18%) 
+                                color: $Marine_blue 
                             
                             
                 .toggle
@@ -152,15 +170,15 @@ body
                     flex-direction: row
                     justify-content: center
                     align-items: center
-                    background-color: hsl(231, 100%, 99%)
-                    border-radius: 5px 
+                    background-color: $Alabaster
+                    border-radius: $br0
                     h3
                         &:hover
                             cursor: pointer
                     .slider
                         margin: 24px
-                        border: 4px solid hsl(213, 96%, 18%)
-                        background-color: hsl(213, 96%, 18%)
+                        border: 4px solid $Marine_blue
+                        background-color: $Marine_blue
                         width: 30px
                         height: 12px
                         border-radius: 12px 
@@ -171,7 +189,7 @@ body
                             position: absolute
                             width: 12px
                             height: 12px
-                            background-color: hsl(0, 0%, 100%)
+                            background-color: $White
                             border-radius: 12px
                         #dot_yearly
                             right: 0
@@ -181,7 +199,7 @@ body
                 input[type="checkbox"]
                     display: none     
                 h2
-                    color: hsl(243, 100%, 62%)     
+                    color: $Purplish_blue     
                 form 
                     flex-direction: column
                     justify-content: space-between
@@ -190,15 +208,15 @@ body
                         width: 100%
                         .add-box
                             width: 92.88%
-                            background-color: hsl(0, 0%, 100%)
-                            border: 1px solid hsl(229, 24%, 87%)
-                            border-radius: 5px 
+                            background-color: $White
+                            border: 1px solid $Light_gray
+                            border-radius: $br1
                             display: flex
                             flex-direction: row
                             justify-content: space-between
                             padding: 15px
                             &:hover
-                                border-color: hsl(243, 100%, 62%)
+                                border-color: $Purplish_blue
                             .check-add
                                 display: flex
                                 flex-direction: row
@@ -206,8 +224,8 @@ body
                                 .checker
                                     height: 19px
                                     width: 19px
-                                    border: 1px solid hsl(229, 24%, 87%)
-                                    border-radius: 5px 
+                                    border: 1px solid $Light_gray
+                                    border-radius: $br0
                                     img
                                         height: 13px
                                         width: 13px
@@ -217,7 +235,7 @@ body
             #step4
                 .detail
                     padding: 22px 24px
-                    background-color: hsl(217, 100%, 97%)
+                    background-color: $Magnolia
                     margin-top: 40px
                     .main-plan
                         display: flex
@@ -228,23 +246,23 @@ body
                             display: flex
                             flex-direction: column
                             justify-content: center
-                            h4
-                                color: hsl(213, 96%, 18%)
-                                font-size: 16px
-                                font-weight: 700
-                                margin: 0
-                            a
-                                font-size: 16px
-                                color: hsl(231, 11%, 63%)
-                                text-decoration: underline
-                                margin-top: 5px
-                                &:hover
-                                    cursor: pointer
-                                    color: hsl(243, 100%, 62%)
+                        h4
+                            color: $Marine_blue
+                            font-size: 16px
+                            font-weight: 700
+                            margin: 0
+                        a
+                            font-size: 16px
+                            color: $Cool_gray
+                            text-decoration: underline
+                            margin-top: 5px
+                            &:hover
+                                cursor: pointer
+                                color: $Purplish_blue
                     .break
                         width: 100%
                         height: 1px
-                        background-color: hsl(231, 11%, 63%)  
+                        background-color: $Cool_gray  
                     .extra
                         margin: 20px 0
                         display: flex
@@ -255,35 +273,37 @@ body
                             font-size: 16px
                             font-weight: 500
                             margin: 0
-                            color: hsl(231, 11%, 63%)
+                            color: $Cool_gray
                         p
-                            color: hsl(213, 96%, 18%)
+                            color: $Marine_blue
                             font-size: 16px
                 .total
                     padding: 22px 24px
-                    background-color: hsl(0, 0%, 100%)
+                    background-color: $White
                     display: flex
                     flex-direction: row
                     justify-content: space-between
                     align-items: center
                     h6
-                        color: hsl(243, 100%, 62%)
+                        color: $Purplish_blue
                         font-size: 18px
                         margin: 0
                         font-weight: 800
                     p
                         font-size: 16px
-                        font-weight: 600
+                        font-weight: 400
         #step5
             margin-top: 29.22%
             width: 72.82% 
-            flex-direction: column
-            align-items: center
-            background-color: hsl(0, 0%, 100%)
-            align-self: center
-            p
-                text-align: center
-                line-height: 1.5rem
+            background-color: $White
+            .thank_you
+                display: flex
+                flex-direction: column
+                align-items: center 
+                align-self: center
+                p
+                    text-align: center
+                    line-height: 1.5rem
 
                 
         .buttons
@@ -292,80 +312,99 @@ body
             margin: auto
             width: 72.82%
             height: 48px
-            background-color: hsl(0, 0%, 100%)
+            background-color: $White
             display: flex
             flex-direction: row
             justify-content: space-between
             button
                 width: 123px
                 font-size: 16px
-                border-radius: 5px
+                border-radius: $br0
                 border: none
                 font-weight: 600
-                color: hsl(0, 0%, 100%)
+                color: $White
                 &:hover
                     cursor: pointer
             #nextstep 
-                background-color: hsl(213, 96%, 18%)
+                background-color: $Marine_blue
                 &:hover
-                    background-color: lighten(hsl(213, 96%, 18%), 10%)
+                    background-color: lighten($Marine_blue, 10%)
             #goback
-                color: hsl(231, 11%, 63%)  
+                color: $Cool_gray  
                 margin-left: -20px
-                background-color: hsl(0, 0%, 100%)
+                background-color: $White
                 &:hover
-                    color: hsl(213, 96%, 18%)
+                    color: $Marine_blue
             #confirm
-                background-color: hsl(243, 100%, 62%)
+                background-color: $Purplish_blue
                 &:hover
-                    background-color: lighten(hsl(243, 100%, 62%), 10%)
+                    background-color: lighten($Purplish_blue, 10%)
 
-
+.attribution
+    font-size: 11px
+    text-align: center
+    margin-top: -10px
+    a
+        color: hsl(228, 45%, 44%)
 
 
 
 
                 
-@media screen and (max-width:400px)
+@media screen and (max-width:1000px)
     .container 
-        width: 100% 
-        min-height: 100vh 
+        width: 100%  
         margin: 0 
         flex-direction: column 
         padding: 0
         border-radius: 0
+        box-shadow: none
+        background-color: transparent
+        margin-bottom: 60px  
+        height: 665px
         .step-dis 
             background: url("./assets/bg-sidebar-mobile.svg")
             background-size: cover
             background-position-y: bottom
             background-position-x: center
             width: 100% 
-            height: 24.75%
+            min-height: 172px 
+            max-height: 80px
             border-radius: 0
             display: flex
             flex-direction: row
             justify-content: center
             .step
+                max-height: 35px
+                overflow: hidden
                 margin: 24px 8px
                 .step-circle
                     display: none
         .main-dis
-            width: 100%
-            height: 75.25%   
+            width: 100%  
             background-color: hsl(215, 89%, 96%)
+            margin-bottom: 60px
+            h1
+                font-size: 24px
             .form-section 
-                top: -14.54%
+                top: -75px
+                position: absolute
                 width: 78.66%
                 padding: 16px 26px 
-                border-radius: 10px
+                border-radius: $br1
+                box-shadow: 0px 10px 10px 0px $Light_gray
                 form 
+                    padding: 15px 0
                     label
                         margin: 6px 0 
                     input
                         height: 40px  
                     h3
+                        font-size: 16px
                         margin: 0
                 #step2 
+                    p
+                        padding: 0 2px
                     form 
                         flex-direction: column 
                         label
@@ -382,21 +421,31 @@ body
                                     justify-content: space-around
                                 img
                                     margin: 0 
+                    .toggle
+                        h3
+                            font-size: 16px
+                        .slider
+                            margin: 5px 24px
+                #step3
+                    .check-add
+                        p
+                            font-size: 11px 
+                            margin-top: 5px
                 #step4
                     .detail  
-                        padding: 7px 17px
-                        margin: 25px 0
+                        padding: 7px 17px 
+                        margin: 25px 0 0
                         .main-plan
-                            margin-bottom: 13px
+                            margin: 13px 0 
             #step5
                 position: absolute
                 top: -37%
                 width: 78.66%
                 padding: 80px 26px 
 
-            .buttons 
-                margin-top: 23px
-                top: calc( 100vh - 130px )
+            .buttons  
+                bottom: 0
+                position: fixed
                 width: calc(100% - 32px)
                 height: 40px 
                 padding: 17px 16px
@@ -404,4 +453,7 @@ body
                     width: 97px
                     #goback 
                         margin-left: -20px
+    .attribution
+        position: absolute
+        z-index: 10
  

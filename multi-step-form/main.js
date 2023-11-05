@@ -1,4 +1,3 @@
-
 var next_btn = document.getElementById("nextstep");
 var goback_btn = document.getElementById("goback");
 var confirm_btn = document.getElementById("confirm");
@@ -8,14 +7,20 @@ var on_service = false;
 var lg_storage = false;
 var cust_profile = false;
 
+var Marine_blue = "hsl(213, 96%, 18%)";
+var Purplish_blue = "hsl(243, 100%, 62%)";
+var Strawberry_red = "hsl(354, 84%, 57%)";
+var Cool_gray = "hsl(231, 11%, 63%)";
+var Light_gray = "hsl(229, 24%, 87%)";
+var Alabaster = "hsl(231, 100%, 99%)";
+
 slider("Yearly");
-var current = 3;
+var current = 1;
 step_choose(current);
 
-function error_rm(a) {
-    console.log(a);
+function error_rm(a) { 
     document.getElementsByClassName("error_txt")[a].innerHTML = "";
-    document.getElementsByClassName("info_form_input")[a].style.borderColor = "hsl(229, 24%, 87%)";
+    document.getElementsByClassName("info_form_input")[a].style.borderColor = "";
 
 }
 function checker(stp) {
@@ -24,39 +29,40 @@ function checker(stp) {
             var info_name_input = document.getElementById("info_name");
             var info_email_input = document.getElementById("info_email");
             var info_tel_input = document.getElementById("info_tel");
+            var error_txt = document.getElementsByClassName("error_txt");
             var status = true;
             if ((info_name_input.value).trim() === "") {
-                info_name_input.style.borderColor = "hsl(354, 84%, 57%)";
-                document.getElementsByClassName("error_txt")[0].innerHTML = "This Field is required";
+                info_name_input.style.borderColor = Strawberry_red;
+                error_txt[0].innerHTML = "This Field is required";
                 status = false;
             } else {
                 if (info_name_input.value.length < 3) {
-                    info_name_input.style.borderColor = "hsl(354, 84%, 57%)";
-                    document.getElementsByClassName("error_txt")[0].innerHTML = "Minimum of 3 letters";
+                    info_name_input.style.borderColor = Strawberry_red;
+                    error_txt[0].innerHTML = "Minimum of 3 letters";
                     status = false;
                 }
             }
             var validemail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
             if ((info_email_input.value).trim() === "") {
-                info_email_input.style.borderColor = "hsl(354, 84%, 57%)";
-                document.getElementsByClassName("error_txt")[1].innerHTML = "This Field is required";
+                info_email_input.style.borderColor = Strawberry_red;
+                error_txt[1].innerHTML = "This Field is required";
                 status = false;
             } else {
                 if (!info_email_input.value.match(validemail)) {
-                    info_email_input.style.borderColor = "hsl(354, 84%, 57%)";
-                    document.getElementsByClassName("error_txt")[1].innerHTML = "Invalid Email Address";
+                    info_email_input.style.borderColor = Strawberry_red;
+                    error_txt[1].innerHTML = "Invalid Email Address";
                     status = false;
                 }
             }
             var validtel = /^[+0]+[0-9]*$/;
             if ((info_tel_input.value).trim() === "") {
-                info_tel_input.style.borderColor = "hsl(354, 84%, 57%)";
-                document.getElementsByClassName("error_txt")[2].innerHTML = "This Field is required";
+                info_tel_input.style.borderColor = Strawberry_red;
+                error_txt[2].innerHTML = "This Field is required";
                 status = false;
             } else {
                 if (!info_tel_input.value.match(validtel)) {
-                    info_tel_input.style.borderColor = "hsl(354, 84%, 57%)";
-                    document.getElementsByClassName("error_txt")[2].innerHTML = "Invalid Phone Number";
+                    info_tel_input.style.borderColor = Strawberry_red;
+                    error_txt[2].innerHTML = "Invalid Phone Number";
                     status = false;
                 }
             }
@@ -64,13 +70,13 @@ function checker(stp) {
         case 2:
             if (plan_option === null) {
                 for (i = 0; i < 3; i++) {
-                    document.getElementsByClassName("plan-box")[i].style.borderColor = "hsl(354, 84%, 57%)";
+                    document.getElementsByClassName("plan-box")[i].style.borderColor = Strawberry_red;
                 }
                 if (document.getElementById("error_step_2") === null) {
                     var error_plan = document.createElement("p");
                     var error_text = document.createTextNode("No plan selected");
                     error_plan.appendChild(error_text);
-                    error_plan.style.color = "hsl(354, 84%, 57%)";
+                    error_plan.style.color = Strawberry_red;
                     error_plan.id = "error_step_2";
                     (document.getElementById("step2")).insertBefore(error_plan, (document.getElementById("step2_form")));
                 }
@@ -88,8 +94,8 @@ function slider(x = plan_duration) {
             plan_duration = "Monthly";
             document.getElementById("dot_monthly").style.display = "block";
             document.getElementById("dot_yearly").style.display = "none";
-            document.getElementById("h3_yearly").style.color = "hsl(231, 11%, 63%)";
-            document.getElementById("h3_monthly").style.color = "hsl(213, 96%, 18%)";
+            document.getElementById("h3_yearly").style.color = Cool_gray;
+            document.getElementById("h3_monthly").style.color = Marine_blue;
             document.getElementById("arcade_price").innerHTML = "$9/mo";
             document.getElementById("advanced_price").innerHTML = "$12/mo";
             document.getElementById("pro_price").innerHTML = "$15/mo";
@@ -99,13 +105,14 @@ function slider(x = plan_duration) {
             document.getElementById("on-service-h2").innerHTML = "+$1/mo";
             document.getElementById("lg-storage-h2").innerHTML = "+$2/mo";
             document.getElementById("cust-profile-h2").innerHTML = "+$2/mo";
+            document.getElementById("total").innerHTML = "Total (per month)";
             break;
         case "Monthly":
             plan_duration = "Yearly";
             document.getElementById("dot_yearly").style.display = "block";
             document.getElementById("dot_monthly").style.display = "none";
-            document.getElementById("h3_yearly").style.color = "hsl(213, 96%, 18%)";
-            document.getElementById("h3_monthly").style.color = "hsl(231, 11%, 63%)";
+            document.getElementById("h3_yearly").style.color = Marine_blue;
+            document.getElementById("h3_monthly").style.color = Cool_gray;
             document.getElementById("arcade_price").innerHTML = "$90/yr";
             document.getElementById("advanced_price").innerHTML = "$120/yr";
             document.getElementById("pro_price").innerHTML = "$150/yr";
@@ -115,6 +122,7 @@ function slider(x = plan_duration) {
             document.getElementById("on-service-h2").innerHTML = "+$10/yr";
             document.getElementById("lg-storage-h2").innerHTML = "+$20/yr";
             document.getElementById("cust-profile-h2").innerHTML = "+$20/yr";
+            document.getElementById("total").innerHTML = "Total (per year)";
             break;
     }
 }
@@ -123,7 +131,7 @@ function plan_chooser() {
     var advanced_status = document.getElementById("advanced").checked;
     var pro_status = document.getElementById("pro").checked;
     var plan_box = document.getElementsByClassName("plan-box");
-    function changer(a, border = "hsl(243, 100%, 62%)", bg = "hsl(231, 100%, 99%)") {
+    function changer(a, border = Purplish_blue, bg = Alabaster) {
         plan_box[a].style.borderColor = border;
         plan_box[a].style.backgroundColor = bg;
     }
@@ -155,7 +163,7 @@ function option_chooser() {
     cust_profile = document.getElementById("cust-profile").checked;
     var add_box = document.getElementsByClassName("add-box");
     var add_box_check = document.getElementsByClassName("checker");
-    function changer(a, border = "hsl(243, 100%, 62%)", bg = "hsl(231, 100%, 99%)") {
+    function changer(a, border = Purplish_blue, bg = Alabaster) {
         add_box[a].style.borderColor = border;
         add_box[a].style.backgroundColor = bg;
         add_box_check[a].style.borderColor = border;
@@ -189,7 +197,11 @@ function step_choose(current_step) {
         document.getElementById("circle_" + i).className = "circle_" + i;
     }
     document.getElementById("step" + current_step).style.display = "block";
-    document.getElementById("circle_" + current_step).className = "circle_current";
+    if (current_step !== 5) {
+        document.getElementById("circle_" + current_step).className = "circle_current";
+    }
+
+    next_btn.parentElement.style.display = "flex";
     switch (current_step) {
         case 1:
             next_btn.parentElement.style.justifyContent = "flex-end";
@@ -210,13 +222,12 @@ function step_choose(current_step) {
             total_calculator();
             break;
         case 5:
-            document.getElementById("step" + current_step).style.display = "flex";
             next_btn.parentElement.style.display = "none";
             break;
     }
 }
 function next_step(x = current) {
-    current = x
+    current = x;
     if (checker(current)) {
         if (current < 4) {
             current += 1;
@@ -282,7 +293,7 @@ function total_calculator() {
     }
     if (on_service) {
         extra += 1;
-        detail_adder("Online service", ('$' + 1 + plan_duration_post_fix));
+        detail_adder("Online service", ("+$" + 1 + plan_duration_post_fix));
     } else {
         var temp_name = document.getElementById("Online service");
         if (temp_name != null) {
@@ -291,7 +302,7 @@ function total_calculator() {
     }
     if (lg_storage) {
         extra += 2;
-        detail_adder("Large storage", ('$' + 2 + plan_duration_post_fix));
+        detail_adder("Large storage", ("+$" + 2 + plan_duration_post_fix));
     } else {
         var temp_name = document.getElementById("Large storage");
         if (temp_name != null) {
@@ -300,7 +311,7 @@ function total_calculator() {
     }
     if (cust_profile) {
         extra += 2;
-        detail_adder("Customizable profile", ('$' + 2 + plan_duration_post_fix));
+        detail_adder("Customizable profile", ("+$" + 2 + plan_duration_post_fix));
     } else {
         var temp_name = document.getElementById("Customizable profile");
         if (temp_name != null) {
@@ -308,7 +319,7 @@ function total_calculator() {
         }
     }
     if (extra === 0) {
-        detail_adder("Add ons", ('$' + 0 + plan_duration_post_fix));
+        detail_adder("Add ons", ("+$" + 0 + plan_duration_post_fix));
     } else {
         var temp_name = document.getElementById("Add ons");
         if (temp_name != null) {
@@ -319,4 +330,3 @@ function total_calculator() {
     document.getElementById("choosen_plan_price").innerHTML = '$' + base_price + plan_duration_post_fix;
     document.getElementById("total_price").innerHTML = '$' + (base_price + extra) + plan_duration_post_fix;
 }
-

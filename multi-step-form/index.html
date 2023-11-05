@@ -109,7 +109,7 @@
         <div id="step3">
           <h1> Pick add-ons </h1>
           <p> Add-ons help enhance your gaming experience. </p>
-          <form>
+          <form id="step3_form">
             <label for="on-service"> 
               <div class="add-box" onclick="option_chooser()">
                 <input type="checkbox" id="on-service" name="on-service" value="on-service">
@@ -178,25 +178,26 @@
         </div>
       </div>
       <div id="step5">
-        <img src="./assets/icon-thank-you.svg">
-        <h1>Thank you!</h1>
-        <p>
-          Thanks for confirming your subscription! We hope you have fun using our platform. 
-          If you ever need support, please feel free to email us at support@loremgaming.com.
-        </p>
+        <div class="thank_you">
+          <img src="./assets/icon-thank-you.svg">
+          <h1>Thank you!</h1>
+          <p>
+            Thanks for confirming your subscription! We hope you have fun using our platform. 
+            If you ever need support, please feel free to email us at support@loremgaming.com.
+          </p>
+        </div>
       </div>
       <div class="buttons">
         <button id="goback" onclick="prev_step()">Go Back</button>
         <button id="nextstep" onclick="next_step()">Next Step</button>
-        <button id="confirm" onclick="finish()">Confirm</button>
+        <button id="confirm" onclick="finish()" form="info_form step2_form step3_form">Confirm</button>
       </div>
-
-    </div>
-
-
-
-
+    </div> 
   </section>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/mtjeth" target="_blank">MTJ</a>.
+  </div>
 <script  src="main.js"></script>
 </body>
 </html>

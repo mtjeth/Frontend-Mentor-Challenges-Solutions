@@ -14,10 +14,11 @@ body {
   margin: 12.96vh auto;
   background-color: hsl(0, 0%, 100%);
   padding: 16px;
-  border-radius: 16px;
+  border-radius: 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  box-shadow: 0px 0px 30px 2px hsl(229, 24%, 87%);
 }
 .container .step-dis {
   width: 30.2%;
@@ -27,7 +28,7 @@ body {
   background-position-y: bottom;
   background-position-x: center;
   background-repeat: no-repeat;
-  border-radius: 16px;
+  border-radius: 10px;
   padding-top: 8px;
 }
 .container .step-dis .step {
@@ -44,7 +45,7 @@ body {
 .container .step-dis .step .circle_current {
   width: 33px;
   height: 33px;
-  border-radius: 33px;
+  border-radius: 30px;
   border: 1px solid hsl(0, 0%, 100%);
   display: flex;
   justify-content: center;
@@ -72,6 +73,7 @@ body {
   padding-left: 16px;
 }
 .container .step-dis .step .step-circle h1 {
+  color: hsl(228, 100%, 84%);
   margin: 0;
   font-size: 10px;
   font-weight: 400;
@@ -130,15 +132,16 @@ body {
   font-weight: 700;
 }
 .container .main-dis .form-section form input {
-  color: hsl(229, 24%, 87%);
+  color: hsl(213, 96%, 18%);
   height: 46px;
   margin-bottom: 16px;
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 0 20px;
   border: 1px solid hsl(229, 24%, 87%);
 }
 .container .main-dis .form-section form input:hover {
   cursor: pointer;
+  border-color: hsl(243, 100%, 62%);
 }
 .container .main-dis .form-section form h3 {
   margin: 6px 0;
@@ -165,7 +168,7 @@ body {
   background-color: hsl(0, 0%, 100%);
   padding: 16px;
   border: 1px solid hsl(229, 24%, 87%);
-  border-radius: 5px;
+  border-radius: 10px;
 }
 .container .main-dis .form-section #step2 form label .plan-box:hover {
   border-color: hsl(243, 100%, 62%);
@@ -182,7 +185,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: hsl(231, 100%, 99%);
-  border-radius: 5px;
+  border-radius: 10px;
 }
 .container .main-dis .form-section #step2 .toggle h3:hover {
   cursor: pointer;
@@ -230,7 +233,7 @@ body {
   width: 92.88%;
   background-color: hsl(0, 0%, 100%);
   border: 1px solid hsl(229, 24%, 87%);
-  border-radius: 5px;
+  border-radius: 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -248,7 +251,7 @@ body {
   height: 19px;
   width: 19px;
   border: 1px solid hsl(229, 24%, 87%);
-  border-radius: 5px;
+  border-radius: 10px;
 }
 .container .main-dis .form-section #step3 form label .add-box .check-add .checker img {
   height: 13px;
@@ -274,19 +277,19 @@ body {
   flex-direction: column;
   justify-content: center;
 }
-.container .main-dis .form-section #step4 .detail .main-plan .main-plan-name h4 {
+.container .main-dis .form-section #step4 .detail .main-plan h4 {
   color: hsl(213, 96%, 18%);
   font-size: 16px;
   font-weight: 700;
   margin: 0;
 }
-.container .main-dis .form-section #step4 .detail .main-plan .main-plan-name a {
+.container .main-dis .form-section #step4 .detail .main-plan a {
   font-size: 16px;
   color: hsl(231, 11%, 63%);
   text-decoration: underline;
   margin-top: 5px;
 }
-.container .main-dis .form-section #step4 .detail .main-plan .main-plan-name a:hover {
+.container .main-dis .form-section #step4 .detail .main-plan a:hover {
   cursor: pointer;
   color: hsl(243, 100%, 62%);
 }
@@ -328,17 +331,20 @@ body {
 }
 .container .main-dis .form-section #step4 .total p {
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 400;
 }
 .container .main-dis #step5 {
   margin-top: 29.22%;
   width: 72.82%;
+  background-color: hsl(0, 0%, 100%);
+}
+.container .main-dis #step5 .thank_you {
+  display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: hsl(0, 0%, 100%);
   align-self: center;
 }
-.container .main-dis #step5 p {
+.container .main-dis #step5 .thank_you p {
   text-align: center;
   line-height: 1.5rem;
 }
@@ -356,7 +362,7 @@ body {
 .container .main-dis .buttons button {
   width: 123px;
   font-size: 16px;
-  border-radius: 5px;
+  border-radius: 10px;
   border: none;
   font-weight: 600;
   color: hsl(0, 0%, 100%);
@@ -385,14 +391,26 @@ body {
   background-color: #7770ff;
 }
 
-@media screen and (max-width: 400px) {
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: -10px;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 1000px) {
   .container {
     width: 100%;
-    min-height: 100vh;
     margin: 0;
     flex-direction: column;
     padding: 0;
     border-radius: 0;
+    box-shadow: none;
+    background-color: transparent;
+    margin-bottom: 60px;
+    height: 665px;
   }
   .container .step-dis {
     background: url("./assets/bg-sidebar-mobile.svg");
@@ -400,13 +418,16 @@ body {
     background-position-y: bottom;
     background-position-x: center;
     width: 100%;
-    height: 24.75%;
+    min-height: 172px;
+    max-height: 80px;
     border-radius: 0;
     display: flex;
     flex-direction: row;
     justify-content: center;
   }
   .container .step-dis .step {
+    max-height: 35px;
+    overflow: hidden;
     margin: 24px 8px;
   }
   .container .step-dis .step .step-circle {
@@ -414,14 +435,22 @@ body {
   }
   .container .main-dis {
     width: 100%;
-    height: 75.25%;
     background-color: hsl(215, 89%, 96%);
+    margin-bottom: 60px;
+  }
+  .container .main-dis h1 {
+    font-size: 24px;
   }
   .container .main-dis .form-section {
-    top: -14.54%;
+    top: -75px;
+    position: absolute;
     width: 78.66%;
     padding: 16px 26px;
     border-radius: 10px;
+    box-shadow: 0px 10px 10px 0px hsl(229, 24%, 87%);
+  }
+  .container .main-dis .form-section form {
+    padding: 15px 0;
   }
   .container .main-dis .form-section form label {
     margin: 6px 0;
@@ -430,7 +459,11 @@ body {
     height: 40px;
   }
   .container .main-dis .form-section form h3 {
+    font-size: 16px;
     margin: 0;
+  }
+  .container .main-dis .form-section #step2 p {
+    padding: 0 2px;
   }
   .container .main-dis .form-section #step2 form {
     flex-direction: column;
@@ -453,12 +486,22 @@ body {
   .container .main-dis .form-section #step2 form label .plan-box img {
     margin: 0;
   }
+  .container .main-dis .form-section #step2 .toggle h3 {
+    font-size: 16px;
+  }
+  .container .main-dis .form-section #step2 .toggle .slider {
+    margin: 5px 24px;
+  }
+  .container .main-dis .form-section #step3 .check-add p {
+    font-size: 11px;
+    margin-top: 5px;
+  }
   .container .main-dis .form-section #step4 .detail {
     padding: 7px 17px;
-    margin: 25px 0;
+    margin: 25px 0 0;
   }
   .container .main-dis .form-section #step4 .detail .main-plan {
-    margin-bottom: 13px;
+    margin: 13px 0;
   }
   .container .main-dis #step5 {
     position: absolute;
@@ -467,8 +510,8 @@ body {
     padding: 80px 26px;
   }
   .container .main-dis .buttons {
-    margin-top: 23px;
-    top: calc(100vh - 130px);
+    bottom: 0;
+    position: fixed;
     width: calc(100% - 32px);
     height: 40px;
     padding: 17px 16px;
@@ -478,5 +521,9 @@ body {
   }
   .container .main-dis .buttons button #goback {
     margin-left: -20px;
+  }
+  .attribution {
+    position: absolute;
+    z-index: 10;
   }
 }/*# sourceMappingURL=style.css.map */
