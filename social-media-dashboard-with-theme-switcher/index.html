@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | [Challenge Name Here]</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 --> 
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+  <link rel="stylesheet" href="styles.css">
+  
+  
+</head>
+<body class="light">
+  <div class="container">
+    <div class="header-1">
+      <h2>
+        Social Media Dashboard
+      </h2>
+      <p>
+        Total Followers: 23,004
+      </p>
+    </div>
+    <div class="line"></div>
+    <div class="toggle" onclick="slider()">
+      <p>
+        Dark Mode
+      </p>
+      <div class="slider">
+        <div class="dot"></div> 
+      </div> 
+    </div>
+    <div class="box-1 facebook">
+      <p><img alt="facebook" src="./images/icon-facebook.svg"> @nathanf</p> 
+      <h1>1987</h1>
+      <p class="followers">Followers</p>
+      <p class="up"><img alt="up" src="./images/icon-up.svg"\> 12 Today</p> 
+    </div>
+    <div class="box-1 twitter">
+      <p><img alt="twitter" src="./images/icon-twitter.svg">  @nathanf</p>
+      <h1>1044</h1>
+      <p class="followers">Followers</p> 
+      <p class="up"><img alt="up" src="./images/icon-up.svg"\> 99 Today</p>
+    </div>
+    <div class="instagram">
+      <div class="box-1">
+        <p><img alt="instagram" src="./images/icon-instagram.svg"> @realnathanf</p>
+        <h1>11k</h1>
+        <p class="followers">Followers</p>
+        <p class="up"><img alt="up" src="./images/icon-up.svg"\> 1099 Today</p>
+      </div>
+    </div>
+    
+    <div class="box-1 youtube">
+      <p><img alt="youtube" src="./images/icon-youtube.svg">Nathan F.</p>
+      <h1>8239</h1>
+      <p class="followers">Subscribers</p>
+      <p class="down"><img alt="dwn" src="./images/icon-down.svg"\> 144 Today</p>
+    </div>
+    <div class="header-2">
+      <h2>Overview - Today</h2>
+    </div>
+    <div class="box-2">
+      <div class="top">
+        <p>Page Views </p>
+        <p><img alt="facebook" src="./images/icon-facebook.svg"></p>
+      </div>
+      <div class="bottom">
+        <h2> 87 </h2>
+        <p class="up"> <img alt="up" src="./images/icon-up.svg">3% </p>
+      </div>
+    </div>
+    <div class="box-2">
+      <div class="top">
+        <p> Likes </p>
+        <p><img alt="facebook" src="./images/icon-facebook.svg"></p>
+      </div>
+      <div class="bottom">
+        <h2> 52 </h2>
+        <p class="down"> <img alt="down" src="./images/icon-down.svg"> 2% </p>
+      </div>
+    </div> 
+    <div class="box-2">
+      <div class="top">
+        <p> Likes </p>
+        <p><img alt="instagram" src="./images/icon-instagram.svg"></p>
+      </div>
+      <div class="bottom">
+        <h2> 5462 </h2>
+        <p class="up"> <img alt="up" src="./images/icon-up.svg"> 2257% </p>
+      </div>
+    </div> 
+    <div class="box-2">
+      <div class="top">
+        <p> Profile Views </p>
+        <p><img alt="instagram" src="./images/icon-instagram.svg"></p>
+      </div>
+      <div class="bottom">
+        <h2> 52k </h2>
+        <p class="up"> <img alt="up" src="./images/icon-up.svg"> 1375% </p>
+      </div>
+    </div> 
+    <div class="box-2">
+      <div class="top">
+        <p> Retweets </p>
+        <p><img alt="twitter" src="./images/icon-twitter.svg"></p>
+      </div>
+      <div class="bottom">
+        <h2> 117 </h2>
+        <p class="up"> <img alt="up" src="./images/icon-up.svg"> 303% </p>
+      </div>
+    </div> 
+    <div class="box-2">
+      <div class="top">
+        <p> Likes </p>
+        <p><img alt="twitter" src="./images/icon-twitter.svg"></p>
+      </div>
+      <div class="bottom">
+        <h2> 507 </h2>
+        <p class="up"> <img alt="up" src="./images/icon-up.svg"> 553% </p>
+      </div>
+    </div> 
+    <div class="box-2">
+      <div class="top">
+        <p> Likes </p>
+        <p><img alt="youtube" src="./images/icon-youtube.svg"></p>
+      </div>
+      <div class="bottom">
+        <h2> 107 </h2>
+        <p class="down"> <img alt="down" src="./images/icon-down.svg"> 19% </p>
+      </div>
+    </div> 
+    <div class="box-2">
+      <div class="top">
+        <p> Total Views </p>
+        <p><img alt="youtube" src="./images/icon-youtube.svg"></p>
+      </div>
+      <div class="bottom">
+        <h2> 1407 </h2>
+        <p class="down"> <img alt="down" src="./images/icon-down.svg"> 12% </p>
+      </div>
+    </div> 
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.github.com/mtjeth" target="_blank"> MTJ </a>.
+  </div>
+
+  <script>
+    var theme = document.getElementsByTagName("body")[0];
+    if( window.matchMedia("(prefers-color-scheme:light)").matches ){
+      theme.className = "light";
+      }else{
+        theme.className = "dark";
+      }
+    function slider(){ 
+      switch(theme.className){
+        case "dark":
+          theme.className = "light";
+          break;
+        case "light":
+          theme.className = "dark";
+          break
+      }
+    }
+  </script>
+   
+</body>
+</html>

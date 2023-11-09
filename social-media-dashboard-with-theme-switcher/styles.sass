@@ -1,0 +1,205 @@
+html
+    font-family: "Inter" 
+body
+    margin: 0
+    h1
+        font-size: 46px
+        margin: 5px 0 
+    h2
+        font-size: 30px  
+        margin: 0
+    p
+        font-size: 14px
+        margin: 20px 0
+        display: flex
+        align-items: center
+        font-weight: 700
+    img
+        margin-right: 10px
+        
+    
+.container
+    width: 80% 
+    margin: 3px auto
+    display: grid
+    grid-auto-columns: 25%
+    align-items: center
+    .header-1
+        grid-column-start: 1
+        grid-column-end: 4
+        margin: 32px 10px
+        p
+            margin: 10px 0
+    .header-2
+        grid-column-start: 1
+        grid-column-end: 5
+        margin: 38px 12px 13px 
+    .box-1,
+    .box-2 
+        border-radius: 5px
+        margin: 12px 15px 
+        &:hover
+            cursor: pointer
+    .box-1,
+    .instagram
+        border-top-width: 4px
+        border-top-style: solid
+        display: flex
+        align-items: center
+        flex-direction: column
+    .box-2
+        display: flex
+        flex-direction: column
+        padding: 0 23px
+        .top,
+        .bottom
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            align-items: center
+        .top
+            img
+                margin: 0
+    .facebook
+        border-color: hsl(208, 92%, 53%)
+    .twitter
+        border-color: hsl(203, 89%, 53%)
+    .instagram
+        border-top-width: 0
+        background-image: linear-gradient(90deg,hsl(37, 97%, 70%), hsl(329, 70%, 58%))
+        border-radius: 5px
+        margin: 12px 15px  
+        border-bottom-left-radius: 10px
+        border-bottom-right-radius: 10px 
+        div
+            border-radius: 0
+            border-top-width: 0
+            margin: 0
+            width: 100.5%
+            margin-top: 4px
+            border-bottom-left-radius: 5px
+            border-bottom-right-radius: 5px
+    .youtube
+        border-color: hsl(348, 97%, 39%)
+    .up
+        color: hsl(163, 72%, 41%) 
+    .down
+        color: hsl(356, 69%, 56%)
+    .followers
+        margin: 14px 0 0
+        letter-spacing: 7px
+        font-weight: 400
+    .line
+        width: 90%
+        height: 1px
+        display: none
+    .toggle
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: flex-end
+        margin: 20px
+        .slider
+            display: flex
+            margin-left: 12px
+            width: 42px
+            height: 17px
+            padding: 4px
+            border-radius: 15px
+            .dot
+                height: 17px
+                width: 17px
+                border-radius: 10px
+        &:hover
+            p,
+            .slider
+                cursor: pointer
+.attribution 
+    font-size: 11px
+    text-align: center 
+
+.dark
+    background: linear-gradient(0deg, hsl(230, 17%, 14%) 66%, hsl(232, 19%, 15%) 15%)
+    background-color: hsl(230, 17%, 14%)
+    background-repeat: no-repeat
+    h1,
+    h2,
+    a
+        color: hsl(0, 0%, 100%)
+    p,
+    div
+        color: hsl(228, 34%, 66%)
+    .box-1,
+    .box-2
+        background-color: hsl(228, 28%, 20%)
+        &:hover
+            background-color: lighten(hsl(228, 28%, 20%), 10%) 
+    .line
+        background-color: hsl(228, 34%, 66%)
+    .toggle
+        .slider
+            background: linear-gradient(0, hsl(210, 78%, 56%), hsl(146, 68%, 55%))
+            .dot 
+                background-color: hsl(230, 17%, 14%) 
+        &:hover
+            p 
+                color: hsl(0, 0%, 100%)
+            .dot
+                background-color: lighten(hsl(230, 17%, 14%) , 10%)
+            
+.light
+    background: linear-gradient(0deg, hsl(0, 0%, 100%) 66%, hsl(225, 100%, 98%) 15%)
+    background-color: hsl(0, 0%, 100%)
+    background-repeat: no-repeat
+    h1,
+    h2,
+    a
+        color: hsl(230, 17%, 14%)
+    p,
+    div
+        color: hsl(228, 12%, 44%)
+    .box-1,
+    .box-2
+        background-color: hsl(227, 47%, 96%)
+        &:hover
+            background-color: darken(hsl(227, 47%, 96%),5% )
+    .line
+        background-color: hsl(228, 12%, 44%)
+    .toggle
+        .slider
+            background: hsl(230, 22%, 74%)
+            .dot 
+                background-color: hsl(0, 0%, 100%)
+                margin-left: 25px 
+        &:hover
+            .slider
+                background: linear-gradient(0, hsl(210, 78%, 56%), hsl(146, 68%, 55%)) 
+            
+
+@media screen and (max-width:1200px)
+    .container
+        width: 87% 
+        display: grid
+        grid-auto-columns: 100% 
+        h2
+            font-size: 20px
+        h1
+            font-size: 45px 
+        .header-1
+            grid-column-start: 1
+            grid-column-end: 2
+            margin: 32px 10px 17px
+            p
+                margin: 10px 0
+        .header-2
+            grid-column-start: 1
+            grid-column-end: 2
+            margin: 38px 15px 13px 
+        .followers
+            margin: 10px 0 0
+        .line
+            display: block
+            margin: 0 15px
+        .toggle
+            margin: 0 15px
+            justify-content: space-between

@@ -1,0 +1,261 @@
+html {
+  font-family: "Inter";
+}
+
+body {
+  margin: 0;
+}
+body h1 {
+  font-size: 46px;
+  margin: 5px 0;
+}
+body h2 {
+  font-size: 30px;
+  margin: 0;
+}
+body p {
+  font-size: 14px;
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+}
+body img {
+  margin-right: 10px;
+}
+
+.container {
+  width: 80%;
+  margin: 3px auto;
+  display: grid;
+  grid-auto-columns: 25%;
+  align-items: center;
+}
+.container .header-1 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  margin: 32px 10px;
+}
+.container .header-1 p {
+  margin: 10px 0;
+}
+.container .header-2 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  margin: 38px 12px 13px;
+}
+.container .box-1,
+.container .box-2 {
+  border-radius: 5px;
+  margin: 12px 15px;
+}
+.container .box-1:hover,
+.container .box-2:hover {
+  cursor: pointer;
+}
+.container .box-1,
+.container .instagram {
+  border-top-width: 4px;
+  border-top-style: solid;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.container .box-2 {
+  display: flex;
+  flex-direction: column;
+  padding: 0 23px;
+}
+.container .box-2 .top,
+.container .box-2 .bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .box-2 .top img {
+  margin: 0;
+}
+.container .facebook {
+  border-color: hsl(208, 92%, 53%);
+}
+.container .twitter {
+  border-color: hsl(203, 89%, 53%);
+}
+.container .instagram {
+  border-top-width: 0;
+  background-image: linear-gradient(90deg, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+  border-radius: 5px;
+  margin: 12px 15px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.container .instagram div {
+  border-radius: 0;
+  border-top-width: 0;
+  margin: 0;
+  width: 100.5%;
+  margin-top: 4px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.container .youtube {
+  border-color: hsl(348, 97%, 39%);
+}
+.container .up {
+  color: hsl(163, 72%, 41%);
+}
+.container .down {
+  color: hsl(356, 69%, 56%);
+}
+.container .followers {
+  margin: 14px 0 0;
+  letter-spacing: 7px;
+  font-weight: 400;
+}
+.container .line {
+  width: 90%;
+  height: 1px;
+  display: none;
+}
+.container .toggle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 20px;
+}
+.container .toggle .slider {
+  display: flex;
+  margin-left: 12px;
+  width: 42px;
+  height: 17px;
+  padding: 4px;
+  border-radius: 15px;
+}
+.container .toggle .slider .dot {
+  height: 17px;
+  width: 17px;
+  border-radius: 10px;
+}
+.container .toggle:hover p,
+.container .toggle:hover .slider {
+  cursor: pointer;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.dark {
+  background: linear-gradient(0deg, hsl(230, 17%, 14%) 66%, hsl(232, 19%, 15%) 15%);
+  background-color: hsl(230, 17%, 14%);
+  background-repeat: no-repeat;
+}
+.dark h1,
+.dark h2,
+.dark a {
+  color: hsl(0, 0%, 100%);
+}
+.dark p,
+.dark div {
+  color: hsl(228, 34%, 66%);
+}
+.dark .box-1,
+.dark .box-2 {
+  background-color: hsl(228, 28%, 20%);
+}
+.dark .box-1:hover,
+.dark .box-2:hover {
+  background-color: #374062;
+}
+.dark .line {
+  background-color: hsl(228, 34%, 66%);
+}
+.dark .toggle .slider {
+  background: linear-gradient(0, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+.dark .toggle .slider .dot {
+  background-color: hsl(230, 17%, 14%);
+}
+.dark .toggle:hover p {
+  color: hsl(0, 0%, 100%);
+}
+.dark .toggle:hover .dot {
+  background-color: #333648;
+}
+
+.light {
+  background: linear-gradient(0deg, hsl(0, 0%, 100%) 66%, hsl(225, 100%, 98%) 15%);
+  background-color: hsl(0, 0%, 100%);
+  background-repeat: no-repeat;
+}
+.light h1,
+.light h2,
+.light a {
+  color: hsl(230, 17%, 14%);
+}
+.light p,
+.light div {
+  color: hsl(228, 12%, 44%);
+}
+.light .box-1,
+.light .box-2 {
+  background-color: hsl(227, 47%, 96%);
+}
+.light .box-1:hover,
+.light .box-2:hover {
+  background-color: #dde2f3;
+}
+.light .line {
+  background-color: hsl(228, 12%, 44%);
+}
+.light .toggle .slider {
+  background: hsl(230, 22%, 74%);
+}
+.light .toggle .slider .dot {
+  background-color: hsl(0, 0%, 100%);
+  margin-left: 25px;
+}
+.light .toggle:hover .slider {
+  background: linear-gradient(0, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 87%;
+    display: grid;
+    grid-auto-columns: 100%;
+  }
+  .container h2 {
+    font-size: 20px;
+  }
+  .container h1 {
+    font-size: 45px;
+  }
+  .container .header-1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    margin: 32px 10px 17px;
+  }
+  .container .header-1 p {
+    margin: 10px 0;
+  }
+  .container .header-2 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    margin: 38px 15px 13px;
+  }
+  .container .followers {
+    margin: 10px 0 0;
+  }
+  .container .line {
+    display: block;
+    margin: 0 15px;
+  }
+  .container .toggle {
+    margin: 0 15px;
+    justify-content: space-between;
+  }
+}/*# sourceMappingURL=styles.css.map */
