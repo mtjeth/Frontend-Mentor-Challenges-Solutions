@@ -1,0 +1,102 @@
+@import "../shared/_shared_dir"
+
+html
+    background-image: url("background-crew-desktop.jpg") 
+
+#crew
+    border-color: $light-color
+
+.crew
+    position: relative
+    margin-top: 63px
+    .main-section 
+        width: 87.5% 
+        padding-top: 11px
+    h3
+        margin: 24px 0
+        width: 100%
+    p
+        width: 64%
+        height: 140px
+    .text
+        width: 65%
+        padding: 86px 0 120px
+    .toggle
+        width: 132px
+        height: 15px
+        display: flex
+        justify-content: space-between 
+        .dot
+            width: 15px
+            height: 15px
+            background-color: transparentize($light-color, 0.75)
+            border-radius: 15px  
+            &:hover
+                background-color: $light-color
+                cursor: pointer
+    .pepole  
+        position: absolute
+        height: 700px 
+        width: 572px 
+        right: 0
+        top: 0
+        z-index: -1
+        display: flex
+        justify-content: center
+        align-items: flex-end
+        #crew-images
+            max-height: 100%
+            max-width: 100%  
+            width: auto
+            height: auto
+
+
+
+@media screen and (max-width: $tablet-screen)
+    html
+        background-image: url("background-crew-tablet.jpg")  
+    .crew 
+        .main-section  
+            padding: 0
+            width: 100%
+            display: flex
+            flex-direction: column
+            align-items: center
+            .text
+                padding: 0
+                p
+                    width: 100%
+                    text-align: center
+        .toggle
+            width: 88px
+            height: 10px  
+            .dot 
+                width: 10px
+                height: 10px 
+        .pepole
+            padding-top: 38px
+            position: relative 
+            height: 470px
+
+
+@media screen and (max-width: $mobile-screen) 
+    html
+        background-image: url("background-crew-mobile.jpg") 
+    .crew 
+        margin-top: 0
+        h5
+            margin-bottom: 27px
+        h3
+            margin: 8px
+        .main-section
+            flex-direction: column-reverse
+            .text
+                width: 90%
+                p
+                    height: 200px
+        .toggle
+            padding: 32px
+        .pepole
+            height: 227px 
+            width: 327px
+            border-bottom: 1px solid transparentize($light-color, 0.75)

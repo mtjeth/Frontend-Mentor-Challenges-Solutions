@@ -1,0 +1,97 @@
+@import "../shared/_shared_dir"
+
+html
+    background-image: url("background-home-desktop.jpg") 
+
+#home
+    border-color: $light-color 
+
+.home 
+    margin-top: 20% 
+    align-items: flex-end
+    .text
+        display: flex
+        flex-wrap: wrap 
+        width: 39% 
+        h1
+            margin: 24px 0 
+        h5
+            font-weight: 400
+            color: $primary-color
+            margin: 0
+        p
+            line-height: 22px
+    .button-home
+        position: relative
+        .button-home-back
+            background-color: transparentize($light-color, 0.86)  
+            position: absolute
+            width: 274px
+            height: 274px
+            border-radius: 250px 
+            z-index: -1
+            transition: all 0.5s
+        &:hover
+            button
+                cursor: pointer
+            .button-home-back
+                margin-top:-88px
+                margin-left: -88px
+                width: 450px
+                height: 450px
+    button
+        width: 274px
+        height: 274px
+        border-radius: 150px
+        +text-type-1(32px, $dark-color) 
+        border: none
+
+@media screen and (max-width: $tablet-screen)
+    html
+        background-image: url("background-home-tablet.jpg") 
+    .home   
+        width: 55% 
+        margin-top: 15%
+        justify-content: center 
+        .text 
+            width: 100%
+            justify-content: center
+            h1
+                margin: 24px 0 
+            p 
+                text-align: center 
+                text-wrap: wrap
+            h5
+                text-align: center
+        .button-home
+            margin-top: 30% 
+            .button-home-back,
+            button
+                width: 242px
+                height: 242px 
+            &:hover
+                .button-home-back
+                    margin-top:-79px
+                    margin-left: -79px
+                    width: 400px
+                    height: 400px
+                    
+@media screen and (max-width: $mobile-screen) 
+    html
+        background-image: url("background-home-mobile.jpg") 
+    .home
+        margin-top: 6.4%
+        width: 85%
+        .button-home
+            margin-top: 37%
+            .button-home-back,
+            button
+                font-size: 23px
+                width: 150px
+                height: 150px
+            &:hover
+                .button-home-back
+                    margin-top:-25px
+                    margin-left: -25px
+                    width: 200px
+                    height: 200px

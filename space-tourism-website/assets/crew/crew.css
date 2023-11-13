@@ -1,0 +1,471 @@
+html {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+body {
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  min-height: 860px;
+  width: 100%;
+  height: 100%;
+}
+
+h1 {
+  font-size: 150px;
+  font-family: "Bellefair", system-ui, -apple-system, BlinkMacSystemFont;
+  color: #fff;
+  margin: 0;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 100px;
+  font-family: "Bellefair", system-ui, -apple-system, BlinkMacSystemFont;
+  color: #fff;
+  margin: 0;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 56px;
+  font-family: "Bellefair", system-ui, -apple-system, BlinkMacSystemFont;
+  color: #fff;
+  margin: 0;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+h4 {
+  font-size: 32px;
+  font-family: "Bellefair", system-ui, -apple-system, BlinkMacSystemFont;
+  color: #fff;
+  margin: 0;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+h5 {
+  font-size: 28px;
+  font-family: "Barlow Condensed", Arial, Helvetica, sans-serif;
+  color: #D0D6F9;
+  letter-spacing: 4.75px;
+  margin: 0;
+  font-weight: 400;
+  text-transform: uppercase;
+  width: 100%;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.sh1 {
+  font-size: 28px;
+  font-family: "Bellefair", system-ui, -apple-system, BlinkMacSystemFont;
+  color: #fff;
+  margin: 0;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.sh2 {
+  font-size: 14px;
+  font-family: "Barlow Condensed", Arial, Helvetica, sans-serif;
+  color: #D0D6F9;
+  letter-spacing: 2.35px;
+  margin: 0;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.sh-3 {
+  font-size: 16px;
+  font-family: "Barlow Condensed", Arial, Helvetica, sans-serif;
+  color: #D0D6F9;
+  letter-spacing: 2.7px;
+  margin: 0;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+a {
+  font-size: 16px;
+  font-family: "Barlow Condensed", Arial, Helvetica, sans-serif;
+  color: #fff;
+  letter-spacing: 2.7px;
+  margin: 0;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.nav-a span {
+  font-weight: 700;
+  padding-right: 12px;
+}
+
+p {
+  font-size: 18px;
+  font-family: "Barlow Condensed", Arial, Helvetica, sans-serif;
+  color: #D0D6F9;
+  letter-spacing: 1px;
+  margin: 0;
+  font-weight: 400;
+  text-transform: none;
+  line-height: 28px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  float: left;
+  border-style: solid;
+  border-color: transparent;
+  border-width: 0 0 3px 0;
+}
+ul li:hover {
+  border-color: gray;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  width: 77%;
+  margin: auto;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 76px;
+}
+.container h5 {
+  margin-bottom: 64px;
+}
+.container h5 span {
+  margin-left: 28px;
+  color: #fff;
+}
+.container .text {
+  display: flex;
+  flex-wrap: wrap;
+  width: 37%;
+}
+
+@media screen and (max-width: 1024px) {
+  body {
+    min-height: 884px;
+  }
+  p {
+    font-size: 16px;
+  }
+  h2 {
+    font-size: 80px;
+  }
+  h4 {
+    font-size: 24px;
+  }
+  h3 {
+    font-size: 40px;
+    text-align: center;
+  }
+  h5 {
+    font-size: 20px;
+    align-self: flex-start;
+  }
+  .sh-3 {
+    font-size: 24px;
+  }
+  .container {
+    width: 90%;
+    justify-content: center;
+    margin-top: 40px;
+  }
+  .container h5 {
+    margin-bottom: 60px;
+  }
+  .container .text {
+    width: 70vw;
+    justify-content: center;
+  }
+  .container .text ul {
+    display: flex;
+    justify-content: space-evenly;
+    width: 70%;
+  }
+  .container .text ul li {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 540px) {
+  body {
+    min-height: 643px;
+  }
+  h5 {
+    font-size: 16px;
+    letter-spacing: 2.7px;
+    text-align: center;
+    font-weight: 400;
+  }
+  h1 {
+    font-size: 80px;
+  }
+  h3 {
+    font-size: 24px;
+  }
+  h4 {
+    font-size: 16px;
+  }
+  p {
+    font-size: 15px;
+  }
+  a {
+    font-size: 14px;
+  }
+  .sh-3 {
+    font-size: 16px;
+  }
+  .container h5 {
+    margin-bottom: 32px;
+  }
+  .container .text {
+    width: 83vw;
+  }
+  .container .text ul {
+    width: 100%;
+  }
+}
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  margin: 40px 0 40px 55px;
+}
+.navbar .nav-menu {
+  position: relative;
+}
+.navbar .nav-menu .blur {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(15px);
+  z-index: -1;
+}
+.navbar .nav-menu .line {
+  width: calc(473px + 100vw - 1440px);
+  height: 1px;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: calc(1440px - 100vw - 55%);
+}
+.navbar .nav-menu ul {
+  padding: 0 1.5vw 0 6.4vw;
+}
+.navbar .nav-menu ul li {
+  padding: 38px 1.7vw 35px;
+}
+
+.menu {
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .navbar {
+    justify-content: space-between;
+    position: relative;
+    margin-top: 0;
+  }
+  .navbar .nav-menu .line {
+    display: none;
+  }
+  .navbar .nav-menu ul {
+    padding: 0 3.9vw 0 3.9vw;
+  }
+  .navbar .nav-menu ul li {
+    padding: 38px 2.2vw 35px;
+  }
+  .navbar .nav-a a {
+    font-size: 14px;
+  }
+  .navbar .nav-a span {
+    display: none;
+  }
+}
+@media screen and (max-width: 540px) {
+  .navbar {
+    margin: 24px;
+  }
+  .navbar .nav-menu {
+    position: fixed;
+    height: 100vh;
+    width: 0;
+    transition: width 0.3s;
+    z-index: 2;
+    right: 0;
+    top: 0;
+  }
+  .navbar .nav-menu .blur {
+    backdrop-filter: blur(35px);
+  }
+  .navbar .nav-menu ul {
+    padding: 0;
+    margin-top: 102px;
+  }
+  .navbar .nav-menu ul li {
+    float: none;
+    padding: 16px 30px;
+    border-width: 0 4px 0 0;
+  }
+  .navbar .nav-menu .nav-a a {
+    font-size: 16px;
+  }
+  .navbar .nav-menu .nav-a a span {
+    display: inline;
+  }
+  .menu {
+    display: block;
+    position: fixed;
+    top: 37.5px;
+    right: 24px;
+    z-index: 5;
+  }
+  #menu-close {
+    display: none;
+  }
+}
+html {
+  background-image: url("background-crew-desktop.jpg");
+}
+
+#crew {
+  border-color: #fff;
+}
+
+.crew {
+  position: relative;
+  margin-top: 63px;
+}
+.crew .main-section {
+  width: 87.5%;
+  padding-top: 11px;
+}
+.crew h3 {
+  margin: 24px 0;
+  width: 100%;
+}
+.crew p {
+  width: 64%;
+  height: 140px;
+}
+.crew .text {
+  width: 65%;
+  padding: 86px 0 120px;
+}
+.crew .toggle {
+  width: 132px;
+  height: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.crew .toggle .dot {
+  width: 15px;
+  height: 15px;
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 15px;
+}
+.crew .toggle .dot:hover {
+  background-color: #fff;
+  cursor: pointer;
+}
+.crew .pepole {
+  position: absolute;
+  height: 700px;
+  width: 572px;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.crew .pepole #crew-images {
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
+@media screen and (max-width: 1024px) {
+  html {
+    background-image: url("background-crew-tablet.jpg");
+  }
+  .crew .main-section {
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .crew .main-section .text {
+    padding: 0;
+  }
+  .crew .main-section .text p {
+    width: 100%;
+    text-align: center;
+  }
+  .crew .toggle {
+    width: 88px;
+    height: 10px;
+  }
+  .crew .toggle .dot {
+    width: 10px;
+    height: 10px;
+  }
+  .crew .pepole {
+    padding-top: 38px;
+    position: relative;
+    height: 470px;
+  }
+}
+@media screen and (max-width: 540px) {
+  html {
+    background-image: url("background-crew-mobile.jpg");
+  }
+  .crew {
+    margin-top: 0;
+  }
+  .crew h5 {
+    margin-bottom: 27px;
+  }
+  .crew h3 {
+    margin: 8px;
+  }
+  .crew .main-section {
+    flex-direction: column-reverse;
+  }
+  .crew .main-section .text {
+    width: 90%;
+  }
+  .crew .main-section .text p {
+    height: 200px;
+  }
+  .crew .toggle {
+    padding: 32px;
+  }
+  .crew .pepole {
+    height: 227px;
+    width: 327px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  }
+}/*# sourceMappingURL=crew.css.map */

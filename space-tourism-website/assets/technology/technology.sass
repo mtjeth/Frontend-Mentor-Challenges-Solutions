@@ -1,0 +1,90 @@
+@import "../shared/_shared_dir"
+
+#technology
+    border-color: $light-color
+
+html
+    background-image: url("background-technology-desktop.jpg") 
+
+.technology 
+    position: relative
+    margin-right: 0
+    width: 92.5%
+    .techs
+        position: absolute
+        right: 0
+    .main-section
+        display: flex
+        .no-circle
+            .circle
+                width: 80px
+                height: 80px
+                margin: 30px
+                border: 1px solid transparentize($light-color, 0.75)
+                border-radius: 50px
+                color: $light-color
+                display: flex
+                justify-content: center
+                align-items: center
+                &:hover
+                    border-color: $light-color
+                    cursor: pointer
+        .text
+            flex-direction: column 
+            justify-content: center
+            h3
+                margin: 17px 0 17px
+ 
+@media screen and (max-width: $tablet-screen)
+    html
+        background-image: url("background-technology-tablet.jpg")
+    .technology 
+        width: 100%
+        margin-bottom: 10px
+        h5
+            width: 90%
+            margin: auto
+            margin-bottom: 60px
+        .techs
+            position: relative
+        .main-section
+            flex-direction: column
+            .no-circle
+                display: flex
+                flex-direction: row
+                padding: 56px 0 44px 
+                justify-content: center
+                .circle
+                    width: 60px
+                    height: 60px 
+                    margin: 0 16px
+            .text
+                align-items: center
+                p
+                    padding: 0 60px
+                    text-align: center
+                     
+@media screen and (max-width: $mobile-screen) 
+    html
+        background-image: url("background-technology-mobile.jpg") 
+    .technology 
+        .techs
+            height: 170px
+            width: 375px
+            #technology-images
+                max-width: 100%
+                max-height: 100%
+        h5
+            margin-bottom: 35px
+        .main-section
+            .no-circle
+                padding: 34px 0 26px 
+                .circle
+                    width: 40px
+                    height: 40px 
+            .text 
+                .sh-3
+                    height: 16px
+                p
+                    padding: 0 
+                    height: 250px

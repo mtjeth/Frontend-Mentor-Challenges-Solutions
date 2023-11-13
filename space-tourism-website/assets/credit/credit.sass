@@ -1,0 +1,49 @@
+@import "../shared/_shared_dir"
+
+#credit
+    border-color: $light-color
+
+html
+    background-image: url("background-credit-desktop.jpg") 
+.credit
+    width: 85%
+    height: 80vh
+    display: flex
+    flex-direction: column
+    text-align: center
+    margin: auto
+    justify-content: center
+    .backdrop
+        position: absolute
+        width: 85%
+        height: 80%
+        background-color: transparentize($light-color, 0.96) 
+        backdrop-filter: blur(15px)
+        z-index: -1
+    h3
+        color: $primary-color 
+        a
+            font-size: 56px
+@media screen and (max-width: $tablet-screen)
+    html
+        background-image: url("background-credit-tablet.jpg") 
+    .credit
+        width: 85%
+        .backdrop
+            height: 80%
+        h2
+            margin-bottom: 20px
+        h3
+            padding: 10px 0
+            a
+                font-size: 40px
+                    
+@media screen and (max-width: $mobile-screen) 
+    html
+        background-image: url("background-credit-mobile.jpg") 
+    .credit 
+        h2
+            font-size: 40px 
+        h3  
+            a
+                font-size: 24px

@@ -1,0 +1,64 @@
+@import "../shared/_shared_dir"
+
+html
+    background-image: url("background-destination-desktop.jpg") 
+
+#destination
+    border-color: $light-color
+
+.destination
+        ul 
+            li
+                margin-right: 33px
+                padding-bottom: 14px
+                a
+                    color: $primary-color
+        .break
+            background-color: transparentize($light-color, 0.75)
+            width: 101%
+            height: 1px
+        .values
+            display: flex
+            flex-wrap: wrap
+            width: 100% 
+            .num_value
+                width: 50%
+
+
+@media screen and (max-width: $tablet-screen)
+    html
+        background-image: url("background-destination-tablet.jpg") 
+    .destination
+        img
+            width: 300px
+            height: 300px
+        .text 
+            margin-top: 53px
+            h2
+                margin: 30px
+            p 
+                text-align: center 
+                text-wrap: wrap 
+            .values
+                margin-top: 53px
+                justify-content: center
+                .break
+                    margin-bottom: 29px
+
+
+@media screen and (max-width: $mobile-screen) 
+    html
+        background-image: url("background-destination-mobile.jpg") 
+    .destination  
+        img
+            width: 170px
+            height: 170px
+        .text 
+            margin: 24px 0 24px
+            h2
+                margin: 15px 
+            .values
+                margin-top: 32px 
+                .num_value
+                    width: 100%
+                    padding-bottom: 32px

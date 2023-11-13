@@ -1,0 +1,26 @@
+$font-family-1 :        "Bellefair", system-ui, -apple-system, BlinkMacSystemFont
+$font-family-2 :        "Barlow Condensed", Arial, Helvetica, sans-serif
+
+$light-color   :       #fff
+$dark-color    :       #0B0D17
+$primary-color :       #D0D6F9
+
+$desktop-screen:        1440px
+$tablet-screen :        1024px
+$mobile-screen :        540px
+
+=text-type-1($size, $color : $light-color,$transform: uppercase) 
+    font-size:          $size
+    font-family:        $font-family-1
+    color:              $color
+    margin:             0
+    font-weight:        400
+    text-transform:     $transform
+=text-type-2($size, $space, $color : $light-color,$transform: uppercase) 
+    font-size:          $size
+    font-family:        $font-family-2
+    color:              $color
+    letter-spacing:     $space
+    margin:             0
+    font-weight:        400
+    text-transform:     $transform

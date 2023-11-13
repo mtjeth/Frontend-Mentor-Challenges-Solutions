@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Space tourism website</title>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bellefair">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow+Condensed"> 
+  <link rel="stylesheet" href="./assets/technology/technology.css">
+
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo">
+      <img alt="logo" src="./assets/shared/logo.svg">
+    </div>
+    <div class="menu">
+      <a href="javascript:void(0)">
+        <img onclick="open_nav()" alt="menu" id="menu-open" src="./assets/shared/icon-hamburger.svg"/>
+        <img onclick="close_nav()" alt="close" id="menu-close" src="./assets/shared/icon-close.svg"/>
+      </a>
+    </div>
+    <div class="nav-menu" id="nav-menu">
+      <div class="blur"></div>
+      <div class="line"></div>
+      <ul> 
+        <li class="nav-a" id="home"><a href="index.html"><span>00</span>HOME</a></li>
+        <li class="nav-a" id="destination"><a href="destination.html"><span>01</span>DESTINATION</a></li>
+        <li class="nav-a" id="crew"><a href="crew.html"><span>02</span>CREW</a></li>
+        <li class="nav-a" id="technology"><a href="technology.html"><span>03</span>TECHNOLOGY</a></li>
+        <li class="nav-a" id="credit"><a href="credit.html"><span>04</span>credit</a></li>
+      </ul>
+    </div>
+  </div> 
+  <div class="technology container"> 
+    <h5>03<span>Space launch 101</span></h5>
+    <div class="techs">
+      <img alt="technology image" id="technology-images" src=""/>
+    </div>
+    <div class="main-section">
+      <div class="no-circle">
+        <div class="circle" id="technology-0" onclick="technology_list(0)" ><a href="javascript:void(0)" class="sh1">1</a></div>
+        <div class="circle" id="technology-1" onclick="technology_list(1)" ><a href="javascript:void(0)" class="sh1">2</a></div>
+        <div class="circle" id="technology-2" onclick="technology_list(2)" ><a href="javascript:void(0)" class="sh1">3</a></div>
+      </div>
+      <div class="text">
+        <p class="sh-3">THE TERMINOLOGY ...</p>
+        <h3 id="technology-name">vehicle</h3>
+        <p id="technology-description">
+          detail
+        </p>
+      </div>
+    </div>
+  
+  </div>  
+  <script src="./assets/main.js"></script>
+  <script src="./assets/technology/technology.js"></script>
+</body>
+</html>

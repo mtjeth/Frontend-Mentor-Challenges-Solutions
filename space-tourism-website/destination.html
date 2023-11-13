@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Space tourism website</title>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bellefair">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow+Condensed"> 
+  <link rel="stylesheet" href="./assets/destination/destination.css">
+
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo">
+      <img alt="logo" src="./assets/shared/logo.svg">
+    </div>
+    <div class="menu">
+      <a href="javascript:void(0)">
+        <img onclick="open_nav()" alt="menu" id="menu-open" src="./assets/shared/icon-hamburger.svg"/>
+        <img onclick="close_nav()" alt="close" id="menu-close" src="./assets/shared/icon-close.svg"/>
+      </a>
+    </div>
+    <div class="nav-menu" id="nav-menu">
+      <div class="blur"></div>
+      <div class="line"></div>
+      <ul> 
+        <li class="nav-a" id="home"><a href="index.html"><span>00</span>HOME</a></li>
+        <li class="nav-a" id="destination"><a href="destination.html"><span>01</span>DESTINATION</a></li>
+        <li class="nav-a" id="crew"><a href="crew.html"><span>02</span>CREW</a></li>
+        <li class="nav-a" id="technology"><a href="technology.html"><span>03</span>TECHNOLOGY</a></li>
+        <li class="nav-a" id="credit"><a href="credit.html"><span>04</span>credit</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="destination container"> 
+    <h5>01<span>PICK YOUR DESTINATION</span></h5>
+    <div class="planet">
+      <img alt="planet image" id="planet-images" src=" "/>
+    </div>
+    <div class="text">
+      <ul>
+        <li><a href="javascript:void(0)" id="planet_0" onclick="planet_choice('0')">Moon</a></li>
+        <li><a href="javascript:void(0)" id="planet_1" onclick="planet_choice('1')">Mars</a></li>
+        <li><a href="javascript:void(0)" id="planet_2" onclick="planet_choice('2')">Europa</a></li>
+        <li><a href="javascript:void(0)" id="planet_3" onclick="planet_choice('3')">Titan</a></li>
+      </ul>
+      <h2 id="planet-name">Planet</h2>
+      <p id="planet-description">
+        description
+      </p>
+      <div class="values">
+        <div class="break"></div>
+        <div class="num_value">
+          <p class="sh2">
+            Avg. distance
+          </p>
+          <p class="sh1" id="planet-distance">
+            00
+          </p>
+        </div>
+        <div class="num_value">
+          <p class="sh2">
+            Est. travel time
+          </p>
+          <p class="sh1" id="planet-travel">
+            0
+          </p>
+        </div>
+      </div>
+    </div>
+  </div> 
+  <script src="./assets/main.js"></script>
+  <script src="./assets/destination/destination.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Space tourism website</title>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bellefair">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow+Condensed"> 
+  <link rel="stylesheet" href="./assets/crew/crew.css">
+
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo">
+      <img alt="logo" src="./assets/shared/logo.svg">
+    </div>
+    <div class="menu">
+      <a href="javascript:void(0)">
+        <img onclick="open_nav()" alt="menu" id="menu-open" src="./assets/shared/icon-hamburger.svg"/>
+        <img onclick="close_nav()" alt="close" id="menu-close" src="./assets/shared/icon-close.svg"/>
+      </a>
+    </div>
+    <div class="nav-menu" id="nav-menu">
+      <div class="blur"></div>
+      <div class="line"></div>
+      <ul> 
+        <li class="nav-a" id="home"><a href="index.html"><span>00</span>HOME</a></li>
+        <li class="nav-a" id="destination"><a href="destination.html"><span>01</span>DESTINATION</a></li>
+        <li class="nav-a" id="crew"><a href="crew.html"><span>02</span>CREW</a></li>
+        <li class="nav-a" id="technology"><a href="technology.html"><span>03</span>TECHNOLOGY</a></li>
+        <li class="nav-a" id="credit"><a href="credit.html"><span>04</span>credit</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="crew container">
+    <h5>02<span>Meet your crew</span></h5>
+    <div class="main-section">
+      <div class="text"> 
+        <h4 id="crew-role">role</h4>
+        <h3 id="crew-name">name</h3>
+        <p id="crew-bio">
+          description
+        </p>
+      </div>
+      <div class="toggle">
+        <div class="dot" id="crew-0" onclick="crew_list(0)"></div>
+        <div class="dot" id="crew-1" onclick="crew_list(1)"></div>
+        <div class="dot" id="crew-2" onclick="crew_list(2)"></div>
+        <div class="dot" id="crew-3" onclick="crew_list(3)"></div>
+      </div>
+      <div class="pepole">
+        <img id="crew-images" alt="crew image" id="crew-images" src=""/>
+      </div>
+    </div>
+  </div>
+  <script src="./assets/main.js"></script>
+  <script src="./assets/crew/crew.js"></script>
+</body>
+</html>
