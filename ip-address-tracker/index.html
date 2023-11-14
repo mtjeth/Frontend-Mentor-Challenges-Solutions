@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | IP Address Tracker</title>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="top-section">
+    <h1>IP Address Tracker</h1> 
+    <div class="ip-address">
+      <input class="ip-address-input" type="text" id="ip-address-input" name="ip-address" placeholder="Search for any IP address or domain">
+      <button class="ip-address-submit" type="submit" onclick="track_ip()"><img src="./images/icon-arrow.svg"/></button>
+    </div>
+    <div class="info-panel">
+      <div class="info-box">
+        <p>ipaddress</p>
+        <h2 id="ip-address-output"></h2>
+      </div>
+      <div class="break"></div>
+      <div class="info-box">
+        <p>location</p>
+        <h2 id="ip-address-location"></h2>
+      </div>
+      <div class="break"> </div>
+      <div class="info-box">
+        <p>timezone</p>
+        <h2 id="ip-address-timezone"></h2>
+      </div>
+      <div class="break"> </div>
+      <div class="info-box">
+        <p>isp</p>
+        <h2 id="ip-address-isp"></h2>
+      </div>
+    </div>
+  </div>
+  <div id="map" class="map"></div>
+
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>
