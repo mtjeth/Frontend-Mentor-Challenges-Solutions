@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+
+    <title>Frontend Mentor | REST Countries API with color theme switcher</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/55f17638ab.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="main-section" id="main-section">
+        <div class="navbar">
+            <h2>Where in the World?</h2>
+            <button onclick="darkmode()"><i class="fa-regular fa-moon" id="darkmode"></i>Dark mode</button>
+            <div class="back"></div>
+        </div>
+        <div class="search_filter">
+            <div class="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" class="search-country" id="search-country" name="search"
+                    placeholder="Search for a country...">
+                <i class="fa-solid fa-xmark" onclick="remove_filter('search')" id="remove_search" ></i>
+            </div>
+            <button class="back-button" id="back-button" onclick="return_main()"><i class="fa-solid fa-arrow-left"></i>Back</button>
+            <div class="filter-box" id="filter-box">
+                <div class="region_filter">
+                    <p id="region_filter_selected">Filter by Region</p>
+                    <i class="fa-solid fa-chevron-down"></i>
+                    <i class="fa-solid fa-chevron-up"></i>
+                    <i class="fa-solid fa-xmark" onclick="remove_filter('region')"></i>
+                </div>
+                <div class="dropdownhover">
+                    <div class="dropdown">
+                        <a href="#" onclick="selected_region('Africa')">Africa</a>
+                        <a href="#" onclick="selected_region('Americas')">Americas</a>
+                        <a href="#" onclick="selected_region('Asia')">Asia</a>
+                        <a href="#" onclick="selected_region('Europe')">Europe</a>
+                        <a href="#" onclick="selected_region('Oceania')">Oceania</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="https://github.com/mtjeth" target="_blank">MTJ</a>.
+      </div>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,314 @@
+//Color
+ 
+.light
+    background-color: hsl(0, 0%, 98%)
+    h2,
+    button,
+    p,
+    a,
+    .fa-solid
+        color: hsl(200, 15%, 8%)
+    .search-country
+        color: hsl(0, 0%, 52%)
+        &::placeholder
+            color: hsl(0, 0%, 52%)
+    button,
+    .back,
+    .search,
+    .filter-box,
+    .dropdown,
+    .country
+        background-color: hsl(0, 0%, 100%)
+
+.dark
+    background-color: hsl(207, 26%, 17%)
+    h2,
+    button,
+    p,
+    a,
+    .fa-solid
+        color: hsl(0, 0%, 100%)
+    .search-country
+        color: hsl(0, 0%, 100%)
+        &::placeholder
+            color: hsl(0, 0%, 100%)
+    button,
+    .back,
+    .search,
+    .filter-box,
+    .dropdown,
+    .country
+        background-color: hsl(209, 23%, 22%) 
+
+//Layout
+button,
+.back,
+.search,
+.filter-box,
+.dropdown,
+.country
+    border-radius: 5px
+    box-shadow: 0px 0px 5px 2px hsl(0deg 0% 0% / 4%)
+
+html
+    font-family: "Nunito Sans"
+    overflow-x: hidden
+body
+    margin: 0
+    overflow-x: hidden
+    min-height: 100vh
+.main-section
+    width: 86%
+    margin: 0 auto
+    display: grid 
+    justify-content: space-between
+    grid-template-columns: repeat(auto-fill, 264px) 
+    gap: 30px
+    padding-bottom: 40px
+    position: relative
+    button  
+        font-size: 16px  
+        border: none
+        font-weight: 300
+        i
+            margin-right: 15px
+    .navbar
+        grid-column: 1 / -1 
+        min-height: 80px
+        display: flex 
+        flex-direction: row
+        justify-content: space-between
+        align-items: center 
+        position: relative
+        .back
+            position: absolute
+            z-index: -2
+            width: 200vw
+            margin-left: -100%
+            height: 100%
+        h2
+            font-size: 18px 
+            font-weight: 800
+        button  
+            background-color: transparent 
+            box-shadow: none
+    .search_filter
+        grid-column: 1 / -1 
+        display: flex
+        flex-direction: row 
+        justify-content: space-between
+        align-items: center
+        height: 56px
+        padding: 15px 0
+        .search
+            display: flex
+            flex-direction: row
+            align-items: center
+            width: 37%
+            min-width: 385px
+            height: 100%
+            position: relative
+            .fa-magnifying-glass
+                width: 15%
+                margin-left: 5%
+                text-align: center
+            .search-country
+                background-color: transparent
+                margin: auto 
+                border: none
+                height: 100%
+                width: 80%
+                &:focus
+                    outline: none
+            .fa-xmark
+                display: none
+                position: absolute
+                right: 20px
+                top: 20px
+        .filter-box
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            align-items: center
+            height: 100%
+            width: 140px 
+            padding: 0 20px 0 40px 
+            position: relative
+            .region_filter
+                width: 140px 
+                display: flex
+                justify-content: space-between
+                align-items: center 
+            .fa-chevron-down
+                display: block
+            .fa-xmark,
+            .fa-chevron-up
+                display: none
+            .dropdownhover
+                position: absolute
+                top: 0
+                left: 0
+            .dropdown
+                display: none
+                margin-top: 66px
+                width: 140px
+                padding: 10px 20px 10px 40px
+                z-index: 2
+                a
+                    padding: 8px 0
+                    text-decoration: none
+                    display: block
+            &:hover
+                .fa-chevron-down
+                    display: none
+                .fa-chevron-up,
+                .dropdown
+                    display: block
+        .filter-box.selected
+            .fa-xmark
+                display: block
+            .fa-chevron-down
+                display: none
+            &:hover
+                .fa-chevron-up,
+                .dropdown
+                    display: none
+        .back-button
+            display: none
+            height: 56px
+            width: 140px
+
+    .country
+        height: 336px
+        width: 264px
+        overflow: hidden
+        .img-box 
+            overflow: hidden
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 100%
+            height: 160px 
+            img
+                min-height: 100%
+                width: 100% 
+        .text
+            padding: 29px 19px
+            p
+                margin: 0
+                padding: 5px
+                font-size: 14px
+                font-weight: 800
+                span
+                    font-weight: 300
+            h2
+                margin: 0
+                padding: 0 0 10px 5px
+                font-size: 18px
+    .detailed  
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+        .img-box 
+            width: 45%
+            max-height: 100%
+            img
+                max-height: 100%
+                width: 100%
+        .text
+            display: grid
+            grid-template-columns: auto auto
+            width: 45%  
+            p
+                margin: 0
+                padding: 15px
+                font-size: 20px
+                font-weight: 800
+                span
+                    font-weight: 300
+                    display: inline
+            h2
+                grid-column: 1/-1
+                margin: 0
+                padding: 0 0 10px 15px
+                font-size: 32px
+            .borders
+                grid-column: 1/-1
+                button
+                    padding: 10px
+                    margin: 10px
+.main-section.sub-section
+    grid-template-columns: auto
+    justify-content: normal
+    .search_filter
+        .back-button
+            display: block
+        .search,
+        .filter-box,
+        .filter-box.selected
+            display: none
+    .country
+        display: none
+
+@media screen and (max-width:700px)
+    .main-section
+        grid-template-columns: auto
+        justify-content: center
+        .nav_bar
+            width: 100%
+            justify-content: space-between
+        .country 
+            width: 100%
+        .navbar
+            button,
+            h2
+                font-size: 14px
+        .search_filter
+            flex-direction: column
+            align-items: flex-start 
+            height: auto
+            .search
+                min-width: 90%
+                width: 100% 
+                margin-bottom: 20px
+                height: 48px 
+            .filter-box
+                margin-top: 20px
+                height: 48px 
+        .detailed 
+            flex-direction: column 
+            align-items: center
+            .img-box 
+                width: 100% 
+            .text 
+                row-gap: 15px
+                grid-template-columns: auto
+                width: 100%  
+                p
+                    margin: 0
+                    padding: 10px
+                    font-size: 16px
+                    font-weight: 800
+                    span
+                        font-weight: 300
+                        display: inline
+                h2
+                    grid-column: 1/-1
+                    margin: 0
+                    padding: 35px 0 10px 10px
+                    font-size: 26px
+                .borders
+                    grid-column: 1/-1
+                    button
+                        padding: 10px
+                        margin: 10px 
+.attribution 
+    font-size: 11px
+    text-align: center 
+
+
+
+
+
+
