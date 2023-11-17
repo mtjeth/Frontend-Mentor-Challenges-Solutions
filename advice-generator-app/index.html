@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Advice Generator App</title>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Manrope">
+  <style>
+    html{
+        margin: 0;
+        overflow-x: hidden;
+        font-family: "Manrope";
+    }
+    body{
+        background-color: hsl(218, 23%, 16%);
+        margin: 0; 
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        margin: auto;
+        width: 542px; 
+        background-color: hsl(217, 19%, 24%);
+        padding: 50px; 
+        margin-top: 20vh;
+        border-radius: 10px;
+    }
+    p{
+        font-size: 16px;
+        min-height: 20px;
+        margin: 0;
+        margin-bottom: 16px;
+        color: hsl(150, 100%, 66%);
+        letter-spacing: 5px;
+    }
+    h1{
+        padding: 20px 0;
+        margin: auto;
+        font-size: 28px;
+        text-align: center;
+        color: hsl(193, 38%, 86%); 
+    }
+    .desktop{
+        padding: 30px;
+    }
+    .mobile{
+        display: none;
+    }
+    button{
+        position: absolute;
+        height: 66px;
+        width: 66px;
+        border: none;
+        border-radius: 40px;
+        bottom: -33px;
+        background-color: hsl(150, 100%, 66%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    button:hover{  
+        box-shadow: 0 0 20px 0px hsl(150, 100%, 66%);
+    }
+    @media screen and (max-width:660px) {
+        .container{
+            max-width: 74%;
+        }
+        .desktop{
+            display: none;
+        }
+        .mobile{
+            display: block;
+        }
+        
+    }
+    @media screen and (max-width:400px) {
+        .container{
+            max-width: 65%; 
+        }
+    }
+    .attribution { font-size: 11px; text-align: center; color:hsl(193, 38%, 86%) ; margin-top: 40px;}
+    .attribution a { color: hsl(150, 100%, 66%); }
+  </style>
+  
+  
+</head>
+<body>
+    <div class="container">
+        <p id="advice-no"> Advice </p>
+        <h1 id="advice-given"> given </h1>
+        <img class="desktop" src="./images/pattern-divider-desktop.svg">
+        <img class="mobile" src="./images/pattern-divider-mobile.svg">
+        <button onclick="advice()"><img src="./images/icon-dice.svg"></button>
+    </div>
+    <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="https://github.com/mtjeth" target="_blank">MTJ</a>.
+    </div> 
+    <script>
+        advice();
+        function advice(){
+            fetch("https://api.adviceslip.com/advice")
+        .then((res) => {
+            return res.json();
+        })
+        .then((data) => {
+            document.getElementById("advice-no").innerHTML = "ADVICE #"+data.slip.id;
+            document.getElementById("advice-given").innerHTML ='"' + data.slip.advice +'"';})
+        }
+      </script>
+</body>
+</html>

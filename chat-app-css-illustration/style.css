@@ -217,9 +217,6 @@ body {
   padding: 0 13px;
   font-size: 8px;
 }
-.phone .phone-outline .chat-background .message form input::-moz-placeholder {
-  color: hsl(206, 6%, 79%);
-}
 .phone .phone-outline .chat-background .message form input::placeholder {
   color: hsl(206, 6%, 79%);
 }
