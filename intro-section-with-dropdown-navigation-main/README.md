@@ -35,7 +35,7 @@ My Design
 - Live Site URL: (https://mtjeth.github.io/Frontend-Mentor-Challenges-Solutions/intro-section-with-dropdown-navigation-main/index.html)
 
 ## My process
-I started from top to bottom approach then thr menu with diffrent configration for mobile and desktop.
+I started from top to bottom approach then through menu with diffrent configration for mobile and desktop.
 
 ### Built with
 
