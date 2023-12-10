@@ -9,7 +9,10 @@ const Attribute = () => {
       >
         Frontend Mentor
       </a>
-      . Coded by <a href="#">Your Name Here</a>.
+      . Coded by{" "}
+      <a rel="noreferrer" href="https://github.com/mtjeth" target="_blank">
+        MTJ
+      </a>
     </div>
   );
 };
