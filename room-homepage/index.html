@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=League+Spartan"
+    />
+
+    <title>Frontend Mentor | Room homepage</title>
+    <style>
+      html {
+        margin: 0;
+        font-family: "League Spartan";
+      }
+      body {
+        margin: 0;
+        position: relative;
+        height: 100%;
+        min-height: 100vh;
+      }
+      #back_drop {
+        display: none;
+        position: fixed;
+        inset: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 2;
+        background: hsl(0, 0%, 0%);
+        opacity: 0.5;
+      }
+      .navbar {
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        top: 50px;
+      }
+      .navbar .logo {
+        padding-inline: 64px 40px;
+      }
+      .navbar a {
+        color: hsl(0, 0%, 100%);
+        font-weight: 700;
+        text-decoration: none;
+        margin-inline: 16px;
+        padding-block: 12px;
+        border-bottom: 2px solid transparent;
+      }
+      .navbar a:hover {
+        border-bottom-color: hsl(0, 0%, 100%);
+        cursor: pointer;
+      }
+      .navbar .icon_menu {
+        display: none;
+      }
+      .navbar .icon_menu img:hover {
+        cursor: pointer;
+      }
+      .top_section {
+        width: 100%;
+        min-height: 500px;
+        height: 66.625vh;
+      }
+      .content {
+        width: 100%;
+        height: 100%;
+        display: none;
+      }
+      .content.show {
+        display: flex;
+      }
+      .top_section .image {
+        width: 58%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom;
+      }
+      .image {
+        overflow: hidden;
+      }
+      .image img {
+        min-width: 100%;
+        min-height: 100%;
+        aspect-ratio: 1;
+      }
+
+      .text {
+        width: 28%;
+        height: 100%;
+        padding-inline: 7%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      h1 {
+        margin: 0;
+        color: hsl(0, 0%, 0%);
+        text-wrap: balance;
+        line-height: 35px;
+      }
+      h2 {
+        color: hsl(0, 0%, 0%);
+        font-size: 20px;
+        margin: 7px 0 20px;
+      }
+      p {
+        color: hsl(0, 0%, 63%);
+        margin-block: 26px;
+        line-height: 25px;
+      }
+      .top_section a {
+        font-weight: 500;
+        margin-bottom: 33px;
+        text-decoration: none;
+        color: hsl(0, 0%, 0%);
+        display: flex;
+        letter-spacing: 10px;
+      }
+      .top_section a:hover {
+        color: hsl(0, 0%, 63%);
+        cursor: pointer;
+      }
+      .top_section a svg {
+        fill: hsl(0, 0%, 0%);
+      }
+      .top_section a:hover svg {
+        fill: hsl(0, 0%, 63%);
+      }
+      .carousel_buttons {
+        position: absolute;
+        display: flex;
+        bottom: 0;
+        left: 0;
+      }
+      .carousel_buttons button {
+        border: none;
+        padding: 26.5px 33px;
+        background-color: hsl(0, 0%, 0%);
+      }
+      .carousel_buttons button:hover {
+        background-color: hsl(0, 0%, 27%);
+        cursor: pointer;
+      }
+      .bottom_section {
+        display: flex;
+        width: 100%;
+        height: 33.375vh;
+        min-height: 200px;
+      }
+      .bottom_section .about-1 {
+        width: 29.17%;
+      }
+      .bottom_section .about-2 {
+        width: 30.5%;
+      }
+      .about {
+        width: 34.07%;
+        padding-inline: 3.13%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .about p {
+        margin: 0;
+        line-height: 20px;
+      }
+      #first .image {
+        background-image: url(./images/desktop-image-hero-1.jpg);
+      }
+      #second .image {
+        background-image: url(./images/desktop-image-hero-2.jpg);
+      }
+      #third .image {
+        background-image: url(./images/desktop-image-hero-3.jpg);
+      }
+      .attribution {
+        position: absolute;
+        bottom: 5px;
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+
+      @media screen and (max-width: 800px) {
+        .content,
+        .bottom_section {
+          flex-direction: column;
+        }
+        .navbar {
+          width: 100%;
+        }
+        .navbar .logo {
+          margin-inline: auto;
+          padding-inline: 0;
+        }
+        #close {
+          display: none;
+        }
+        .navbar .icon_menu {
+          position: absolute;
+          display: block;
+          left: 6.4%;
+          z-index: 10;
+        }
+        .navbar .menu {
+          position: fixed;
+          top: 0;
+          background-color: hsl(0, 0%, 100%);
+          display: none;
+          align-items: center;
+          justify-content: flex-end;
+          flex-wrap: wrap;
+          padding-right: 20px;
+          width: calc(100% - 20px);
+          height: 110px;
+          z-index: 5;
+        }
+        .navbar .menu a {
+          color: hsl(0, 0%, 0%);
+        }
+        .navbar a:hover {
+          border-bottom-color: hsl(0, 0%, 0%);
+        }
+        .top_section .image {
+          height: 360px;
+          width: 100%;
+        }
+        .top_section {
+          height: 770px;
+        }
+        .text {
+          padding-inline: 8%;
+          width: 84%;
+          height: 410px;
+        }
+        .carousel_buttons {
+          top: -58px;
+          right: 0;
+          bottom: inherit;
+          left: inherit;
+        }
+        .carousel_buttons button {
+          padding: 15.5px 22px;
+        }
+        .about {
+          width: 84%;
+          padding-inline: 8%;
+          height: 302px;
+        }
+        .bottom_section {
+          height: inherit;
+        }
+        .bottom_section .about-1 {
+          width: 100%;
+          height: 240px;
+          display: flex;
+        }
+        .bottom_section .about-2 {
+          width: 100%;
+          height: 227px;
+          display: flex;
+        }
+      }
+      @media screen and (max-width: 400px) {
+        #first .image {
+          background-image: url(./images/mobile-image-hero-1.jpg);
+        }
+        #second .image {
+          background-image: url(./images/mobile-image-hero-2.jpg);
+        }
+        #third .image {
+          background-image: url(./images/mobile-image-hero-3.jpg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div onclick="menu(false)" id="back_drop"></div>
+    <div class="navbar">
+      <div class="icon_menu">
+        <img
+          id="open"
+          onclick="menu(true)"
+          src="./images/icon-hamburger.svg"
+          alt="icon-hamburger"
+        />
+        <img
+          id="close"
+          onclick="menu(false)"
+          src="./images/icon-close.svg"
+          alt="icon-close"
+        />
+      </div>
+      <img class="logo" src="./images/logo.svg" alt="room logo" />
+      <div class="menu" id="menu">
+        <a href="#Home">Home</a>
+        <a href="#Shop">Shop</a>
+        <a href="#About">About</a>
+        <a href="#Contact">Contact</a>
+      </div>
+    </div>
+    <div class="top_section">
+      <div class="content show" id="first">
+        <div class="image"></div>
+        <div class="text">
+          <h1>Discover innovative ways to decorate</h1>
+          <p>
+            We provide unmatched quality, comfort, and style for property owners
+            across the country. Our experts combine form and function in
+            bringing your vision to life. Create a room in your own style with
+            our collection and make your property a reflection of you and what
+            you love.
+          </p>
+          <a href="#">
+            Shop now
+            <svg width="40" height="12" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M34.05 0l5.481 5.527h.008v.008L40 6l-.461.465v.063l-.062-.001L34.049 12l-.662-.668 4.765-4.805H0v-1h38.206l-4.82-4.86L34.05 0z"
+                fill-rule="nonzero"
+              />
+            </svg>
+          </a>
+          <div class="carousel_buttons">
+            <button onclick="key_slide('left')">
+              <img alt="previous button" src="./images/icon-angle-left.svg" />
+            </button>
+            <button onclick="key_slide('right')">
+              <img alt="next but" src="./images/icon-angle-right.svg" />
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="content" id="second">
+        <div class="image"></div>
+        <div class="text">
+          <h1>We are available all across the globe</h1>
+          <p>
+            With stores all over the world, it's easy for you to find furniture
+            for your home or place of business. Locally, we’re in most major
+            cities throughout the country. Find the branch nearest you using our
+            store locator. Any questions? Don't hesitate to contact us today.
+          </p>
+          <a href="#">
+            Shop now
+            <svg width="40" height="12" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M34.05 0l5.481 5.527h.008v.008L40 6l-.461.465v.063l-.062-.001L34.049 12l-.662-.668 4.765-4.805H0v-1h38.206l-4.82-4.86L34.05 0z"
+                fill-rule="nonzero"
+              />
+            </svg>
+          </a>
+          <div class="carousel_buttons">
+            <button onclick="key_slide('left')">
+              <img alt="previous button" src="./images/icon-angle-left.svg" />
+            </button>
+            <button onclick="key_slide('right')">
+              <img alt="next but" src="./images/icon-angle-right.svg" />
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="content" id="third">
+        <div class="image"></div>
+        <div class="text">
+          <h1>Manufactured with the best materials</h1>
+          <p>
+            Our modern furniture store provide a high level of quality. Our
+            company has invested in advanced technology to ensure that every
+            product is made as perfect and as consistent as possible. With three
+            decades of experience in this industry, we understand what customers
+            want for their home and office.
+          </p>
+          <a href="#">
+            Shop now
+            <svg width="40" height="12" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M34.05 0l5.481 5.527h.008v.008L40 6l-.461.465v.063l-.062-.001L34.049 12l-.662-.668 4.765-4.805H0v-1h38.206l-4.82-4.86L34.05 0z"
+                fill-rule="nonzero"
+              />
+            </svg>
+          </a>
+          <div class="carousel_buttons">
+            <button onclick="key_slide('left')">
+              <img alt="previous button" src="./images/icon-angle-left.svg" />
+            </button>
+            <button onclick="key_slide('right')">
+              <img alt="next but" src="./images/icon-angle-right.svg" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom_section">
+      <div class="image about-1">
+        <img src="./images/image-about-dark.jpg" alt="image-about-dark.jpg" />
+      </div>
+      <div class="about">
+        <h2>About our furniture</h2>
+        <p>
+          Our multifunctional collection blends design and function to suit your
+          individual taste. Make each room unique, or pick a cohesive theme that
+          best express your interests and what inspires you. Find the furniture
+          pieces you need, from traditional to contemporary styles or anything
+          in between. Product specialists are available to help you create your
+          dream space.
+        </p>
+        <div class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by
+          <a href="https://github.com/mtjeth" target="_blank">MTJ</a>.
+        </div>
+      </div>
+      <div class="image about-2">
+        <img src="./images/image-about-light.jpg" alt="image-about-light.jpg" />
+      </div>
+    </div>
+    <script type="text/javascript">
+      var current_slide = "first";
+      const slide = (value) => {
+        document.getElementById("first").className = "content";
+        document.getElementById("second").className = "content";
+        document.getElementById("third").className = "content";
+        document.getElementById(value).className += " show";
+        current_slide = value;
+      };
+      const key_slide = (value) => {
+        switch (current_slide) {
+          case "first":
+            if (value === "left") {
+              slide("third");
+            } else {
+              slide("second");
+            }
+            break;
+          case "second":
+            if (value === "left") {
+              slide("first");
+            } else {
+              slide("third");
+            }
+            break;
+          case "third":
+            if (value === "left") {
+              slide("second");
+            } else {
+              slide("first");
+            }
+            break;
+        }
+      };
+      window.addEventListener(
+        "keydown",
+        (event) => {
+          if (event.defaultPrevented) {
+            return; // Do nothing if the event was already processed
+          }
+          if (event.key === "ArrowLeft") {
+            key_slide("left");
+          }
+          if (event.key === "ArrowRight") {
+            key_slide("right");
+          }
+          event.preventDefault();
+        },
+        true
+      );
+
+      const menu = (isopen) => {
+        if (isopen) {
+          document.getElementById("open").style.display = "none";
+          document.getElementById("close").style.display = "block";
+          document.getElementById("menu").style.display = "flex";
+          document.getElementById("back_drop").style.display = "block";
+        } else {
+          document.getElementById("open").style.display = "block";
+          document.getElementById("close").style.display = "none";
+          document.getElementById("menu").style.display = "";
+          document.getElementById("back_drop").style.display = "";
+        }
+      };
+    </script>
+  </body>
+</html>
