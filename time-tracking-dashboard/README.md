@@ -18,15 +18,13 @@ Users should be able to:
 
 - ![](./my_design/active-states.jpg)
 - ![](./my_design/desktop-design.jpg) 
-- ![](./my_design/mobile-design.jpg) 
-- ![](./my_design/mobile-with-filters.jpg)
+- ![](./my_design/mobile-design.jpg)  
 
 #### Frontend Mentor Design
 
 - ![](./orginal_design/active-states.jpg)
 - ![](./orginal_design/desktop-design.jpg) 
-- ![](./orginal_design/mobile-design.jpg) 
-- ![](./orginal_design/mobile-with-filters.jpg)
+- ![](./orginal_design/mobile-design.jpg)  
 
 ### Links
 
